@@ -9,17 +9,21 @@ public class UI {
     Container con;
 
     JPanel optionsPanel, mainPanel, wordPanel, userPanel;
-    JPanel dataBasePanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel;
+    JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel;
 
     int windowX = 1600;
     int windowY = 900;
 
-    int optionsPanelWidth, mainPanelWidth, wordPanelWidth, userPanelWidth;
-    int wordPanelHeight, userPanelHeight;
+    int margin = 8;
+
+    int optionsPanelWidth, mainPanelWidth, wordPanelWidth, userPanelWidth, mainWordPanelWidth, dataBasePanelWidth;
+    int commentPanelWidth, commentPanelLevel;
+    int wordPanelHeight, userPanelHeight, dataBasePanelHeight, mainWordPanelHeight, commentPanelHeight;
 
     Color darkGray = new Color(30, 30, 30);
-    Color mediumGray = new Color (50, 50, 50);
-    Color lightGray = new Color (80, 80, 80);
+    Color mediumGray = new Color (40, 40, 40);
+    Color lightGray = new Color (50, 50, 50);
+    Color veryLightGray = new Color (60, 60, 60);
     Color mediumPurple = new Color (70, 70, 206);
 
     public UI(){
@@ -39,37 +43,63 @@ public class UI {
 
     void displayScreen() {
         optionsPanelWidth = 300;
-        optionsPanel = makePanel(5, 5, optionsPanelWidth, windowY - 10, mediumGray);
+        optionsPanel = makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
         con.add(optionsPanel);
 
-        mainPanelWidth = windowX - optionsPanelWidth - 15;
-        mainPanel = makePanel(10 + optionsPanelWidth, 5, mainPanelWidth,
-                windowY - 10, mediumGray);
-        mainPanel.setLayout(null);
+        mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
+        mainPanel = makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
+                windowY - margin * 2, mediumGray);
+        mainPanel.setLayout(null); //set panel's layout to null to have control on its child's boundaries
         con.add(mainPanel);
 //        mainPanel.setVisible(false);
 
-        wordPanelWidth = mainPanelWidth - 10;
+        wordPanelWidth = mainPanelWidth - margin * 2;
         wordPanelHeight = 500;
-        wordPanel = makePanel(5, 5, wordPanelWidth, wordPanelHeight, lightGray);
-//        wordPanel.setPreferredSize(new Dimension(wordPanelWidth, wordPanelHeight));
+        wordPanel = makePanel(margin, margin, wordPanelWidth, wordPanelHeight, lightGray);
+        wordPanel.setLayout(null);
         mainPanel.add(wordPanel);
 
         userPanelWidth = wordPanelWidth;
-        userPanelHeight = windowY - wordPanelHeight - 25;
-        userPanel = makePanel(5,wordPanelHeight + 10,
+        userPanelHeight = windowY - wordPanelHeight - margin * 5;
+        userPanel = makePanel(margin,wordPanelHeight + margin * 2,
                 userPanelWidth, userPanelHeight, lightGray);
         mainPanel.add(userPanel);
 
+        mainWordPanelWidth = 500;
+        mainWordPanelHeight = 150;
+        mainWordPanel = makePanel(mainPanelWidth/2 - mainWordPanelWidth/2 - margin, margin,
+                mainWordPanelWidth, mainWordPanelHeight, veryLightGray);
+        wordPanel.add(mainWordPanel);
 
+        dataBasePanelWidth = (wordPanelWidth - margin * 4 - mainWordPanelWidth) / 2;
+        dataBasePanelHeight = mainWordPanelHeight;
+        dataBasePanel = makePanel(margin, margin, dataBasePanelWidth, dataBasePanelHeight, veryLightGray);
+        wordPanel.add(dataBasePanel);
 
+        grammarPanel = makePanel(margin * 3 + dataBasePanelWidth + mainWordPanelWidth, margin, dataBasePanelWidth,
+                dataBasePanelHeight, veryLightGray);
+        wordPanel.add(grammarPanel);
+
+        commentPanelWidth = (wordPanelWidth - margin * 4) / 3;
+        commentPanelHeight = wordPanelHeight - margin * 3 - mainWordPanelHeight;
+        commentPanelLevel = mainWordPanelHeight + margin * 2;
+        commentPanel = makePanel(margin, commentPanelLevel, commentPanelWidth,
+                commentPanelHeight, veryLightGray);
+        wordPanel.add(commentPanel);
+
+        examplePanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
+                commentPanelHeight, veryLightGray);
+        wordPanel.add(examplePanel);
+
+        tagsPanel = makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
+                commentPanelHeight, veryLightGray);
+        wordPanel.add(tagsPanel);
 
     }
 
     JPanel makePanel(int x, int y, int width, int height, Color color) {
         JPanel panel = new JPanel();
         panel.setBounds(x, y, width, height);
-        panel.setPreferredSize(new Dimension(width, height));
         panel.setBackground(color);
         panel.setVisible(true);
         return panel;
