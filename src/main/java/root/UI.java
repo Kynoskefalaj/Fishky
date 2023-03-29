@@ -9,16 +9,17 @@ public class UI {
     Container con;
 
     JPanel optionsPanel, mainPanel, wordPanel, userPanel;
-    JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel;
+    JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
+            userActionPanel;
 
     int windowX = 1600;
     int windowY = 900;
 
     int margin = 8;
 
-    int optionsPanelWidth, mainPanelWidth, wordPanelWidth, userPanelWidth, mainWordPanelWidth, dataBasePanelWidth;
-    int commentPanelWidth, commentPanelLevel;
-    int wordPanelHeight, userPanelHeight, dataBasePanelHeight, mainWordPanelHeight, commentPanelHeight;
+    int optionsPanelWidth, mainPanelWidth, wordPanelWidth, userPanelWidth, mainWordPanelWidth, dataBasePanelWidth,
+        commentPanelWidth, commentPanelLevel, wordPanelHeight, userPanelHeight, dataBasePanelHeight,
+        mainWordPanelHeight, commentPanelHeight;
 
     Color darkGray = new Color(30, 30, 30);
     Color mediumGray = new Color (40, 40, 40);
@@ -63,6 +64,7 @@ public class UI {
         userPanelHeight = windowY - wordPanelHeight - margin * 5;
         userPanel = makePanel(margin,wordPanelHeight + margin * 2,
                 userPanelWidth, userPanelHeight, lightGray);
+        userPanel.setLayout(null);
         mainPanel.add(userPanel);
 
         mainWordPanelWidth = 500;
@@ -95,6 +97,13 @@ public class UI {
                 commentPanelHeight, veryLightGray);
         wordPanel.add(tagsPanel);
 
+
+        picturePanel = makePanel(margin, margin, commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
+        userPanel.add(picturePanel);
+
+        userActionPanel = makePanel(margin * 2 + commentPanelWidth, margin,
+                userPanelWidth - margin * 3 - commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
+        userPanel.add(userActionPanel);
     }
 
     JPanel makePanel(int x, int y, int width, int height, Color color) {
