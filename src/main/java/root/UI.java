@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 
 public class UI {
 
+    Main main;
+
     JFrame window;
     Container con;
 
@@ -18,9 +20,10 @@ public class UI {
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
     JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
-    JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox;
+    JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
     JTextField userWordInput;
     JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+
 
     int windowX = 1600;
     int windowY = 900;
@@ -48,10 +51,11 @@ public class UI {
     Color goodColor = new Color(48, 206, 59);
     Color badColor = new Color(187, 66, 66);
 
-    public UI() {
+    public UI(Main main) {
+        this.main = main;
         displayWindow();
         displayScreen();
-//        Thread.sleep(4000);
+
     }
 
     void displayWindow() {
@@ -144,10 +148,10 @@ public class UI {
 //        commentPanel.setLayout(null);
         wordPanel.add(commentPanel);
 
-        examplePanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
+        picturePanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
 //        examplePanel.setLayout(null);
-        wordPanel.add(examplePanel);
+        wordPanel.add(picturePanel);
 
         tagsPanel = makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
@@ -155,8 +159,8 @@ public class UI {
         wordPanel.add(tagsPanel);
 
 
-        picturePanel = makePanel(margin, margin, commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
-        userPanel.add(picturePanel);
+        examplePanel = makePanel(margin, margin, commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
+        userPanel.add(examplePanel);
 
         userActionPanel = makePanel(margin * 2 + commentPanelWidth, margin,
                 userPanelWidth - margin * 3 - commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
@@ -270,7 +274,7 @@ public class UI {
         exampleCheckBox = new JCheckBox();
         exampleCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
         exampleCheckBox.setBackground(veryLightGray);
-        exampleCheckBox.setMnemonic(KeyEvent.VK_C);
+        exampleCheckBox.setMnemonic(KeyEvent.VK_E);
         exampleCheckBox.setSelected(true);
         exampleCheckBox.addItemListener(new ItemListener() {
             @Override
@@ -286,7 +290,7 @@ public class UI {
         tagsCheckBox = new JCheckBox();
         tagsCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
         tagsCheckBox.setBackground(veryLightGray);
-        tagsCheckBox.setMnemonic(KeyEvent.VK_C);
+        tagsCheckBox.setMnemonic(KeyEvent.VK_T);
         tagsCheckBox.setSelected(true);
         tagsCheckBox.addItemListener(new ItemListener() {
             @Override
@@ -299,6 +303,23 @@ public class UI {
         });
         tagsPanel.add(tagsCheckBox);
 
+        pictureCheckBox = new JCheckBox();
+        pictureCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+        pictureCheckBox.setBackground(veryLightGray);
+        pictureCheckBox.setMnemonic(KeyEvent.VK_P);
+        pictureCheckBox.setSelected(true);
+        pictureCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+//                    picture.setVisible(true);
+                }
+//                else
+//                    picture.setVisible(false);
+            }
+        });
+        picturePanel.add(pictureCheckBox);
+
 //        --------------------------------------------------------------------------------------------------------------
 //        components on userActionPanel
         userWordInput = new JTextField();
@@ -306,6 +327,7 @@ public class UI {
         userWordInput.setFont(normalFont);
         userWordInput.setHorizontalAlignment(JTextField.CENTER);
         userWordInput.setBackground(mediumPurple);
+        userWordInput.setForeground(Color.black);
         userWordInput.setBorder(BorderFactory.createLineBorder(mediumGray));
         userActionPanel.add(userWordInput);
 
@@ -358,6 +380,8 @@ public class UI {
         okButton = makeButton("Yes", buttonFont, nextButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         okButton.setBackground(goodColor);
+        okButton.addActionListener(main.utilsHandler);
+        okButton.setActionCommand("ok");
         userActionPanel.add(okButton);
 
         nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
@@ -368,6 +392,7 @@ public class UI {
         thanksForAnswerLabel = makeLabel("Thank you for your answer", smallHeaderFont, JLabel.CENTER);
         thanksForAnswerLabel.setBounds(okButton.getX(), okButton.getY() + okButton.getHeight() + labelMargin,
                 okButton.getWidth() * 2 + labelMargin, okButton.getHeight());
+//        thanksForAnswerLabel.setVisible(false);
         userActionPanel.add(thanksForAnswerLabel);
 
         submitButton = makeButton("Submit", buttonFont, okButton.getX(),
@@ -378,6 +403,7 @@ public class UI {
         isSubmittedLabel = makeLabel("Submitted", smallHeaderFont, JLabel.CENTER);
         isSubmittedLabel.setBounds(nokButton.getX(), submitButton.getY(), nokButton.getWidth(), submitButton.getHeight());
         userActionPanel.add(isSubmittedLabel);
+
 
     }
 }
