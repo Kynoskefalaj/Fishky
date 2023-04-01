@@ -13,7 +13,8 @@ public class UI {
             userActionPanel;
     JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel;
-    JTextArea commentArea, exampleArea;
+    JTextArea commentArea, exampleArea, tagsArea;
+    JCheckBox commentsVisibilityCheckBox, exampleVisibilityCheckBox, tagsVisibilityCheckBox;
 
     int windowX = 1600;
     int windowY = 900;
@@ -28,7 +29,9 @@ public class UI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
     Font wordFont = new Font("Arial", Font.BOLD, 45);
+    Font textFont = new Font("Times New Roman", Font.PLAIN, 19);
 
+    Color veryDarkGray = new Color(15, 15, 15);
     Color darkGray = new Color(30, 30, 30);
     Color mediumGray = new Color (40, 40, 40);
     Color lightGray = new Color (50, 50, 50);
@@ -136,8 +139,10 @@ public class UI {
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         dataBasePanel.add(currentDB_Label);
 
+        int valueObjectLevel = labelMargin * 2 + headerFont.getSize() + 5;
+
         currDB_ValueLabel = makeLabel("The data base", normalFont, JLabel.LEFT);
-        currDB_ValueLabel.setBounds(labelMargin, labelMargin * 2 + headerFont.getSize() + 5, 250,
+        currDB_ValueLabel.setBounds(labelMargin, valueObjectLevel, 250,
                 normalFont.getSize() + 5);
         dataBasePanel.add(currDB_ValueLabel);
 
@@ -146,8 +151,7 @@ public class UI {
         grammarPanel.add(posLabel);
 
         posValueLabel = makeLabel("The part of speech", normalFont, JLabel.LEFT);
-        posValueLabel.setBounds(labelMargin, labelMargin * 2 + headerFont.getSize() + 5, 250,
-                normalFont.getSize() + 5);
+        posValueLabel.setBounds(labelMargin, valueObjectLevel, 250,normalFont.getSize() + 5);
         grammarPanel.add(posValueLabel);
 
         commentLabel = makeLabel("Comment:", headerFont, JLabel.LEFT);
@@ -164,11 +168,47 @@ public class UI {
 
 //        ----------------------------------------------------------------------------------------------------------
 //        text areas:
+        commentArea = new JTextArea();
+        commentArea.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
+                "printer took a galley of type and scrambled it to make a type specimen book. It has survived " +
+                "not only five centuries, but also the leap into electronic typesetting, remaining essentially " +
+                "unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including " +
+                "versions of Lorem Ipsum.");
+        commentArea.setBackground(veryLightGray);
+        commentArea.setBounds(labelMargin, valueObjectLevel, commentPanelWidth - 2 * labelMargin,
+                commentPanelHeight - labelMargin - valueObjectLevel);
+        commentArea.setFont(textFont);
+        commentArea.setForeground(veryDarkGray);
+        commentArea.setLineWrap(true);
+        commentPanel.add(commentArea);
 
+        exampleArea = new JTextArea();
+        exampleArea.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown " +
+                "printer took a galley of type and scrambled it to make a type specimen book. It has survived " +
+                "not only five centuries, but also the leap into electronic typesetting, remaining essentially " +
+                "unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including " +
+                "versions of Lorem Ipsum.");
+        exampleArea.setBackground(veryLightGray);
+        exampleArea.setBounds(labelMargin, valueObjectLevel, commentPanelWidth - 2 * labelMargin,
+                commentPanelHeight - labelMargin - valueObjectLevel);
+        exampleArea.setFont(textFont);
+        exampleArea.setForeground(veryDarkGray);
+        exampleArea.setLineWrap(true);
+        examplePanel.add(exampleArea);
 
-
-
-
+        tagsArea = new JTextArea();
+        tagsArea.setText("Tag1, Tag2, Tag3, Tag4 ...");
+        tagsArea.setBackground(veryLightGray);
+        tagsArea.setBounds(labelMargin, valueObjectLevel, commentPanelWidth - 2 * labelMargin,
+                commentPanelHeight - labelMargin - valueObjectLevel);
+        tagsArea.setFont(textFont);
+        tagsArea.setForeground(veryDarkGray);
+        tagsArea.setLineWrap(true);
+        tagsPanel.add(tagsArea);
 
 
     }
