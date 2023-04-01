@@ -15,9 +15,12 @@ public class UI {
     JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
             userActionPanel;
     JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
-            currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel;
-    JTextArea commentArea, exampleArea, tagsArea;
-    JCheckBox commentsCheckBox, exampleCheckBox, tagsVisibilityCheckBox;
+            currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
+            isTranslationCorrectLabel, thanksForAnswerLabel;
+    JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
+    JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox;
+    JTextField userWordInput;
+    JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
 
     int windowX = 1600;
     int windowY = 900;
@@ -33,6 +36,8 @@ public class UI {
     Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
     Font wordFont = new Font("Arial", Font.BOLD, 45);
     Font textFont = new Font("Times New Roman", Font.PLAIN, 19);
+    Font buttonFont = new Font("Arial", Font.BOLD, 25);
+    Font smallHeaderFont = new Font("Times New Roman", Font.PLAIN, 25);
 
     Color veryDarkGray = new Color(15, 15, 15);
     Color darkGray = new Color(30, 30, 30);
@@ -40,6 +45,8 @@ public class UI {
     Color lightGray = new Color (50, 50, 50);
     Color veryLightGray = new Color (60, 60, 60);
     Color mediumPurple = new Color (70, 70, 206);
+    Color goodColor = new Color(48, 206, 59);
+    Color badColor = new Color(187, 66, 66);
 
     public UI() {
         displayWindow();
@@ -55,6 +62,35 @@ public class UI {
         window.setLayout(null);
 
         con = window.getContentPane();
+    }
+
+    JPanel makePanel(int x, int y, int width, int height, Color color) {
+        JPanel panel = new JPanel();
+        panel.setBounds(x, y, width, height);
+        panel.setBackground(color);
+        panel.setLayout(null);
+        panel.setVisible(true);
+        return panel;
+    }
+
+    JLabel makeLabel(String name, Font font, int horizontalAlignment){
+        JLabel label = new JLabel(name);
+        label.setForeground(Color.black);
+        label.setFont(font);
+        label.setHorizontalAlignment(horizontalAlignment);
+        label.setVisible(true);
+        return label;
+    }
+
+    JButton makeButton(String name, Font font, int x, int y, int width, int height, Color color){
+        JButton button = new JButton(name);
+        button.setBounds(x, y, width, height);
+        button.setForeground(Color.black);
+        button.setBackground(color);
+        button.setBorder(BorderFactory.createLineBorder(mediumGray));
+        button.setFont(font);
+
+        return button;
     }
 
     void displayScreen() {
@@ -247,23 +283,101 @@ public class UI {
         });
         examplePanel.add(exampleCheckBox);
 
-    }
+        tagsCheckBox = new JCheckBox();
+        tagsCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+        tagsCheckBox.setBackground(veryLightGray);
+        tagsCheckBox.setMnemonic(KeyEvent.VK_C);
+        tagsCheckBox.setSelected(true);
+        tagsCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                    tagsArea.setVisible(true);
+                } else
+                    tagsArea.setVisible(false);
+            }
+        });
+        tagsPanel.add(tagsCheckBox);
 
-    JPanel makePanel(int x, int y, int width, int height, Color color) {
-        JPanel panel = new JPanel();
-        panel.setBounds(x, y, width, height);
-        panel.setBackground(color);
-        panel.setLayout(null);
-        panel.setVisible(true);
-        return panel;
-    }
+//        --------------------------------------------------------------------------------------------------------------
+//        components on userActionPanel
+        userWordInput = new JTextField();
+        userWordInput.setBounds(labelMargin, labelMargin, examplePanel.getWidth() - labelMargin * 2, 40);
+        userWordInput.setFont(normalFont);
+        userWordInput.setHorizontalAlignment(JTextField.CENTER);
+        userWordInput.setBackground(mediumPurple);
+        userWordInput.setBorder(BorderFactory.createLineBorder(mediumGray));
+        userActionPanel.add(userWordInput);
 
-    JLabel makeLabel(String name, Font font, int horizontalAlignment){
-        JLabel label = new JLabel(name);
-        label.setForeground(Color.black);
-        label.setFont(font);
-        label.setHorizontalAlignment(horizontalAlignment);
-        label.setVisible(true);
-        return label;
+        enterButton = makeButton("Enter", buttonFont, examplePanel.getWidth(), labelMargin,
+                (tagsPanel.getWidth() + margin - 3 * labelMargin) / 3, userWordInput.getHeight(), mediumPurple);
+        userActionPanel.add(enterButton);
+
+        nextButton = makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,
+                labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
+        userActionPanel.add(nextButton);
+
+        checkButton = makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,
+                labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
+        userActionPanel.add(checkButton);
+
+        hintLabel = makeLabel("This is hint", normalFont, JLabel.LEFT);
+        hintLabel.setBounds(labelMargin, userWordInput.getHeight() + 2 * labelMargin, userWordInput.getWidth(),
+                userWordInput.getHeight());
+        userActionPanel.add(hintLabel);
+
+        hintButton = makeButton("Hint", buttonFont, enterButton.getX(), hintLabel.getY(), enterButton.getWidth(),
+                enterButton.getHeight(), mediumPurple);
+        userActionPanel.add(hintButton);
+
+        checkLabel = makeLabel("Check answer", normalFont, JLabel.CENTER);
+        checkLabel.setBounds(nextButton.getX(), hintLabel.getY(), checkButton.getWidth() * 2 + labelMargin,
+                hintLabel.getHeight());
+        userActionPanel.add(checkLabel);
+
+        userSuggestionsInput = new JTextArea();
+        userSuggestionsInput.setBounds(labelMargin, userActionPanel.getHeight() - 3 * (enterButton.getHeight() + labelMargin),
+                nextButton.getX() - 2 * labelMargin,userActionPanel.getHeight() - 200 - labelMargin);
+        userSuggestionsInput.setBackground(veryLightGray);
+        userSuggestionsInput.setFont(textFont);
+        userSuggestionsInput.setForeground(veryDarkGray);
+        userSuggestionsInput.setBorder(BorderFactory.createLineBorder(lightGray));
+        userActionPanel.add(userSuggestionsInput);
+
+        leaveFeedbackLabel = makeLabel("Leave feedback below:", smallHeaderFont, JLabel.LEFT);
+        leaveFeedbackLabel.setBounds(labelMargin, userSuggestionsInput.getY() - hintLabel.getHeight(),
+                userSuggestionsInput.getWidth(), hintLabel.getHeight());
+        leaveFeedbackLabel.setForeground(veryDarkGray);
+        userActionPanel.add(leaveFeedbackLabel);
+
+        isTranslationCorrectLabel = makeLabel("Is translation correct?", smallHeaderFont, JLabel.CENTER);
+        isTranslationCorrectLabel.setBounds(nextButton.getX(), leaveFeedbackLabel.getY(),
+                nextButton.getWidth() * 2 + labelMargin, leaveFeedbackLabel.getHeight());
+        userActionPanel.add(isTranslationCorrectLabel);
+
+        okButton = makeButton("Yes", buttonFont, nextButton.getX(), userSuggestionsInput.getY(),
+                nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
+        okButton.setBackground(goodColor);
+        userActionPanel.add(okButton);
+
+        nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
+                nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
+        nokButton.setBackground(badColor);
+        userActionPanel.add(nokButton);
+
+        thanksForAnswerLabel = makeLabel("Thank you for your answer", smallHeaderFont, JLabel.CENTER);
+        thanksForAnswerLabel.setBounds(okButton.getX(), okButton.getY() + okButton.getHeight() + labelMargin,
+                okButton.getWidth() * 2 + labelMargin, okButton.getHeight());
+        userActionPanel.add(thanksForAnswerLabel);
+
+        submitButton = makeButton("Submit", buttonFont, okButton.getX(),
+                thanksForAnswerLabel.getY() + labelMargin + thanksForAnswerLabel.getHeight(), nextButton.getWidth(),
+                nextButton.getHeight(), mediumPurple);
+        userActionPanel.add(submitButton);
+
+        isSubmittedLabel = makeLabel("Submitted", smallHeaderFont, JLabel.CENTER);
+        isSubmittedLabel.setBounds(nokButton.getX(), submitButton.getY(), nokButton.getWidth(), submitButton.getHeight());
+        userActionPanel.add(isSubmittedLabel);
+
     }
 }
