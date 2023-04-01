@@ -13,6 +13,7 @@ public class UI {
             userActionPanel;
     JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel;
+    JTextArea commentArea, exampleArea;
 
     int windowX = 1600;
     int windowY = 900;
@@ -135,9 +136,19 @@ public class UI {
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         dataBasePanel.add(currentDB_Label);
 
+        currDB_ValueLabel = makeLabel("The data base", normalFont, JLabel.LEFT);
+        currDB_ValueLabel.setBounds(labelMargin, labelMargin * 2 + headerFont.getSize() + 5, 250,
+                normalFont.getSize() + 5);
+        dataBasePanel.add(currDB_ValueLabel);
+
         posLabel = makeLabel("Part of speech:", headerFont, JLabel.LEFT);
         posLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         grammarPanel.add(posLabel);
+
+        posValueLabel = makeLabel("The part of speech", normalFont, JLabel.LEFT);
+        posValueLabel.setBounds(labelMargin, labelMargin * 2 + headerFont.getSize() + 5, 250,
+                normalFont.getSize() + 5);
+        grammarPanel.add(posValueLabel);
 
         commentLabel = makeLabel("Comment:", headerFont, JLabel.LEFT);
         commentLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize() + 5);
@@ -151,6 +162,8 @@ public class UI {
         tagsLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         tagsPanel.add(tagsLabel);
 
+//        ----------------------------------------------------------------------------------------------------------
+//        text areas:
 
 
 
