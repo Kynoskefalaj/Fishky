@@ -2,6 +2,9 @@ package root;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
 
 public class UI {
 
@@ -14,7 +17,7 @@ public class UI {
     JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel;
     JTextArea commentArea, exampleArea, tagsArea;
-    JCheckBox commentsVisibilityCheckBox, exampleVisibilityCheckBox, tagsVisibilityCheckBox;
+    JCheckBox commentsCheckBox, exampleCheckBox, tagsVisibilityCheckBox;
 
     int windowX = 1600;
     int windowY = 900;
@@ -210,6 +213,39 @@ public class UI {
         tagsArea.setLineWrap(true);
         tagsPanel.add(tagsArea);
 
+//        ----------------------------------------------------------------------------------------------------------
+//        check boxes:
+        commentsCheckBox = new JCheckBox();
+        commentsCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+        commentsCheckBox.setBackground(veryLightGray);
+        commentsCheckBox.setMnemonic(KeyEvent.VK_C);
+        commentsCheckBox.setSelected(true);
+        commentsCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                    commentArea.setVisible(true);
+                } else
+                    commentArea.setVisible(false);
+            }
+        });
+        commentPanel.add(commentsCheckBox);
+
+        exampleCheckBox = new JCheckBox();
+        exampleCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+        exampleCheckBox.setBackground(veryLightGray);
+        exampleCheckBox.setMnemonic(KeyEvent.VK_C);
+        exampleCheckBox.setSelected(true);
+        exampleCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                    exampleArea.setVisible(true);
+                } else
+                    exampleArea.setVisible(false);
+            }
+        });
+        examplePanel.add(exampleCheckBox);
 
     }
 
@@ -229,7 +265,5 @@ public class UI {
         label.setHorizontalAlignment(horizontalAlignment);
         label.setVisible(true);
         return label;
-
-
     }
 }
