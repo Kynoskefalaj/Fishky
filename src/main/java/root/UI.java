@@ -41,6 +41,7 @@ public class UI {
     Font textFont = new Font("Times New Roman", Font.PLAIN, 19);
     Font buttonFont = new Font("Arial", Font.BOLD, 25);
     Font smallHeaderFont = new Font("Times New Roman", Font.PLAIN, 25);
+    Font notificationFont = new Font("Arial", Font.BOLD, 20);
 
     Color veryDarkGray = new Color(15, 15, 15);
     Color darkGray = new Color(30, 30, 30);
@@ -366,6 +367,7 @@ public class UI {
         userSuggestionsInput.setBackground(veryLightGray);
         userSuggestionsInput.setFont(textFont);
         userSuggestionsInput.setForeground(veryDarkGray);
+        userSuggestionsInput.setLineWrap(true);
         userSuggestionsInput.setBorder(BorderFactory.createLineBorder(lightGray));
         userActionPanel.add(userSuggestionsInput);
 
@@ -394,7 +396,7 @@ public class UI {
         nokButton.setActionCommand("nok");
         userActionPanel.add(nokButton);
 
-        thanksForAnswerLabel = makeLabel("Thank you for your answer", smallHeaderFont, JLabel.CENTER);
+        thanksForAnswerLabel = makeLabel("Thank you for your answer", notificationFont, JLabel.CENTER);
         thanksForAnswerLabel.setBounds(okButton.getX(), okButton.getY() + okButton.getHeight() + labelMargin,
                 okButton.getWidth() * 2 + labelMargin, okButton.getHeight());
         thanksForAnswerLabel.setVisible(false);
@@ -407,8 +409,9 @@ public class UI {
         submitButton.setActionCommand("submit");
         userActionPanel.add(submitButton);
 
-        isSubmittedLabel = makeLabel("Submitted", smallHeaderFont, JLabel.CENTER);
+        isSubmittedLabel = makeLabel("Submitted", notificationFont, JLabel.CENTER);
         isSubmittedLabel.setBounds(nokButton.getX(), submitButton.getY(), nokButton.getWidth(), submitButton.getHeight());
+        isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
 
