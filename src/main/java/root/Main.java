@@ -26,8 +26,14 @@ public class Main {
 
             String utilAction = event.getActionCommand();
             switch (utilAction) {
-                case "ok": ui.thanksForAnswerLabel.setVisible(true); break;
-                case "nok": ui.thanksForAnswerLabel.setVisible(true); break;
+                case "ok":
+                    ui.thanksForAnswerLabel.setVisible(true);
+                    ui.thanksForAnswerLabel.setForeground(ui.goodColor);
+                    break;
+                case "nok":
+                    ui.thanksForAnswerLabel.setForeground(ui.badColor);
+                    ui.thanksForAnswerLabel.setVisible(true);
+                    break;
                 case "submit": ui.isSubmittedLabel.setVisible(true); break;
             }
         }
