@@ -387,21 +387,26 @@ public class UI {
         nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         nokButton.setBackground(badColor);
+        nokButton.addActionListener(main.utilsHandler);
+        nokButton.setActionCommand("nok");
         userActionPanel.add(nokButton);
 
         thanksForAnswerLabel = makeLabel("Thank you for your answer", smallHeaderFont, JLabel.CENTER);
         thanksForAnswerLabel.setBounds(okButton.getX(), okButton.getY() + okButton.getHeight() + labelMargin,
                 okButton.getWidth() * 2 + labelMargin, okButton.getHeight());
-//        thanksForAnswerLabel.setVisible(false);
+        thanksForAnswerLabel.setVisible(false);
         userActionPanel.add(thanksForAnswerLabel);
 
         submitButton = makeButton("Submit", buttonFont, okButton.getX(),
                 thanksForAnswerLabel.getY() + labelMargin + thanksForAnswerLabel.getHeight(), nextButton.getWidth(),
                 nextButton.getHeight(), mediumPurple);
+        submitButton.addActionListener(main.utilsHandler);
+        submitButton.setActionCommand("submit");
         userActionPanel.add(submitButton);
 
         isSubmittedLabel = makeLabel("Submitted", smallHeaderFont, JLabel.CENTER);
         isSubmittedLabel.setBounds(nokButton.getX(), submitButton.getY(), nokButton.getWidth(), submitButton.getHeight());
+        isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
 
 

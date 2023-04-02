@@ -26,25 +26,9 @@ public class Main {
 
             String utilAction = event.getActionCommand();
             switch (utilAction) {
-                case "ok": ui.thanksForAnswerLabel.setVisible(true);
-                    popupTimer = new Timer(2000, new ActionListener() {
-                        public void actionPerformed(ActionEvent evt) {
-                            popupTimer.start();
-                            popupTimer.stop();
-                            }
-                        });
-                    ui.thanksForAnswerLabel.setVisible((false));
-                    break;
-
-                case "nok": ui.thanksForAnswerLabel.setVisible(true);
-                    popupTimer = new Timer(2000, new ActionListener() {
-                        public void actionPerformed(ActionEvent evt) {
-                            popupTimer.start();
-                            popupTimer.stop();
-                        }
-                    });
-                    ui.thanksForAnswerLabel.setVisible((false));
-                case "submit": break;
+                case "ok": ui.thanksForAnswerLabel.setVisible(true); break;
+                case "nok": ui.thanksForAnswerLabel.setVisible(true); break;
+                case "submit": ui.isSubmittedLabel.setVisible(true); break;
             }
         }
     }
