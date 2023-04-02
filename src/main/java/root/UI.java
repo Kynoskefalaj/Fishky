@@ -225,6 +225,7 @@ public class UI {
         commentArea.setFont(textFont);
         commentArea.setForeground(veryDarkGray);
         commentArea.setLineWrap(true);
+        commentArea.setEditable(false);
         commentPanel.add(commentArea);
 
         exampleArea = new JTextArea();
@@ -241,6 +242,7 @@ public class UI {
         exampleArea.setFont(textFont);
         exampleArea.setForeground(veryDarkGray);
         exampleArea.setLineWrap(true);
+        exampleArea.setEditable(false);
         examplePanel.add(exampleArea);
 
         tagsArea = new JTextArea();
@@ -251,6 +253,7 @@ public class UI {
         tagsArea.setFont(textFont);
         tagsArea.setForeground(veryDarkGray);
         tagsArea.setLineWrap(true);
+        tagsArea.setEditable(false);
         tagsPanel.add(tagsArea);
 
 //        ----------------------------------------------------------------------------------------------------------
