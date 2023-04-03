@@ -13,27 +13,28 @@ public class UI {
     JFrame window;
     Container con;
 
-    JPanel optionsPanel, mainPanel, wordPanel, userPanel;
-    JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
+    public JPanel optionsPanel, mainPanel, wordPanel, userPanel;
+    public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
             userActionPanel;
-    JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
+    public JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
-    JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
-    JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
-    JTextField userWordInput;
-    JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+    public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
+    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
+    public JTextField userWordInput;
+    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+    private int valueObjectLevel;
 
 
-    int windowX = 1600;
-    int windowY = 900;
+    private final int windowX = 1600;
+    private final int windowY = 900;
 
-    int margin = 8;
-    int labelMargin = 5;
+    private final int margin = 8;
+    private final int labelMargin = 5;
 
-    int optionsPanelWidth, mainPanelWidth, wordPanelWidth, userPanelWidth, mainWordPanelWidth, dataBasePanelWidth,
-        commentPanelWidth, commentPanelLevel, wordPanelHeight, userPanelHeight, dataBasePanelHeight,
-        mainWordPanelHeight, commentPanelHeight;
+    private int optionsPanelWidth;
+    private int commentPanelWidth;
+    private int commentPanelHeight;
 
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
@@ -56,7 +57,11 @@ public class UI {
         this.main = main;
         displayWindow();
         displayScreen();
-
+        displayPanels();
+        displayLabels();
+        displayCheckBoxes();
+        displayTextAreas();
+        displayUserActionsComponents();
     }
 
     void displayWindow() {
@@ -98,42 +103,43 @@ public class UI {
         return button;
     }
 
-    void displayScreen() {
+    private void displayScreen() {
         optionsPanelWidth = 300;
         optionsPanel = makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
         optionsPanel.setLayout(new GridLayout(13, 1));
         con.add(optionsPanel);
+    }
 
-        mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
+    private void displayPanels() {
+        int mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
         mainPanel = makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
                 windowY - margin * 2, mediumGray);
         mainPanel.setLayout(null); //set panel's layout to null to have control on its child's boundaries
         con.add(mainPanel);
 //        mainPanel.setVisible(false);
 
-        wordPanelWidth = mainPanelWidth - margin * 2;
-        wordPanelHeight = 500;
+        int wordPanelWidth = mainPanelWidth - margin * 2;
+        int wordPanelHeight = 500;
         wordPanel = makePanel(margin, margin, wordPanelWidth, wordPanelHeight, lightGray);
         wordPanel.setLayout(null);
         mainPanel.add(wordPanel);
 
-        userPanelWidth = wordPanelWidth;
-        userPanelHeight = windowY - wordPanelHeight - margin * 5;
-        userPanel = makePanel(margin,wordPanelHeight + margin * 2,
-                userPanelWidth, userPanelHeight, lightGray);
+        int userPanelHeight = windowY - wordPanelHeight - margin * 5;
+        userPanel = makePanel(margin, wordPanelHeight + margin * 2,
+                wordPanelWidth, userPanelHeight, lightGray);
         userPanel.setLayout(null);
         mainPanel.add(userPanel);
 
-        mainWordPanelWidth = 500;
-        mainWordPanelHeight = 150;
-        mainWordPanel = makePanel(mainPanelWidth/2 - mainWordPanelWidth/2 - margin, margin,
+        int mainWordPanelWidth = 500;
+        int mainWordPanelHeight = 150;
+        mainWordPanel = makePanel(mainPanelWidth / 2 - mainWordPanelWidth / 2 - margin, margin,
                 mainWordPanelWidth, mainWordPanelHeight, veryLightGray);
         wordPanel.add(mainWordPanel);
         mainWordPanel.setLayout(new GridLayout(2, 1));
 
 
-        dataBasePanelWidth = (wordPanelWidth - margin * 4 - mainWordPanelWidth) / 2;
-        dataBasePanelHeight = mainWordPanelHeight;
+        int dataBasePanelWidth = (wordPanelWidth - margin * 4 - mainWordPanelWidth) / 2;
+        int dataBasePanelHeight = mainWordPanelHeight;
         dataBasePanel = makePanel(margin, margin, dataBasePanelWidth, dataBasePanelHeight, veryLightGray);
         wordPanel.add(dataBasePanel);
 
@@ -143,7 +149,7 @@ public class UI {
 
         commentPanelWidth = (wordPanelWidth - margin * 4) / 3;
         commentPanelHeight = wordPanelHeight - margin * 3 - mainWordPanelHeight;
-        commentPanelLevel = mainWordPanelHeight + margin * 2;
+        int commentPanelLevel = mainWordPanelHeight + margin * 2;
         commentPanel = makePanel(margin, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
 //        commentPanel.setLayout(null);
@@ -164,9 +170,11 @@ public class UI {
         userPanel.add(examplePanel);
 
         userActionPanel = makePanel(margin * 2 + commentPanelWidth, margin,
-                userPanelWidth - margin * 3 - commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
+                wordPanelWidth - margin * 3 - commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
         userPanel.add(userActionPanel);
+    }
 
+    private void displayLabels() {
 //        ---------------------------------------------------------------------------------------------------------
 //        JLabels:
         dbsLabel = makeLabel("Databases:", headerFont, JLabel.LEFT);
@@ -183,7 +191,7 @@ public class UI {
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         dataBasePanel.add(currentDB_Label);
 
-        int valueObjectLevel = labelMargin * 2 + headerFont.getSize() + 5;
+        valueObjectLevel = labelMargin * 2 + headerFont.getSize() + 5;
 
         currDB_ValueLabel = makeLabel("The data base", normalFont, JLabel.LEFT);
         currDB_ValueLabel.setBounds(labelMargin, valueObjectLevel, 250,
@@ -195,7 +203,7 @@ public class UI {
         grammarPanel.add(posLabel);
 
         posValueLabel = makeLabel("The part of speech", normalFont, JLabel.LEFT);
-        posValueLabel.setBounds(labelMargin, valueObjectLevel, 250,normalFont.getSize() + 5);
+        posValueLabel.setBounds(labelMargin, valueObjectLevel, 250, normalFont.getSize() + 5);
         grammarPanel.add(posValueLabel);
 
         commentLabel = makeLabel("Comment:", headerFont, JLabel.LEFT);
@@ -209,7 +217,9 @@ public class UI {
         tagsLabel = makeLabel("Tags:", headerFont, JLabel.LEFT);
         tagsLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         tagsPanel.add(tagsLabel);
+    }
 
+    private void displayTextAreas() {
 //        ----------------------------------------------------------------------------------------------------------
 //        text areas:
         commentArea = new JTextArea();
@@ -256,7 +266,9 @@ public class UI {
         tagsArea.setLineWrap(true);
         tagsArea.setEditable(false);
         tagsPanel.add(tagsArea);
+    }
 
+    private void displayCheckBoxes() {
 //        ----------------------------------------------------------------------------------------------------------
 //        check boxes:
         commentsCheckBox = new JCheckBox();
@@ -267,7 +279,7 @@ public class UI {
         commentsCheckBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                if(e.getStateChange() == ItemEvent.SELECTED) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
                     commentArea.setVisible(true);
                 } else
                     commentArea.setVisible(false);
@@ -283,7 +295,7 @@ public class UI {
         exampleCheckBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                if(e.getStateChange() == ItemEvent.SELECTED) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
                     exampleArea.setVisible(true);
                 } else
                     exampleArea.setVisible(false);
@@ -299,7 +311,7 @@ public class UI {
         tagsCheckBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                if(e.getStateChange() == ItemEvent.SELECTED) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
                     tagsArea.setVisible(true);
                 } else
                     tagsArea.setVisible(false);
@@ -315,7 +327,7 @@ public class UI {
         pictureCheckBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                if(e.getStateChange() == ItemEvent.SELECTED) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
 //                    picture.setVisible(true);
                 }
 //                else
@@ -323,7 +335,9 @@ public class UI {
             }
         });
         picturePanel.add(pictureCheckBox);
+    }
 
+    private void displayUserActionsComponents() {
 //        --------------------------------------------------------------------------------------------------------------
 //        components on userActionPanel
         userWordInput = new JTextField();
@@ -414,7 +428,5 @@ public class UI {
         isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
-
-
     }
 }
