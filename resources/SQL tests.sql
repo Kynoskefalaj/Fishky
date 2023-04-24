@@ -37,10 +37,3 @@ IGNORE 1 LINES;
 
 SELECT * FROM words
 LIMIT 10;
-
-
-    
-    
-    
-    
-    

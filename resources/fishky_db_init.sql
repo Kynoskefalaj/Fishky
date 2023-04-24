@@ -37,7 +37,10 @@ CREATE TABLE fishky.explanation
     eng_phrase VARCHAR(495),
     pol_phrase VARCHAR(495),
     eng_sentence VARCHAR(495),
-    eng_explanation VARCHAR(4050)
+    eng_explanation VARCHAR(4050),
+    PRIMARY KEY (word_id),
+    CONSTRAINT FK_word_explanation FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
 );
 
 LOAD DATA INFILE 
