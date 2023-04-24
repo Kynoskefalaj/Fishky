@@ -1,0 +1,998 @@
+﻿word_id,eng_word,pl_translation,part_of_speech
+1,slight,niewielki,adjective
+2,sunscreen,krem z filtrem,noun
+3,scientific,naukowy,adjective
+4,briefly,krótko,adverb
+5,bore,nudzić/nudziarz,verb/noun
+6,swerve,zboczenie,verb/noun
+7,possess,posiadać,verb
+8,revision,rewizja,noun
+9,orphanage,sierociniec,noun
+10,commence,rozpocząć,verb
+11,crosswalk,przejście dla pieszych,noun
+12,establish,ustanowić,verb
+13,abbreviation,skrót,noun
+14,pullover,sweter (wciągany przez głowę),noun
+15,excess,nadwyżka,noun/adjective
+16,prawns,krewetka,noun
+17,rinse,wypłukać,verb
+18,obesity,otyłość,noun
+19,pointed,ostro zakończony,adjective
+20,sensible,rozsądny,adjective
+21,idle,bezczynny,adjective/verb
+22,occupation,zawód,noun
+23,omit,pomijać,verb
+24,thread,wątek,noun
+25,scold,nakrzyczeć,verb
+26,handout,rozdać,noun/verb
+27,wage,płaca,noun/verb
+28,lorry,ciężarówka,noun
+29,duvet,kołdra (rzadko się z tym spotykam),noun
+30,significance,istotność,noun
+31,humid,wilgotny,adjective
+32,enclose,"dołączać (np załącznik), ująć",verb
+33,fold,składać (np. pranie),verb
+34,odd,dziwny,adjective
+35,cruise,rejs,noun/verb
+36,fixed,naprawiony (a w przypadku psa - wykastrowany),adjective/verb
+37,trunk,bagażnik,noun
+38,conditioning,"warunkowanie (można tego słowa też użyć jako używanie odżywki, odżywka to też condition)",noun
+39,outstanding,wybitny,adjective
+40,drought,susza,noun
+41,thus,a zatem,adverb
+42,overtake,przejąć,verb
+43,cellist,wiolonczelista? (cello to wiolonczela),noun
+44,eventually,ostatecznie,adverb
+45,prefix,przedrostek,noun/verb
+46,altogether,ogółem,adverb
+47,fairly,całkiem,adverb
+48,casual,nieformalny,adjective
+49,suntan,opalenizna (raczej się spotykałam z po prostu tan),noun
+50,custom,zwyczaj,noun
+51,willing,chętny,adjective
+52,anxiety,lęk,noun
+53,kettle,czajnik,noun
+54,clerk,sprzedawca,noun
+55,vacant,pusty,adjective
+56,junction,skrzyżowanie,noun
+57,soil,gleba,noun
+58,roughly,około,adverb
+59,litter,śmieci,noun/verb
+60,punctuation,interpunkcja,noun
+61,oar,wiosło,noun
+62,harsh,ostry,adjective
+63,consequence,konsekwencja,noun
+64,significant,istotny,adjective
+65,bridegroom,pan młody,noun
+66,conjunction,spójnik,noun
+67,chopsticks,pałeczki,noun
+68,attendance,obecność,noun
+69,emphasize,podkreślić,verb
+70,several,kilka,determiner
+71,loads,masa,noun
+72,provide,dostarczać,verb
+73,pattern,wzór,noun
+74,cast,rzucać (np cień albo czar),verb
+75,comfort,wygoda,noun
+76,labour,ciężka praca,noun
+77,encourage,zachęcać,verb
+78,wrap,owinąć,verb
+79,gradual,stopniowy,adjective
+80,chief,szef,noun/adjective
+81,variety,różnorodność,noun
+82,engagement,zaręczyny,noun
+83,seek,szukać,verb
+84,capable,zdolny (do czegoś),adjective
+85,puncture,nakłucie,noun/verb
+86,income,dochód,noun
+87,tin,puszka,noun
+88,sights,widoki,noun
+89,occur,występować,verb
+90,convert,konwertować,verb
+91,forbid,zabraniać,verb
+92,greenhouse,szklarnia,noun
+93,pleasant,przyjemny,adjective
+94,marvellous,cudowny,adjective
+95,importance,istotność,noun
+96,management,zarządzanie,noun
+97,footpath,chodnik,noun
+98,kindness,dobro,noun
+99,diagram,diagram,noun
+100,weed,chwast,noun
+101,scenery,"sceneria, krajobraz",noun
+102,perform,występować,verb
+103,settle,rostrzygnąć/osiadać,verb
+104,luckily,szczęśliwie,adverb
+105,overseas,zagraniczny,adjective
+106,pronunciation,"wymowa, artykulacja",noun
+107,convenience,wygoda,noun
+108,shepherd,pasterz,noun
+109,aircraft,samolot,noun
+110,recession,recesja,noun
+111,division,podział,noun
+112,strict,surowy,adjective
+113,honour,"honorować, zaszczycać",verb/noun
+114,postgraduate,podyplomowy,adjective/noun
+115,combine,"łączyć, kombinować",verb/noun
+116,overtime,nadgodziny,noun/adverb
+117,getaway,"ucieczka, krótkie wakacje",noun
+118,takeaway,"na wynos, przekąska na wynos",noun
+119,depress,przygnębiać,verb
+120,advance,"postęp, zaliczyć do wyższej klasy",noun/verb
+121,customary,zwyczajowy,adjective
+122,worldwide,światowy,adjective
+123,log,"kłoda, dziennik",noun
+124,current,"obecny, bieżący",adjective/noun
+125,engaged,"zaręczony, zaangażowany",adjective/verb
+126,self,sam,pronoun/noun
+127,transportation,"transport, przewóz",noun
+128,mean,"znaczyć, średnia arytmetyczna",verb/noun
+129,boxing,boks,noun
+130,growth,wzrost,noun
+131,declare,"oświadczać, deklarować",verb
+132,voyage,podróż morska,noun
+133,tiring,męczący,adjective
+134,scale,skala,noun/verb
+135,pole,"biegun, słupek",noun
+136,arts,sztuka,noun
+137,packed,"zapakowany, zatłoczony",adjective
+138,repetition,powtórzenie,noun
+139,dictation,dyktando,noun
+140,bargain,okazja,noun/verb
+141,cassette,kaseta,noun
+142,drop,kropla,noun/verb
+143,induce,wywoływać,verb
+144,voluntary,dobrowolny,adjective
+145,moth,ćma,noun
+146,avenge,pomścić,verb
+147,summit,szczyt,noun
+148,whether,czy,conjunction
+149,engage,angażować,verb
+150,resorting,uciekanie się do,verb/noun
+151,whatever it takes,za wszelką cenę,phrase
+152,actualize,urzeczywistnić,verb
+153,disposal,pozbycie się,noun
+154,interfere,przeszkadzać,verb
+155,brat,bachor,noun
+156,hold back,powstrzymywać,verb
+157,ought,powinno się,modal verb
+158,indulgent,pobłażliwy,adjective
+159,incivilities,nieuprzejmości,noun
+160,lenient,pobłażliwy,adjective
+161,consideration,rozważenie,noun
+162,rather,raczej,adverb
+163,merely,"jedynie, tylko",adverb
+164,drew,"narysować, wyciągnąć",verb
+165,hatred,nienawiść,noun
+166,preside,przewodniczyć,verb
+167,predecessor,poprzednik,noun
+168,exaggerating,przesadzanie,verb
+169,composed,skomponowany,adjective
+170,utilize,wykorzystać,verb
+171,convene,zwołać,verb
+172,splendid,wspaniały,adjective
+173,rein,"wodze, hamować",noun/verb
+174,solely,wyłącznie,adverb
+175,squabble,sprzeczka,noun/verb
+176,differ,różnić się,verb
+177,falsehood,fałsz,noun
+178,assume,zakładać,verb
+179,soaked,przemoczony,adjective
+180,sage,mędrzec,noun/adjective
+181,toward,w kierunku,preposition
+182,enraged,rozwścieczony,adjective
+183,descend,"schodzić, zejście",verb
+184,descendant,potomek,noun
+185,predestined,przeznaczony,adjective
+186,proof,dowód,noun
+187,supreme,najwyższy,adjective
+188,moniker,przydomek,noun
+189,biased,stronniczy,adjective
+190,swathed,zawinięty,adjective
+191,incorporate,włączać,verb
+192,barred,zabroniony,adjective
+193,forsake,porzucać,verb
+194,retrieval,odzyskiwanie,noun
+195,venue,miejsce,noun
+196,reconnoiter,rozpoznać,verb
+197,surpass,przewyższać,verb
+198,fetching,uroczy,adjective
+199,grudge,niechęć,noun
+200,shall,powinien,modal verb
+201,revere,czcić,verb
+202,mere,"zaledwie, jedynie",adverb
+203,nonetheless,niemniej jednak,adverb
+204,persistent,trwały,adjective
+205,leper,trędowaty,noun
+206,tumor,guz,noun
+207,reject,odrzucać,verb
+208,often,często,adverb
+209,revolt,bunt,noun/verb
+210,seduce,uwieść,verb
+211,ambiguous,dwuznaczny,adjective
+212,embrace,uścisk,verb/noun
+213,rid,pozbyć się,verb
+214,assault,atak,noun/verb
+215,petal,płatek,noun
+216,apprehensive,"lękliwy, uporczywy, wytrwały",adjective
+217,bonnet,czapeczka,noun
+218,grief,"smutek, żal",noun
+219,refrain,refren,noun/verb
+220,sober,trzeźwy,adjective
+221,consent,zgoda,noun/verb
+222,bend,zakręt,noun/verb
+223,farther,"dalej, ponadto",adverb
+224,involve,dotyczyć,verb
+225,drag,"ciągnąć, wlec",verb/noun
+226,prosecution,oskarżenie,noun
+227,testimony,"świadectwo, zeznanie",noun
+228,encounter,"spotkanie, pojedynek, starcie",noun/verb
+229,snuggle,tulić się,verb
+230,compassion,współczucie,noun
+231,tend,zmierzać,verb
+232,define,definiować,verb
+233,plurality,mnogość,noun
+234,impoverish,zubożyć,verb
+235,among,pośród,preposition
+236,wherewithal,potrzebne środki,noun
+237,entice,wabić,verb
+238,dent,wygięcie,noun/verb
+239,bloom,kwiat,noun/verb
+240,diversity,różnorodność,noun
+241,genocide,ludobójstwo,noun
+242,carnage,rzeź,noun
+243,slaughter,"ubój, wymordowywanie, pogrom",noun/verb
+244,atrocity,okrócieństwo,noun
+245,set off,wyruszać,phrasal verb
+246,imminent,"bliski, nadciągający, nadchodzący",adjective
+247,upon,na,preposition
+248,prophetic,proroczy,adjective
+249,beyond,poza (ogrodzeniem),preposition
+250,predict,przewidywać,verb
+251,bloodshed,rozlew krwii,noun
+252,encompassed,Objęte,verb
+253,disrupt,zakłócać,verb
+254,accomplish,ukończyć,verb
+255,commitment,zaangażowanie,noun
+256,insult,zniewaga,noun/verb
+257,despicable,podły,adjective
+258,struggle,walczyć/borykać się,noun/verb
+259,aisle,nawa boczna/przejście,noun
+260,itchy,swędzący,adjective
+261,divide,podzielony,verb/adjective
+262,strayed,zbłąkane,adjective
+263,boundary,rubież/granica,noun
+264,decay,rozkład/rozpad/zanikać/próchnieć,noun/verb
+265,embers,żar,noun
+266,glimpse,dojrzeć/ujrzeć,noun/verb
+267,inner,wewnętrzny,adjective
+268,sleepwalking,lunatykowanie,noun
+269,unfurle,rozpostrzeć się,verb
+270,altitude,wzniesienie/wyżyna,noun
+271,lackey,lokaj,noun
+272,sloop,slup,noun
+273,anchor,kotwica,noun/verb
+274,acquired,nabyty,adjective
+275,desolate,opustoszały,adjective
+276,exile,wygnanie,noun/verb
+277,stake,stawka,noun
+278,chart,"wykres, mapa",noun/verb
+279,bound,"granica, skok",noun/verb
+280,vermin,"szkodniki, robactwo",noun
+281,lad,chłopak,noun
+282,string up,powiesić,verb
+283,haywire,pogmatwany,adjective
+284,arise,powstać,verb
+285,exaggerating,wyolbrzymiać,verb
+286,inane,głupkowaty,adjective
+287,mankind,ludzkość,noun
+288,preach,kazanie,verb
+289,underestimate,nie doceniać,verb
+290,beckons,kiwać,verb
+291,gloomy,ponury,adjective
+292,intimidate,zastraszyć,verb
+293,infidel,niewierny,noun/adjective
+294,reference,odniesienie,noun
+295,perpetrator,sprawca,noun
+296,zigzagging,zygzakowanie,verb/adjective
+297,alleged,rzekomy,adjective
+298,detention,aresztowanie,noun
+299,implicated,zamieszany,adjective/verb
+300,according,według,preposition
+301,deaf,głuchy,adjective
+302,burden,obciążenie,noun
+303,miserable,"nieszczęśliwy, nędzny",adjective
+304,subconscious,podświadomy,adjective
+305,unbearable,nie do zniesienia,adjective
+306,yawn,ziewać,verb
+307,contagious,zaraźliwy,adjective
+308,get rid,pozbyć się,verb
+309,schedule,harmonogram,noun
+310,overdo,"przedobrzyć, przesadzić z czymś",verb
+311,whack,walnięcie,noun
+312,appeal,apelujący,adjective
+313,ephemeral,"efemeryczny, krótkotrwały ",adjective
+314,munted,oszołomiony,adjective
+315,oversea,za granicą,adverb
+316,unpleasant,nieprzyjemny,adjective
+317,aware,świadomy,adjective
+318,gullible,łatwowierny,adjective
+319,tempt,kusić,verb
+320,survey,ankieta,noun
+321,bother,zawracać głowę,verb
+322,chilly,chłodny,adjective
+323,owe,zawdzięczać,verb
+324,compassionate,współczujący,adjective
+325,chamberlains,"szambelan, kamerdyner",noun
+326,viral,wirusowy,adjective
+327,reveal,odsłonić,verb
+328,bunch,"wiązka, grono",noun
+329,poll,głosowanie,noun
+330,jeopardy,niebezpieczeństwo,noun
+331,retrieve,odzyskać,verb
+332,although,"mimo że, chociaż",conjunction
+333,enlist,zwerbować,verb
+334,scanty,ubogi,adjective
+335,strap,pasek,noun
+336,vigilantes,czujni,noun
+337,affair,romans,noun
+338,thirst,pragnienie,noun
+339,scattered,porozrzucany,adjective
+340,certain,pewien (czegoś),adjective
+341,decent,przyzwoity,adjective
+342,despite,pomimo,preposition
+343,slope,"stok, nachylenie",noun
+344,slope,"praca, robocizna",noun
+345,gotta,musieć,verb
+346,plunder,plądrowanie,noun
+347,obscure,"niejasny, niezrozumiały, mroczny",adjective
+348,whip,bat,noun
+349,fetch,sprowadzać,verb
+350,humankind,ludzkość,noun
+351,kindred,"pokrewny, krewni",adjective
+352,shrunk,"kurczyć, kurczyć się",verb
+353,ferocity,"dzikość, okrucieństwo",noun
+354,distinguished,"wybitny, wytworny",adjective
+355,malice,"zła wola, złośliwość",noun
+356,gloom,mrok,noun
+357,crept,skradał się (creep),verb
+358,rumor,plotka,noun
+359,perceive,dostrzec,verb
+360,intend,zamierzać,verb
+361,humming,nucenie,noun
+362,eager,"żądny, chętny",adjective
+363,grin,szczerzyć zęby w uśmiechu,verb/noun
+364,require,wymagać,verb
+365,reign,królować,verb/noun
+366,asset,obiekt,noun
+367,develop,rozwijać,verb
+368,ridicule,wyszydzać,verb/noun
+369,deride,wyszydzać,verb
+370,mercifully,miłosiernie,adverb
+371,muss,zamieszanie,noun/verb
+372,uptight,napięty,adjective
+373,gaga,umysłowo zdezorientowany z powodu nadmiernego podekscytowania,adjective/noun
+374,to exact,żądać i uzyskiwać siłą,verb
+375,unobtrusive,nie rzucający się w oczy,adjective
+376,encased,"zamknięte, przykryte obudową",adjective
+377,brass,hajs,noun
+378,draft card,wezwanie na wojne,noun
+379,toothpick,wykałaczka,noun
+380,to chain,zapiąć łańcuchem,verb
+381,ludicrous,"tak głupie, że aż warte wyśmiania, absurd",adjective
+382,licorice,lukrecja,noun
+383,treat,"poczęstunek, wielka przyjemność",noun
+384,abruptly,gwałtownie,adverb
+385,soot,sadza,noun
+386,dropout,porzucić szkołę,noun
+387,ridiculous,ekstrawagancko abawny,adjective
+388,soak,moczyć,verb
+389,aleck,Alek,noun
+390,approach,podejście,"noun, verb"
+391,hassle,kłopot,noun
+392,sophisticated,wyrafinowany,adjective
+393,renowned,znany z (czegoś),adjective
+394,prowess,"waleczność, dzielność",noun
+395,tonsil,migdałek,noun
+396,grope,iść po omacku,verb
+397,lean,opierać się,verb
+398,brush,otrzeć,verb
+399,dispatcher,dyspozytor,noun
+400,bystander,"przechodzeń, widz",noun
+401,precinct,"okręg, okolica",noun
+402,relate,odnosić się,verb
+403,curfew,godzina policyjna,noun
+404,lung,płuco,noun
+405,disenfranchised,pozbawieni praw,adjective
+406,hunky-dory,klawo,adjective
+407,errand,zadanie,noun
+408,lingerie,bielizna damska,noun
+409,wither,uschnąć,verb
+410,debt,dług,noun
+411,condemned,skazany,adjective
+412,disposable,jednorazowy,adjective
+413,remorse,"skrucha, żal",noun
+414,temptation,pokusa,noun
+415,circumferentially,obwodowo,adverb
+416,reinforcement,wzmocnienie,noun
+417,ply,warstwa,noun
+418,carcass,osnowa,noun
+419,issue,zagadnienie,noun
+420,principal,główny,adjective
+421,denial,odmowa,noun
+422,overwhelming,przytłaczający,adjective
+423,abuse,nadużycie,noun
+424,sole,jedyny,adjective
+425,throughout,poprzez,preposition
+426,wary,ostrożny,adjective
+427,shakedown,zażądanie spłaty,noun
+428,covert,ukryty/potajemny,adjective
+429,unearth,wykopać,verb
+430,excavation,wykop (przy wykopaliskach),noun
+431,evaluate,oceniać,verb
+432,be in charge,być odpowiedzialnym za…,phrase
+433,spectre,widmo,noun
+434,expose,uwidocznić/eksponować,verb
+435,revoke,odwołać,verb
+436,ascension,wniebowstąpienie,noun
+437,particular,"szczególny, konkretny, specyficzny",adjective
+438,concern,dotyczyć,verb
+439,further,dalej,adverb
+440,recon,zwiad,noun
+441,allegation,zarzut,noun
+442,sincere,szczery,adjective
+443,blight,zaraza roślinna,noun
+444,either,"conjuction - bądź, adverb - też, pronoun - obaj",conjunction
+445,tissue,chusteczka papierowa,noun
+446,sue,pozwać/zaskarżyć,verb
+447,resemble,przypominać (kogoś z wyglądu),verb
+448,hostage,zakładnik,noun
+449,gaze,wzrok,noun/verb
+450,vigilant,czujny,adjective
+451,dais,podium,noun
+452,extinguish,gasić,verb
+453,urge,nalegać/namawiać/popęd [a strong desire or impulse],verb/noun
+454,bounty,chojność/premia,noun
+455,kindle,rozpalać/rozżarzać,verb
+456,ascend,wspiąć się,verb
+457,beneath,pod,preposition
+458,silhouette,sylwetka,noun
+459,veer,zmieniać kierunek,verb
+460,due,"przymiotnik: 1 słuszny/należny 2 zaplanowany, przysłówek: 1 dokładnie/bezpośrednio, rzeczownik: 1 opłata",adjective/adverb/noun
+461,artisan,rzemieślnik,noun
+462,relief,ulga,noun
+463,exertion,wysiłek,noun
+464,loom,wynurzać się z mgły,verb/noun
+465,brisk,energetyczny,adjective
+466,provision,prowiant/zaopatrzenie,noun
+467,sustenance,wyżywienie,noun
+468,starched,nakrochmalony,adjective
+469,mildew,pleśń,noun
+470,examine,badać,verb
+471,abroad,za granicę,adverb
+472,unwise,niemądrze,adjective
+473,nod,skinienie/ukłon,noun/verb
+474,quaint,osobliwy/ciekawy/oryginalny,adjective
+475,narrow,wąski,adjective
+476,spill,wylać się/rozlać się,verb/noun
+477,sullen,ponury,adjective
+478,stroll,przechadzka,verb/noun
+479,unsettle,zaniepokoić,verb
+480,dense,gęsty,adjective
+481,crude,w surowym staanie,adjective
+482,prickle,ukłucie/kłuć,noun/verb
+483,hemmed,osaczony,adjective/verb
+484,hampered,skrępowany,adjective/verb
+485,courtyard,dziedziniec,noun
+486,quarry,ofiara/zdobycz,noun
+487,emerge, pojawić się,verb
+488,shimmer,połyskiwać/lśnić/migotać,verb/noun
+489,squat,przysiad/przysadzisty,adjective/verb
+490,neat,schludny/czysty/staranny/gustowny,adjective
+491,frown,marszczyć się,verb/noun
+492,fancy,fantazyjny,adjective
+493,thoroughfare,przejście/przejazd,noun
+494,overcast,pochmurny,adjective
+495,hiss,syczenie,noun/verb
+496,abrupt,nagły,adjective
+497,sudden,nagły/niespodziewany,adjective
+498,suddenly,niespodziewanie,adverb
+499,peer,przyglądać się bacznie,verb/noun
+500,flicker,migotanie,verb/noun
+501,lodging room,pokój do wynajęcia,noun
+502,compartment,przedział,noun
+503,dwelling,mieszkanie,noun
+504,modest,skromny,adjective
+505,slate,dachówka łupkowa,noun
+506,weary,zmęczony,adjective/verb
+507,underneath,pod spodem,preposition
+508,reckon,sądzić/liczyć się/zsumować,verb
+509,reverie,zaduma,noun
+510,tint,odcień,noun/verb
+511,tinting,barwienie się,noun
+512,descend,opadać/zniżać się,verb
+513,glance,spoglądać,verb/noun
+514,recede,oddalać się,verb
+515,dough,forsa,noun
+516,sip,łyk,noun/verb
+517,instead,zamiast,adverb
+518,proper,właściwy,adjective
+519,bustling,gwar,adjective
+520,hustle,pośpiech,noun/verb
+521,confide,zwierzać się,verb
+522,amused,rozbawiony,adjective
+523,rattle,grzechotka/grzechotać,noun/verb
+524,attitude,nastawienie/postawa,noun
+525,demeanor,postawa,noun
+526,lax,luźny/swobodny/niedbały,adjective
+527,recently,niedawno,adverb
+528,self-inflicted,samookaleczenie,adjective
+529,inflicted,okaleczenie,verb/adjective
+530,solitude,samotność/samotnia,noun
+531,though,"chociaż/nawet jeśli/pomimo, że",conjunction
+532,reluctant,niechętny,adjective
+533,however,jednak,adverb
+534,Devoid,pozbawiony czegoś,adjective
+535,void,unieważniać,noun
+536,coruscate,skrzyć/iskrzyć,verb
+537,rampant,szerzący się/nieokiełznany,adjective
+538,Superstition,przesąd/zabobobn,noun
+539,rely,polegać (na),verb
+540,ailing,schorowany,adjective
+541,excursion,wycieczka,noun
+542,motor couch,autokar,noun
+543,put up with,znosić,verb
+544,at least,przynajmniej/co najmniej,adverb
+545,drawn to,pociągnięty do ,verb phrase
+546,crest,szczyt,noun
+547,drop off,zasnąć,phrasal verb
+548,consequently,wskutek tego,adverb
+549,unify,jednoczyć,verb
+550,constituency,"okręg wyborczy, wyborcy",noun
+551,quarrel,"kłótnia, kłócić się",noun
+552,accurate,dokładny/precyzyjny,adjective
+553,decimal,dziesiętny,adjective
+554,proverb,przysłowie,noun
+555,principle,zasada/reguła,noun
+556,ashamed,zawstydzony,adjective
+557,steep,stromy/gwałtowny,adjective
+558,minor,drobny/nieletni/drugi fakultet,adjective/noun
+559,aptitude,zdolność,noun
+560,rink,lodowisko,noun
+561,frequency,częstotliwość,noun
+562,erase,zmazać,verb
+563,highlighter,zakreślacz,noun
+564,promotion,awans/promocja/propagowanie,noun
+565,decrease,zmniejszać (się),verb
+566,merit,zasługa/zasłużyć się,noun/verb
+567,amusement,rozrywka,noun
+568,palm,palma/dłoń,noun
+569,unification,zjednoczenie/ujednolicenie/unifikacja,noun
+570,term,semestr/termin,noun
+571,misunderstand,żle zrozumieć,verb
+572,sweep,zamiatać/omiatać,verb
+573,regarding,odnośnie/co się tyczy,preposition
+574,surround,otaczać/opasywać,verb
+575,development,rozwój,noun
+576,belief,wiara,noun
+577,dump,śmietnisko/skład/sterta,noun
+578,dump,kafelki/płytki,noun
+579,electrician,elektryk,noun
+580,tick,zaznaczenie/odchaczać/kleszcz,noun/verb
+581,whereas,podczas gdy/natomiast,conjunction
+582,slice,plasterek/kromka,noun/verb
+583,unforgettable,niezapomniany,adjective
+584,artificial,sztyczny,adjective
+585,peel,skórka/obierać/łuszczyć się,noun/verb
+586,saying,powiedzenie,noun
+587,apart,oddalone od siebie/osobno,adverb/adjective
+588,sack,wyrzucić z pracy/worek,noun/verb
+589,fare,opłata,noun
+590,significant,istotny/znaczący/ważny,adjective
+591,telly,telewizja,Noun
+592,overcome,przezwyciężyć,Verb
+593,sigh,westchnąć/westchnienie,Verb
+594,convince,przekonywać/namawiać,Verb
+595,refer,odwoływać się (do)/odnosić się/zwracać się,Verb
+596,faint,słaby/zemdleć,Adjective/Verb
+597,runway,pas startowy/bieżnia,Noun
+598,attraction,przyciąganie/pociąg/atrakcja,Noun
+599,properly,odpowiednio/właściwie,Adverb
+600,affect,wpływać na/poruszać,verb
+601,merry,wesoły/miły,adjective
+602,conductor,konduktor/przewodnik elektryczny,noun
+603,facilities,udogodnienia/sprzęt/obiekty,noun
+604,confusion,zamieszanie,noun
+605,publisher,wydawca,noun
+606,vowel,samogłoska,noun
+607,shelter,schronienie,noun
+608,contribute,wnieść/przyczynić się,verb
+609,counsellor,doradca/adwokat,noun
+610,delight,zachwyt/zachwycać,noun/verb
+611,tear,drzeć/łza,noun/verb
+612,trumpet,trąbka,noun
+613,depart,wyjeżdżać/odjeżdżać/odstępować,verb
+614,chick,pisklę/kurczątko,noun
+615,granny,babcia,noun
+616,stove,piec/kuchenka,noun
+617,bridegroom,pan młody,noun
+618,roast,pieczeń,noun
+619,timetable,rozkład jazdy/rozkład zajęć,noun
+620,foal,źrebię/oźrebić się,noun/verb
+621,hen,kura,noun
+622,fortnight,dwa tygodnie,noun
+623,sneeze,kichać/kichnięcie,noun/verb
+624,pardon,ułaskawiać/przebaczać/ułaskawienie,noun/verb
+625,petrol,benzyna,noun
+626,piglet,prosiak,noun
+627,dreadful,straszne,adjective
+628,even,"przysłówek - nawet, jeszcze / przymiotnik: parzysty, równy",adjective
+629,calf,"łydka, cielę",noun
+630,mend,naprawiać,verb
+631,keen,"chętny, zapalony, ostry",adjective
+632,thick,"gruby, gęsty / grubo, gęsto",adjective
+633,plaster,gips/gipsować/oklejać/tynkować,noun/verb
+634,interview,rozmowa kwalifikacyjna/wywiad/przesłuchanie/przeprowadzać wywaid,noun/verb
+635,honeymoon,miesiąc miodowy,noun
+636,bergain,okazja/targować się,noun/verb
+637,pitch,wysokość tonu,noun
+638,waste,strata/odpady/marnować,noun/verb
+639,blow,cios/wiać/dmuchać,noun/verb
+640,niece,siostrzenica/bratanica,noun
+641,niece,siostrzenica/bratanica,noun
+642,conjunction,spójnik,noun
+643,saucepan,rondel,noun
+644,remote,odległy/daleki,adjective
+645,pop,przebijać/pękać z trzaskiem/pop,verb/noun
+646,adverb,przysłówek,noun
+647,stand,stać/opinia/znosić/postawić/podstawka,noun/verb
+648,along,"wzdłuż/naprzód/z, ze sobą",adverb/preposition
+649,dial,tarcza telefonu czy zegara/wybierać numer telefonu,noun/verb
+650,carrier,przewoźnik/nosiciel/nosidełko,noun
+651,razor,maszynka do golenia/brzytwa,noun
+652,rucksack,plecak,noun
+653,rug,dywan/dywanik,noun
+654,checkout,wymeldowanie/kasa,noun
+655,untidy,nieuporządkowany/niestaranny,adjective
+656,comb,czesać/grzebień,verb/noun
+657,capital,stolica/kapitał,noun
+658,folk,lud/ludowy,noun/adjective
+659,reserve,groch,noun/verb
+660,reserve,rezerwa/powściągliwość/rezerwowy/rezerwować,noun/adjective
+661,freezer,zamrażarka,noun
+662,clarinet,klarnet,noun
+663,receipt,paragon/pokwitowanie,noun
+664,spelling,pisownia,noun
+665,fond,lubić/zamiłowany,adjective/verb
+666,crayon,kredka,noun
+667,groom,pan młody/stajenny/oporządzić/wyszczotkować/dbać o siebie,noun/verb
+668,traffic,ruch uliczny,noun
+669,tape,kaseta/taśma/nagrywać/przyklejać za pomocą taśmy,noun/verb
+670,accommodation,zakwaterowanie,noun
+671,takeoff,start/nagły sukces,noun
+672,leap,skok/skakać,noun/verb
+673,conservation,ochrona/zachowanie,noun
+674,nephew,siostrzeniec/bratanek,noun
+675,cupboard,kredens/szafka,noun
+676,cottage,domek/chatka,noun
+677,noticeboard,tablica ogłoszeń,noun
+678,eraser,gumka do mazania,noun
+679,chalk,kreda,noun
+680,sink,zlew/tonąć/opadać,noun/verb
+681,bride,panna młoda,noun
+682,leisure,czas wolny,noun
+683,course,"kurs/bieg,tok/danie",noun
+684,insufficient,niewystarczający,adjective
+685,underhanded,podstępny,adjective
+686,bond,więź,noun
+687,scrutiny,badanie/lustracja,noun
+688,hollow,"pusty, wydrążony",adjective/noun
+689,backlash,"reakcja / negatywny odzew, luz międzyzębowy",noun
+690,merge,łączyć,verb
+691,though,chociaż,conjunction
+692,equation,równanie,noun
+693,indicator,wskaźnik,noun
+694,variable,zmienna,noun/adjective
+695,concurrent,równoległy,adjective
+696,simultaneous,równoczesny,adjective
+697,latest,najnowszy,adjective
+698,nevertheless,niemniej jednak,adverb
+699,rigid,sztywny,adjective
+700,inertial force,siła bezwładności,noun
+701,amiss,"źle, nie tak",adverb
+702,relish,smakować,verb
+703,dwindle,"maleć, zmniejszać się, niknąć itp.",verb
+704,heirloom,"dziedzictwo, scheda",noun
+705,basin,dorzecze,noun
+706,breakthrough,przełom,noun
+707,significant,istotny,adjective
+708,furthermore,ponadto,adverb
+709,albeit,aczkolwiek,conjunction
+710,vary,"zmieniać soię, różnić się",verb
+711,concrete,"konkretny, betonowy, beton, konkret",adjective/noun
+712,rely,"polegać, zaufać",verb
+713,entertainer,komik,noun
+714,terrific,niesamowity,adjective
+715,dally,marudzić,verb
+716,indicate,wskazywać na,verb
+717,unreliable,"niepewny, nieodpowiedzialny (nie można na nim polegać), nierzetelny, niewiarygodny",adjective
+718,drawers,szuflady,noun
+719,answerphone,automatyczna sekretarka,noun
+720,arrangement,"ustalenie, układ, ustawienie",noun
+721,Hebrew,"hebrajski, żydowski",adjective
+722,mist,mgła,noun
+723,approximately,"w przybliżeniu, około",adverb
+724,supply duct,kanał zasilający,noun
+725,baffle,przegroda,noun
+726,hopper,zbiornik,noun
+727,pleat,"plisa, zakładka",noun
+728,recent,"ostatni, niedawny",przymiotnik
+729,castor,rolka,rzeczownik
+730,array,szyk,rzeczownik
+731,lime,wapno,rzeczownik
+732,abrasive,ścierniwo,rzeczownik
+733,shavings,wióry,rzeczownik
+734,handling,obsługiwanie,rzeczownik
+735,alongside,wzdłuż,przyimek
+736,dispose,dysponować,czasownik
+737,foundry,odlewnia,noun
+738,smelter,huta,noun
+739,incineration plant,spalarnia,noun
+740,comprise,zawierać,verb
+741,commissioning,uruchomienie,noun
+742,deliberately,celowo,adverb
+743,intercept,przechwycić,verb
+744,suspended,zawieszony,adjective
+745,attenuation,osłabienie,noun
+746,revise,poprawiać/rewidować,verb
+747,mandatory,obowiązkowy,adjective
+748,due to,wskutek,preposition
+749,subassembly,podzespół,noun
+750,tacking,sczepianie,noun
+751,alter,zmieniać,verb
+752,derived,pochodny,adjective
+753,commodity,towar,noun
+754,overdue,zaległy,adjective
+755,due diligence,należyta staranność,noun
+756,embedded,osadzony,adjective
+757,assign,przydzielać,verb
+758,prior,wcześniejszy,adjective
+759,countersunk screw,śruba z łbem stożkowym (wpuszczana),noun
+760,attenuator,tłumik,noun
+761,tangent,styczny,adjective
+762,interim,tymczasowy,adjective
+763,combustible,palny,adjective
+764,chute,zsyp,noun
+765,adjacent,przylegający,adjective
+766,conduct,przeprowadzić (np. szkolenie),verb
+767,evacuation drills,ćwiczenia ewakuacyjne,noun
+768,plant,zakład,noun
+769,comprehensive,obszerny,adjective
+770,enforcement,egzekwowanie,noun
+771,facility,obiekt,noun
+772,complacency,samozadowolenie,noun
+773,housekeeping,gospodarowanie,noun
+774,dispersed,rozproszony,adjective
+775,related,związany,adjective
+776,convey,"przekazywać, podawać",verb
+777,fine,"drobno, drobny",adjective
+778,suspend,zawieszać,verb
+779,dispersion,"dyspersja, rozproszenie",noun
+780,confinement,"ograniczenie, uwięzienie",noun
+781,combustion,spalanie,noun
+782,distinguish,rozróżniać,verb
+783,deflagration,deflagracja,noun
+784,regardless,bez względu na,adverb
+785,therefore,dlatego,adverb
+786,vast,rozległy,adjective
+787,grind,szlifować,verb
+788,mitigate,łagodzić,verb
+789,compliant,zgodny,adjective
+790,relevant,odpowiedni,adjective
+791,various,różny,adjective
+792,therein,w nim,adverb
+793,assess,"oceniać, oszacować",verb
+794,batch number,numer partii,noun
+795,short circuit,zwarcie,noun
+796,prescribe,przepisać,verb
+797,grounding,uziemienie,noun
+798,earthing,uziemienie,noun
+799,across,przez,preposition
+800,discharge,wyładowanie,noun
+801,intended,zamierzony,adjective
+802,interior,wnętrze,noun
+803,inadvertently,nieumyślnie,adverb
+804,orifice,zwężka,noun
+805,wire tray,korytko kablowe,noun
+806,junction box,skrzynka rozdzielcza,noun
+807,cable gland,przepust kablowy,noun
+808,requirement,wymaganie,noun
+809,malfunction,awaria,noun
+810,adjusted to,dostosowany do,adjective
+811,threshold,próg,noun
+812,concentration,stężenie,noun
+813,sufficient,wystarczający,adjective
+814,abrasion,przetarcie,noun
+815,apparatus,aparatura,noun
+816,ultrasonics,ultradźwięki,noun
+817,thermal,termiczny,adjective
+818,debris,odłamki,noun
+819,apart from,poza,preposition
+820,necessary,niezbędny,adjective
+821,assumption,założenie,noun
+822,initial,wstępny,adjective
+823,remark,uwaga,noun
+824,alignment,wyrównanie,noun
+825,yield,wydajność,noun
+826,cunning,podstępny,adjective
+827,tremble,drżeć,verb
+828,mutual,wzajemne,adjective
+829,cumbersome,nieporęczny,adjective
+830,span,rozpiętość,noun
+831,literal,dosłowny,adjective
+832,ongoing,bieżący,adjective
+833,yield stress,granica plastyczności,noun
+834,tensile modulus of elasticity,moduł plastyczności,noun
+835,transition,przejściówka,noun
+836,permeability,przepuszczalność,noun
+837,node,"węzeł, punkt węzłowy",noun
+838,chamfer,"ścięcie, sfazowanie",noun
+839,enclosed,w załączeniu,adjective
+840,noncompliant,niezgodny,adjective
+841,parse,analizować,verb
+842,phishing,wyłudzanie informacji,noun
+843,tentative,niepewny,adjective
+844,inquiries,zapytania,noun
+845,draught,"projekt, szkic",noun
+846,intermittent,przerywany,adjective
+847,ledger,przypieczony,noun
+848,ledger,księga główna,noun
+849,remittance,przelew,noun
+850,recipient,odbiorca,noun
+851,subliminal,podświadomy,adjective
+852,prerequisites,warunki wstępne,noun
+853,strive,starać się,verb
+854,purpose,zamiar,noun
+855,thorough,dokładny,adjective
+856,preliminary,wstępny,adjective
+857,agenda,program,noun
+858,credentials,kwalifikacje,noun
+859,clogging,zapychanie,noun
+860,gland,dławnica,noun
+861,tipping point,punkt zwrotny,noun
+862,callous,"stwardniały, nieczuły",adjective
+863,steadfast,niezłomny,adjective
+864,as well,także,adverb
+865,impersonating,podszywanie się,verb
+866,deducted,odliczony,adjective
+867,platen,płyta dociskowa,noun
+868,embed,osadzać,verb
+869,sustainability,zrównoważony rozwój,noun
+870,tangible,namacalny,adjective
+871,foundation,"fundacja, podstawa, założenie, podkład",noun
+872,stakeholder,interesariusz,noun
+873,commit,"popełniać, angażować",verb
+874,accordingly,odpowiednio,adverb
+875,align,wyrównywać,verb
+876,accordance,zgodność,noun
+877,sustainability approach,podejście do zrównoważonego rozwoju,noun
+878,direct,bezpośredni,adjective
+879,indirect,pośredni,adjective
+880,pertaining,typowy dla,adjective
+881,reap,zbierać (żniwa),verb
+882,distinct,"odrębny, wyraźny",adjective
+883,framework,struktura,noun
+884,handed over,przekazany,verb
+885,hand over,oddać,verb
+886,quantifiable,"policzalne, wymierne",adjective
+887,allocation,przydział,noun
+888,phaseout,wycofywanie,noun
+889,on behalf,w imieniu,preposition
+890,contamination,zanieczyszczenie,noun
+891,incur,ponieść,verb
+892,incentive,"zachęta, bodziec",noun
+893,acquisition,nabycie,noun
+894,freight,fracht/ładunek,noun
+895,coarse,gruboziarnisty,adjective
+896,shot blasting,śrutowanie,noun
+897,obsolete,przestarzały,adjective
+898,beneficial,korzystny,adjective
+899,gust,podmuch wiatru,noun
+900,brief,"krótki, zwięzły",adjective
+901,within,"przyimek - w ciągu, w zasięgu / przysłówek - wewnątrz",preposition
+902,entity,podmiot,noun
+903,ruse,podstęp,noun
+904,imbue,nasycać,verb
+905,solicited,namawiany,adjective
+906,unsolicited,dobrowolny,adjective
+907,compromised,naruszane,adjective
+908,grid,krata,noun
+909,manner,sposób,noun
+910,evaluation,ocena,noun
+911,intertwined,przeplatany,adjective
+912,lattice,krata,noun
+913,buckling,wyboczenie,noun
+914,impervious ,nieprzenikalny,adjective
+915,susceptible,podatny,adjective
+916,concrete,beton,noun/adjective
+917,transverse,poprzeczny,adjective
+918,torsion,skręcanie,noun
+919,isosceles,równoramienny,adjective
+920,sheer,prostopadły,adjective
+921,longitude,długość geograficzna,noun
+922,latitude,szerokość geograficzna,noun
+923,gale,wichura,noun
+924,thoroughly,całkowicie,adverb
+925,scales,waga (do ważenia),noun
+926,adjustment,dostosowanie,noun
+927,immutable,niezmienny,adjective
+928,amend,poprawiać,verb
+929,retain,zachować,verb
+930,omit,pomijać,verb
+931,upstream,"pod prąd, powyżej",adverb
+932,verbose,gadatliwy,adjective
+933,least,mniej,adjective/adverb
+934,even,parzysta,adjective
+935,odd,nieparzysta,adjective
+936,obstacle,przeszkoda,noun
+937,flaunt,afiszować się,verb
+938,flabbergast,oszołomić,verb
+939,flattering,pochlebny,adjective
+940,foe,"wróg, przeciwnik",noun
+941,fiddle,"grać na skrzypcach, bawić się czymś bezmyślnie",verb
+942,notorious,notoryczny,adjective
+943,prominent,znaczący,adjective
+944,conspicuous,rzucający się w oczy,adjective
+945,crude oil,ropa naftowa,noun
+946,fortnight,dwa tygodnie,noun
+947,undergo,poddawać się (metamorfozie),verb
+948,culprit,"winowajca, sprawca, winny",noun
+949,concealment,ukrycie,noun
+950,bead,"listwa, koralik",noun
+951,unintelligible,niezrozumiały,adjective
+952,presumably,prawdopodobnie,adverb
+953,vanity,próżność,noun
+954,implicit,"domniemany, bezwarunkowy",adjective
+955,notorious,notoryczny,adjective
+956,implicitly,"domyślnie, bez zastrzeżeń, niejawnie",adverb
+957,association,"stowarzyszenie, związek, skojarzenie",noun
+958,preserve,"zachować, utrzymywać",verb
+959,comprehensive,"wyczerpujący, wszechstronny, obszerny",adjective
+960,hence,w związku z tym,adverb
+961,incest,kazirodztwo,noun
+962,stance,postawa,noun
+963,curfew,cisza nocna,noun
+964,twitch,"rzeczownik - drganie, skurcz / czasownik - drgać",noun/verb
+965,comma,przecinek,noun
+966,as well,również,adverb
+967,plot,"wykres, działka, fabuła",noun
+968,excess,nadmiar,noun/adjective
+969,redundant,zbędny,adjective
+970,terminate,skończyć,verb
+971,solicit,zabiegać,verb
+972,deception,oszustwo,noun
+973,fraud,oszustwo,noun
+974,breach,naruszać,verb/noun
+975,termination,zakończenie,noun
+976,liable,podatny,adjective
+977,diligence,pracowitość,noun
+978,comply,przestrzegać,verb
+979,therefore,w związku z tym,adverb
+980,applicable,odpowiedni,adjective
+981,excessive,nadmierny,adjective
+982,undisclosed,nieujawnione,adjective
+983,establish,ustanawiać,verb
+984,decent,przyzwoity,adjective
+985,interchangeably,zamiennie,adverb
+986,prompt,podpowiedź,noun/verb
+987,scrape,zeskrobać,verb/noun
+988,divulge,ujawnić,verb
+989,parenthesis,nawias,noun
+990,primary,podstawowy,adjective
+991,testimonials,referencje,noun
+992,cache,pamięć podręczna,noun
+993,thoroughly,gruntownie,adverb
+994,assessment,ocena,noun
+995,given that,zakładając że,conjunction
+996,explicit,wyraźny,adjective
+997,Posh,Wysublimowany (w mowie),adjective
