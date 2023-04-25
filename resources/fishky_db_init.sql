@@ -149,3 +149,16 @@ IGNORE 1 LINES
 SELECT * FROM word_attributes;
 
 DROP TABLE word_attributes;
+
+-- ---------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.users
+(
+	id INT PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    email VARCHAR(90) UNIQUE,
+    passwd VARCHAR(45),
+	nickname VARCHAR(45) UNIQUE,
+    permission_level INT GENERATED ALWAYS AS (0)
+);
+
+DROP TABLE fishky.users;
