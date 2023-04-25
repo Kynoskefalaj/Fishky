@@ -98,3 +98,29 @@ INSERT INTO frequency (word_id, ranking_position)
 VALUES (997, 'test');
 
 DROP TABLE frequency;
+
+-- -----------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.tags
+(
+	word_id INT PRIMARY KEY,
+    tag_1 VARCHAR(45),
+    tag_2 VARCHAR(45),
+    tag_3 VARCHAR(45),
+    CONSTRAINT FK_word_tags FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
+);
+
+LOAD DATA INFILE
+'C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\fishky_db_tags.csv'
+INTO TABLE fishky.tags
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(word_id, @var1, @var2, @var3)
+SET	tag_1 = NULLIF(@var1, ''),
+    tag_2 = NULLIF(@var2, ''),
+    tag_3 = NULLIF(@var3, '');
+    
+SELECT * FROM tags;
+

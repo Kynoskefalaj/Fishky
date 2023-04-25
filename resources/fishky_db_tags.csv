@@ -1,0 +1,998 @@
+word_id,tag_1,tag_2,tag_3
+1,small,size,amount
+2,skin,protection,summer
+3,science,research,knowledge
+4,time,duration,summary
+5,boring,activity,people
+6,driving,movement,direction
+7,ownership,control,property
+8,edit,change,document
+9,children,care,charity
+10,start,beginning,action
+11,pedestrian,crossing,safety
+12,create,start,set up
+13,shorten,words,language
+14,clothing,sweater,winter
+15,extra,surplus,quantity
+16,seafood,shellfish,cooking
+17,clean,washing,water
+18,health,weight,medical
+19,shape,sharp,object
+20,reasonable,practical,wise
+21,lazy,inactive,unemployed
+22,job,profession,work
+23,exclude,leave out,skip
+24,sewing,textile,material
+25,reprimand,criticize,blame
+26,distribute,give out,information
+27,salary,payment,income
+28,truck,transportation,heavy
+29,bedding,blanket,sleep
+30,importance,meaning,value
+31,moisture,damp,climate
+32,include,attach,contain
+33,crease,bend,flatten
+34,strange,unusual,different
+35,travel,ship,vacation
+36,repair,set,constant
+37,car,storage,travel
+38,training,fitness,air
+39,excellent,remarkable,exceptional
+40,weather,dryness,agriculture
+41,therefore,consequently,so
+42,pass,exceed,surpass
+43,music,instrument,orchestra
+44,finally,ultimately,in the end
+45,word,language,grammar
+46,completely,entirely,in total
+47,somewhat,relatively,reasonably
+48,informal,relaxed,easygoing
+49,tan,skin,summer
+50,tradition,culture,habit
+51,eager,ready,enthusiastic
+52,fear,worry,stress
+53,tea,boiling,hot water
+54,sales,assistant,retail
+55,empty,available,unoccupied
+56,intersection,road,traffic
+57,dirt,earth,ground
+58,approximately,estimate,around
+59,garbage,waste,rubbish
+60,grammar,writing,language
+61,rowing,boat,paddle
+62,severe,rough,tough
+63,result,outcome,effect
+64,important,major,relevant
+65,wedding,groom,marriage
+66,grammar,words,language
+67,food,eating,utensils
+68,presence,participation,school
+69,highlight,stress,accentuate
+70,few,some,multiple
+71,many,quantity,lots
+72,supply,furnish,give
+73,design,shape,model
+74,throw,mold,shape
+75,ease,convenience,relaxation
+76,work,job,employment
+77,motivate,inspire,support
+78,cover,envelope,package
+79,slow,steady,progressive
+80,leader,boss,manager
+81,diversity,assortment,range
+82,commitment,proposal,wedding
+83,search,look for,find
+84,able,competent,skilled
+85,hole,piercing,injury
+86,earnings,salary,revenue
+87,container,metal,can
+88,scenery,landmarks,attractions
+89,happen,take place,appear
+90,transform,change,modify
+91,prohibit,ban,restrict
+92,garden,plants,climate
+93,enjoyable,nice,likable
+94,wonderful,fantastic,amazing
+95,significance,relevance,value
+96,administration,leadership,organization
+97,sidewalk,walkway,pedestrian
+98,benevolence,generosity,compassion
+99,chart,graph,illustration
+100,plant,unwanted,garden
+101,landscape,view,nature
+102,act,present,execute
+103,resolve,establish,decide
+104,fortunately,happily,providentially
+105,foreign,abroad,international
+106,accent,intonation,articulation
+107,ease,comfort,facility
+108,herder,pastor,guardian
+109,airplane,aviation,jet
+110,economic slump,downturn,depression
+111,separation,partition,segmentation
+112,severe,rigid,stern
+113,respect,dignity,esteem
+114,graduate,advanced,higher degree
+115,merge,unite,blend
+116,extra time,additional,extended
+117,escape,vacation,holiday
+118,takeout,fast food,delivery
+119,sadden,discourage,deject
+120,progress,improvement,development
+121,traditional,usual,habitual
+122,global,international,universal
+123,timber,wood,record
+124,present,existing,ongoing
+125,committed,involved,occupied
+126,individual,personal,identity
+127,transit,movement,shipping
+128,average,signify,represent
+129,pugilism,fighting,sport
+130,development,progress,expansion
+131,announce,state,proclaim
+132,journey,trip,sailing
+133,exhausting,fatiguing,draining
+134,size,magnitude,measurement
+135,post,column,pillar
+136,culture,creativity,fine arts
+137,crowded,full,busy
+138,iteration,reiteration,duplication
+139,command,instruction,transcription
+140,deal,discount,sale
+141,tape,recording,audio
+142,drip,bead,globule
+143,cause,provoke,stimulate
+144,willing,optional,unpaid
+145,butterfly,insect,pest
+146,revenge,retaliate,vindicate
+147,peak,top,apex
+148,if,whether or not,regardless
+149,involve,participate,commit
+150,turn to,rely on,use
+151,by all means,at all costs,no matter what
+152,realize,manifest,implement
+153,removal,elimination,discard
+154,disturb,obstruct,hinder
+155,youngster,kid,child
+156,restrain,inhibit,suppress
+157,should,must,supposed to
+158,lenient,permissive,tolerant
+159,impoliteness,rudeness,disrespect
+160,permissive,tolerant,forgiving
+161,thoughtfulness,deliberation,contemplation
+162,instead,quite,fairly
+163,only,just,solely
+164,sketched,depicted,illustrated
+165,animosity,hostility,aversion
+166,chair,conduct,lead
+167,forerunner,ancestor,antecedent
+168,overstating,inflating,magnifying
+169,arranged,orchestrated,created
+170,use,employ,exploit
+171,summon,assemble,call together
+172,magnificent,excellent,superb
+173,control,restrict,limit
+174,only,exclusively,just
+175,argument,dispute,quarrel
+176,vary,diverge,contrast
+177,lie,untruth,deception
+178,presume,suppose,take for granted
+179,drenched,saturated,wet
+180,wise man,philosopher,thinker
+181,in the direction of,facing,heading towards
+182,furious,angry,incensed
+183,go down,lower,descend
+184,offspring,heir,progeny
+185,fated,predetermined,destined
+186,evidence,verification,confirmation
+187,highest,ultimate,paramount
+188,nickname,alias,cognomen
+189,prejudiced,partial,unfair
+190,wrapped,covered,enshrouded
+191,include,integrate,assimilate
+192,prohibited,banned,forbidden
+193,abandon,leave,desert
+194,recovery,retrieval,regain
+195,location,site,place
+196,explore,scout,investigate
+197,exceed,outdo,outstrip
+198,attractive,charming,captivating
+199,resentment,animosity,bitterness
+200,should,ought,must
+201,respect,worship,admiration
+202,only,small,insignificant
+203,however,nevertheless,still
+204,consistent,lasting,continuous
+205,disease,outcast,ostracized
+206,growth,cancer,medical
+207,refuse,decline,deny
+208,frequently,regularly,repeatedly
+209,rebellion,uprising,protest
+210,entice,allure,tempt
+211,unclear,vague,uncertain
+212,hug,hold,accept
+213,remove,eliminate,get rid of
+214,attack,violence,aggression
+215,flower,plant,nature
+216,fearful,anxious,uneasy
+217,hat,headwear,clothing
+218,sadness,mourning,sorrow
+219,chorus,repeat,verse
+220,not drunk,serious,clear-headed
+221,agreement,permission,approval
+222,curve,turn,twist
+223,beyond,further,more
+224,include,entail,concern
+225,pull,haul,tow
+226,accusation,trial,legal
+227,evidence,statement,witness
+228,meeting,confrontation,clash
+229,cuddle,hug,nestle
+230,empathy,sympathy,kindness
+231,aim,head,lead
+232,specify,determine,describe
+233,diversity,variety,multiple
+234,make poor,impoverishment,drain
+235,amidst,between,surrounded by
+236,means,resources,funds
+237,attract,lure,tempt
+238,indentation,damage,mark
+239,flower,blossom,growth
+240,variety,differences,heterogeneity
+241,mass murder,extermination,holocaust
+242,slaughter,massacre,bloodshed
+243,killing,butchery,annihilation
+244,brutality,savagery,violence
+245,start,begin,depart
+246,upcoming,approaching,impending
+247,on,over,atop
+248,predictive,divinatory,visionary
+249,outside,further than,transcending
+250,forecast,anticipate,foresee
+251,killing,violence,massacre
+252,surrounded,included,covered
+253,disturb,interfere,interrupt
+254,achieve,complete,finish
+255,dedication,involvement,obligation
+256,offense,affront,disrespect
+257,contemptible,vile,abhorrent
+258,fight,effort,challenge
+259,corridor,passage,walkway
+260,irritating,scratchy,uncomfortable
+261,separate,split,partition
+262,lost,wander,deviate
+263,border,limit,edge
+264,rot,deterioration,decomposition
+265,hot coal,cinder,ashes
+266,glance,peek,sight
+267,internal,inside,innermost
+268,somnambulism,sleep disorder,walking sleep
+269,unfold,spread out,unroll
+270,height,elevation,mountain
+271,servant,follower,subordinate
+272,boat,vessel,ship
+273,mooring,tie-up,stabilizer
+274,obtained,gained,purchased
+275,deserted,abandoned,barren
+276,banishment,expulsion,deportation
+277,bet,wager,investment
+278,graph,diagram,map
+279,limit,jump,restrict
+280,pests,insects,rodents
+281,boy,young man,youth
+282,hang,suspend,dangle
+283,chaotic,crazy,jumbled
+284,emerge,appear,develop
+285,overstate,overemphasize,amplify
+286,foolish,silly,senseless
+287,humanity,people,society
+288,sermon,teach,advocate
+289,undervalue,underestimate,belittle
+290,signal,gesture,invite
+291,dark,somber,depressing
+292,frighten,scare,bully
+293,non-believer,heretic,skeptic
+294,mention,allusion,citation
+295,culprit,offender,culprit
+296,meandering,winding,twisting
+297,supposed,claimed,rumored
+298,arrest,custody,confinement
+299,involved,connected,incriminated
+300,based on,in accordance,in line with
+301,hearing-impaired,impaired,mute
+302,load,weight,responsibility
+303,unhappy,wretched,pathetic
+304,unconscious,hidden,latent
+305,intolerable,insufferable,excruciating
+306,drowsiness,tiredness,boredom
+307,infectious,communicable,transmissible
+308,dispose,eliminate,remove
+309,timetable,agenda,program
+310,exaggerate,exceed,overindulge
+311,hit,strike,blow
+312,petition,plea,request
+313,short-lived,transitory,fleeting
+314,confused,disoriented,bewildered
+315,abroad,foreign,international
+316,disagreeable,displeasing,nasty
+317,conscious,cognizant,mindful
+318,naive,credulous,trusting
+319,entice,seduce,lure
+320,poll,questionnaire,study
+321,trouble,inconvenience,disturb
+322,cold,cool,frigid
+323,be indebted to,be obligated to,have to pay
+324,empathetic,sympathetic,caring
+325,steward,valet,butler
+326,infectious,contagious,epidemic
+327,disclose,uncover,unveil
+328,cluster,group,collection
+329,election,ballot,vote
+330,danger,risk,hazard
+331,recover,regain,recoup
+332,even though,despite,notwithstanding
+333,recruit,engage,enroll
+334,meager,insufficient,inadequate
+335,belt,band,fastener
+336,watchful,observant,alert
+337,relationship,liaison,love affair
+338,craving,desire,longing
+339,dispersed,disorganized,random
+340,sure,confident,convinced
+341,respectable,appropriate,acceptable
+342,regardless,notwithstanding,in spite of
+343,incline,gradient,slant
+344,work,job,labor
+345,have to,must,need to
+346,pillage,loot,ransack
+347,unclear,ambiguous,uncertain
+348,lash,scourge,thong
+349,bring,retrieve,collect
+350,humanity,mankind,people
+351,related,similar,akin
+352,decrease,diminish,contract
+353,brutality,violence,fierceness
+354,prominent,notable,exceptional
+355,spite,hostility,animosity
+356,darkness,melancholy,depression
+357,sneak,crawl,tipt
+358,gossip,hearsay,speculation
+359,notice,observe,discern
+360,plan,aim,purpose
+361,buzzing,murmuring,droning
+362,enthusiastic,keen,willing
+363,smile,smirk,beam
+364,demand,need,necessitate
+365,rule,govern,dominate
+366,property,possession,belonging
+367,grow,evolve,progress
+368,mock,taunt,deride
+369,ridicule,mock,taunt
+370,compassionately,kindly,sympathetically
+371,confusion,disorder,mess
+372,tense,anxious,stressed
+373,excited,enthusiastic,hyper
+374,demand,require,coerce
+375,inconspicuous,subtle,discreet
+376,covered,enclosed,wrapped
+377,money,cash,funds
+378,conscription,enlistment,military service
+379,dental floss,interdental cleaner,stick
+380,bind,secure,tether
+381,ridiculous,preposterous,laughable
+382,anise,candy,sweet
+383,indulgence,delight,enjoyment
+384,suddenly,unexpectedly,hastily
+385,black carbon,ash,pollution
+386,quit,abandon,give up
+387,absurd,ludicrous,silly
+388,wet,immerse,saturate
+389,jester,prankster,comedian
+390,method,technique,way
+391,trouble,difficulty,annoyance
+392,refined,cultured,elegant
+393,famous,celebrated,well-known
+394,bravery,courage,valor
+395,lymph node,throat,gland
+396,fumble,stumble,search blindly
+397,rest against,incline against,support
+398,scrub,sweep,clean
+399,operator,controller,coordinator
+400,onlooker,observer,spectator
+401,location,division,jurisdiction
+402,connection,association,communication
+403,law,restriction,nighttime
+404,anatomy,respiration,organ
+405,politics,rights,inequality
+406,slang,expression,satisfaction
+407,task,mission,assignment
+408,clothing,underwear,fashion
+409,plant,decline,weaken
+410,finance,obligation,liability
+411,law,judgment,punishment
+412,single-use,convenience,waste
+413,regret,guilt,apology
+414,desire,attraction,temptation
+415,geometry,measurement,direction
+416,strength,support,enhancement
+417,layer,material,thickness
+418,anatomy,framework,structure
+419,topic,problem,subject
+420,main,chief,primary
+421,rejection,refusal,contradiction
+422,intense,powerful,dominant
+423,mistreatment,violence,exploitation
+424,only,single,unique
+425,entire,all,from start to end
+426,cautious,alert,suspicious
+427,extortion,intimidation,illegal
+428,secret,hidden,undercover
+429,dig,discover,uncover
+430,digging,archeology,construction
+431,assessment,analysis,judgement
+432,responsibility,leadership,management
+433,ghost,apparition,phantom
+434,reveal,uncover,disclose
+435,cancel,withdraw,annulment
+436,religion,Christianity,spiritual
+437,specific,individual,distinctive
+438,relate to,interest,worry
+439,additional,more,extended
+440,military,scouting,reconnaissance
+441,accusation,charge,claim
+442,genuine,honest,authentic
+443,disease,decay,destruction
+444,choice,also,two
+445,paper,absorbent,disposable
+446,legal,lawsuit,litigation
+447,similarity,likeness,comparison
+448,captive,prisoner,kidnapping
+449,stare,look,observation
+450,watchful,alert,attentive
+451,platform,stage,lectern
+452,put out,smother,quench
+453,encourage,persuade,prompt
+454,reward,generosity,gift
+455,ignite,fire up,inflame
+456,climb,rise,go up
+457,below,under,underneath
+458,outline,shape,contour
+459,change,shift,turn
+460,owed,expected,payment
+461,craftsman,skilled worker,tradesperson
+462,comfort,ease,relaxation
+463,effort,exertion,strain
+464,emerge,appear,materialize
+465,lively,active,vigorous
+466,supply,stock,equipment
+467,food,nourishment,sustenance
+468,stiff,formal,crisp
+469,fungus,mold,decay
+470,inspect,scrutinize,analyze
+471,overseas,foreign,international
+472,foolish,imprudent,reckless
+473,gesture,signal,indication
+474,charming,picturesque,old-fashioned
+475,slim,thin,tight
+476,leak,overflow,pour
+477,sulky,gloomy,moody
+478,walk,leisurely walk,amble
+479,disturb,agitate,unsettle
+480,thick,compact,crowded
+481,raw,unrefined,primitive
+482,poke,sting,puncture
+483,surrounded,enclosed,trapped
+484,hindered,restricted,impeded
+485,yard,garden,enclosure
+486,prey,game,victim
+487,appear,come out,surface
+488,sparkle,glisten,twinkle
+489,crouch,sit,hunker
+490,tidy,organized,precise
+491,scowl,grimace,pout
+492,elaborate,imaginative,decorative
+493,road,avenue,boulevard
+494,cloudy,gloomy,dim
+495,sizzle,buzz,whiz
+496,sudden,unexpected,hasty
+497,unexpected,abrupt,surprising
+498,unexpectedly,all of a sudden,swiftly
+499,gaze,scrutinize,observe
+500,twinkle,shimmer,flutter
+501,accommodation,rental,hospitality
+502,transportation,train,storage
+503,housing,home,real estate
+504,humble,simple,unassuming
+505,roofing,construction,building
+506,tired,fatigued,exhausted
+507,location,position,bottom
+508,estimation,calculation,evaluation
+509,daydreaming,reflection,contemplation
+510,color,shade,hue
+511,coloring,dyeing,staining
+512,go down,decline,drop
+513,look,glimpse,peek
+514,move away,retreat,withdraw
+515,money,cash,currency
+516,drink,taste,swallow
+517,alternative,substitution,rather than
+518,appropriate,suitable,correct
+519,activity,energy,liveliness
+520,hurry,rush,bustle
+521,trust,reveal,confess
+522,entertained,amused,delighted
+523,noise,shaking,clattering
+524,mindset,opinion,perspective
+525,behavior,manner,conduct
+526,slack,relaxed,careless
+527,lately,recently,newly
+528,harm,injury,self-harm
+529,injury,harm,wound
+530,loneliness,isolation,se
+531,however,despite,although
+532,hesitant,unwilling,resistant
+533,nevertheless,nonetheless,yet
+534,lacking,without,empty
+535,cancel,nullify,invalidate
+536,sparkle,shine,glitter
+537,uncontrolled,widespread,prevailing
+538,belief,myth,tradition
+539,depend,trust,count on
+540,ill,sick,unwell
+541,trip,outing,expedition
+542,bus,coach,tour bus
+543,tolerate,endure,bear
+544,minimum,lowest,smallest
+545,attracted,interested,fascinated
+546,summit,peak,top
+547,fall asleep,doze off,drift off
+548,as a result,therefore,hence
+549,unite,merge,consolidate
+550,district,voters,electorate
+551,argument,dispute,fight
+552,precise,exact,correct
+553,numerical,fractional,decimal
+554,saying,maxim,adage
+555,rule,guideline,doctrine
+556,embarrassed,guilty,remorseful
+557,steepness,incline,gradient
+558,small,minor,insignificant
+559,ability,talent,skill
+560,ice rink,arena,skating rink
+561,rate,occurrence,wavelength
+562,delete,remove,wipe out
+563,marker,pen,highlight
+564,advancement,advertising,publicity
+565,reduce,lower,decline
+566,worth,credit,excellence
+567,entertainment,fun,pleasure
+568,hand,tree,foliage
+569,unity,consolidation,standardization
+570,period,session,semester
+571,misinterpret,misconceive,misread
+572,clean,brush,sweep up
+573,concerning,related,with respect to
+574,encircle,envelop,enclose
+575,progress,growth,advancement
+576,faith,conviction,trust
+577,landfill,garbage dump,rubbish heap
+578,tiles,ceramic,flooring
+579,electrician,wireman,electrical contractor
+580,check mark,tick off,mark off
+581,while,although,but
+582,piece,portion,cut
+583,memorable,lasting,remarkable
+584,synthetic,fake,man-made
+585,skin,remove,strip
+586,proverb,aphorism,maxim
+587,separate,distant,isolated
+588,dismiss,fire,bag
+589,fee,charge,price
+590,important,notable,meaningful
+591,TV,television,broadcasting
+592,conquer,defeat,surpass
+593,exhale,breathe out,moan
+594,persuade,influence,talk into
+595,allude,mention,relate
+596,weak,dizzy,light-headed
+597,airstrip,tarmac,taxiway
+598,draw,charm,allure
+599,correctly,appropriately,suitably
+600,influence,impact,alter
+601,joyful,happy,cheerful
+602,guide,leader,controller
+603,amenities,equipment,infrastructure
+604,chaos,disorder,bewilderment
+605,editor,printer,press
+606,phoneme,speech,language
+607,refuge,sanctuary,haven
+608,donate,participate,give
+609,advisor,consultant,therapist
+610,joy,pleasure,happiness
+611,rip,teardrop,shred
+612,brass instrument,music,jazz
+613,leave,go,exit
+614,baby bird,young chicken,offspring
+615,grandmother,elderly,senior citizen
+616,oven,cooker,range
+617,groom,husband,wedding
+618,meat dish,cook,oven
+619,schedule,agenda,itinerary
+620,young horse,colt,filly
+621,female chicken,poultry,bird
+622,two weeks,14 days,half-month
+623,achoo,cold,allergy
+624,forgiveness,amnesty,excuse
+625,gasoline,fuel,gas
+626,young pig,piggy,swine
+627,scary,terrible,awful
+628,equal,flat,balanced
+629,baby cow,muscle,anatomy
+630,fix,repair,restore
+631,eager,sharp,enthusiastic
+632,heavy,dense,broad
+633,cast,bandage,adhesive
+634,conversation,interrogation,meeting
+635,vacation,newlywed,romantic
+636,deal,bargain,negotiate
+637,tone,level,sound
+638,garbage,trash,loss
+639,hit,wind,breathe
+640,family,niece,relative
+641,family,niece,relative
+642,grammar,connective,word class
+643,cooking,pot,kitchen
+644,distant,far,isolated
+645,burst,explode,soda
+646,grammar,modifier,language
+647,support,opinion,display
+648,together,forward,direction
+649,phone,clock,communication
+650,transportation,carrier,luggage
+651,shaving,grooming,sharp
+652,backpack,bag,hiking
+653,carpet,floor,decoration
+654,payment,retail,exit
+655,messy,disorganized,chaotic
+656,hair,grooming,tool
+657,city,finance,letter
+658,traditional,music,culture
+659,legume,vegetable,food
+660,backup,precaution,savings
+661,appliance,food storage,ice
+662,musical instrument,woodwind,jazz
+663,invoice,proof of payment,record
+664,writing,language,orthography
+665,liking,affection,sentiment
+666,drawing,art,coloring
+667,bridegroom,horse,wedding
+668,transportation,cars,road
+669,adhesive tape,recording,fastening
+670,lodging,housing,stay
+671,departure,success,aviation
+672,jump,hop,bound
+673,preservation,protection,environment
+674,family,nephew,relative
+675,storage,furniture,kitchen
+676,house,small,rural
+677,bulletin board,information,display
+678,rubber,school,drawing
+679,teaching,writing,drawing
+680,plumbing,kitchen,bathroom
+681,wedding,marriage,groom
+682,free time,relaxation,activity
+683,education,direction,meal
+684,inadequate,lacking,scarce
+685,deceitful,sly,sneaky
+686,connection,tie,relationship
+687,examination,inspection,analysis
+688,empty,cavity,hollowed
+689,reaction,response,consequence
+690,combine,unite,integrate
+691,although,yet,nevertheless
+692,mathematics,formula,algebra
+693,signal,measure,gauge
+694,changeable,fluctuating,mutable
+695,simultaneous,parallel,synchronized
+696,concurrent,synchronous,concurrent
+697,newest,recent,up-to-date
+698,however,nonetheless,still
+699,inflexible,stiff,unyielding
+700,physics,motion,mechanics
+701,incorrect,mistake,error
+702,enjoy,savor,taste
+703,decrease,diminish,decline
+704,inheritance,legacy,antique
+705,watershed,catchment basin,sink
+706,innovation,discovery,progress
+707,important,noteworthy,considerable
+708,moreover,additionally,also
+709,although,even though,yet
+710,differ,change,fluctuate
+711,solid,cement,specific
+712,depend,trust,count on
+713,comedian,performer,artist
+714,amazing,fantastic,excellent
+715,procrastinate,waste time,dawdle
+716,show,point out,suggest
+717,untrustworthy,undependable,inconsistent
+718,cabinets,dresser,storage
+719,voicemail,answering machine,phone message
+720,organization,setup,plan
+721,Jewish,language,Israel
+722,fog,haze,vapor
+723,roughly,about,around
+724,ventilation,air conditioning,piping
+725,barrier,obstacle,block
+726,container,bin,reservoir
+727,fold,crease,gather
+728,latest,recent,new
+729,wheel,caster,roller
+730,arrangement,display,assortment
+731,calcium oxide,citrus fruit,white powder
+732,rough,harsh,abrasive
+733,chips,scraps,fragments
+734,management,operation,handling
+735,beside,next to,parallel
+736,arrange,manage,handle
+737,workshop,factory,production
+738,furnace,refinery,processing
+739,furnace,burner,waste disposal
+740,include,contain,consist of
+741,initiation,activation,launch
+742,intentionally,purposely,consciously
+743,stop,seize,intercept
+744,hanging,dangling,in limbo
+745,weakening,reduction,decrease
+746,edit,modify,update
+747,compulsory,required,obligatory
+748,because of,owing to,as a result of
+749,component,submodule,part
+750,joining,fastening,bonding
+751,change,modify,adjust
+752,obtained,derived from,descended
+753,product,good,item
+754,late,delayed,past due
+755,thoroughness,prudence,caution
+756,fixed,integrated,implanted
+757,designate,appoint,allocate
+758,previous,earlier,preceding
+759,screw,fastener,hardware
+760,reducer,suppressor,muffler
+761,perpendicular,intersecting,tangent
+762,temporary,provisional,acting
+763,flammable,inflammable,burnable
+764,slide,channel,conduit
+765,neighboring,next door,nearby
+766,perform,lead,carry out
+767,emergency,safety drills,fire drills
+768,factory,facility,production
+769,complete,thorough,all-inclusive
+770,implementation,execution,enforcement
+771,building,structure,venue
+772,self-satisfaction,smugness,satisfaction
+773,cleaning,maintenance,organization
+774,scattered,spread out,separated
+775,connected,associated,linked
+776,communicate,transfer,impart
+777,small,tiny,minute
+778,hang,halt,discontinue
+779,scattering,distribution,diffusion
+780,restriction,limitation,captivity
+781,burning,ignition,reaction
+782,differentiate,recognize,identify
+783,explosion,combustion,ignition
+784,irrespective,notwithstanding,despite
+785,thus,consequently,hence
+786,immense,enormous,extensive
+787,polish,sharpen,sand
+788,alleviate,reduce,ease
+789,obedient,conforming,agreeable
+790,applicable,pertinent,related
+791,different,diverse,assorted
+792,in it,in which,inside
+793,evaluate,estimate,judge
+794,lot number,production batch,serial number
+795,electrical fault,circuit failure,electrical short
+796,order,prescribe,recommend
+797,earthing,grounding system,electrical ground
+798,grounding,electrical ground,earthing system
+799,through,over,beyond
+800,release,emission,unloading
+801,planned,deliberate,purposeful
+802,inside,inner,internal
+803,accidentally,unintentionally,mistakenly
+804,opening,aperture,nozzle
+805,cable tray,wire duct,cable channel
+806,distribution box,electrical box,connection box
+807,cable gland,cable fitting,cable connector
+808,necessity,demand,prerequisite
+809,failure,breakdown,glitch
+810,tailored to,adapted to,customized to
+811,limit,boundary,margin
+812,density,level,content
+813,enough,adequate,satisfactory
+814,wearing,rubbing,erosion
+815,equipment,device,machine
+816,ultrasound,sonic,ultrasonic
+817,heat-related,temperature,thermal
+818,wreckage,fragments,rubble
+819,except for,aside from,beyond
+820,essential,required,vital
+821,premise,supposition,presumption
+822,first,starting,preliminary
+823,comment,observation,statement
+824,adjustment,positioning,calibration
+825,output,productivity,performance
+826,devious,sly,sneaky
+827,shake,quiver,shiver
+828,reciprocal,shared,common
+829,awkward,bulky,unwieldy
+830,range,extent,width
+831,exact,word-for-word,verbatim
+832,current,continuing,in progress
+833,yield strength,flow stress,yield point
+834,Young's modulus,elastic modulus,stiffness
+835,change,conversion,transformation
+836,porosity,permeance,permeation
+837,junction,connection,intersection
+838,bevel,angle,cut
+839,attached,included,enclosed
+840,nonconforming,incompatible,contrary
+841,analyze,dissect,examine
+842,scamming,fraud,identity theft
+843,uncertain,hesitant,provisional
+844,questions,queries,requests
+845,draft,sketch,blueprint
+846,sporadic,occasional,periodic
+847,stuck,glued,attached
+848,account book,record book,journal
+849,payment,transfer,deposit
+850,receiver,addressee,beneficiary
+851,subconscious,latent,underlying
+852,requirements,conditions,preconditions
+853,endeavor,attempt,aim
+854,intention,objective,goal
+855,complete,comprehensive,detailed
+856,initial,introductory,preparatory
+857,schedule,itinerary,plan
+858,qualifications,certification,skills
+859,obstruction,blockage,congestion
+860,glandular,sebaceous,secretory
+861,critical point,turning point,threshold
+862,insensitive,indifferent,unfeeling
+863,resolute,unwavering,persistent
+864,also,in addition,aslo too
+865,pretending,imitating,mimicking
+866,subtracted,removed,taken away
+867,pressure plate,impression bed,print bed
+868,implant,fix,insert
+869,sustainability,sustainable,eco-friendliness
+870,touchable,palpable,physical
+871,basis,groundwork,basis
+872,shareholder,investor,partner
+873,engage,involve,undertake
+874,correspondingly,consequently,accordingly
+875,adjust,position,orient
+876,compliance,agreement,conformity
+877,sustainability approach,sustainable practice,eco-consciousness
+878,immediate,straight,unmediated
+879,mediated,circuitous,roundabout
+880,related,concerning,applicable
+881,harvest,gather,collect
+882,separate,different,unique
+883,structure,system,organization
+884,transferred,delivered,relinquished
+885,transfer,relinquish,deliver
+886,measurable,assessable,calculable
+887,allotment,distribution,assignment
+888,elimination,discontinuation,withdrawal
+889,on someone's behalf,representing someone,for someone
+890,pollution,adulteration,impurity
+891,experience,sustain,acquire
+892,motivation,inducement,stimulus
+893,purchase,acquisition,takeover
+894,cargo,shipment,transport
+895,rough,grainy,uneven
+896,abrasive blasting,sand blasting,shot peening
+897,outdated,antiquated,old-fashioned
+898,advantageous,favorable,profitable
+899,blast,gust,burst
+900,concise,short,summarized
+901,location,range,inside
+902,identity,object,legal
+903,deceit,trickery,deception
+904,saturate,infuse,instill
+905,requested,invited,asked
+906,voluntary,spontaneous,uninvited
+907,violated,weakened,damaged
+908,pattern,structure,network
+909,way,behavior,style
+910,assessment,review,analysis
+911,interconnected,woven,twisted
+912,structure,pattern,grid
+913,deformation,instability,bending
+914,resistant,impermeable,impenetrable
+915,vulnerable,prone,sensitive
+916,material,construction,solid
+917,horizontal,perpendicular,crosswise
+918,twisting,deformation,strain
+919,triangle,equal sides,geometry
+920,steep,absolute,transparent
+921,geography,navigation,coordinates
+922,geography,navigation,coordinates
+923,wind,storm,tempest
+924,completely,fully,entirely
+925,weighing,balance,measurement
+926,adaptation,modification,regulation
+927,unchangeable,permanent,fixed
+928,correct,modify,improve
+929,keep,preserve,maintain
+930,leave out,exclude,skip
+931,direction,location,against
+932,talkative,wordy,long-winded
+933,minimum,smallest,lowest
+934,number,mathematics,divisible by two
+935,number,mathematics,not divisible by two
+936,barrier,hindrance,obstruction
+937,show off,display,exhibit
+938,amaze,astonish,surprise
+939,complimentary,pleasing,favorable
+940,enemy,opponent,rival
+941,play,toy,manipulate
+942,infamous,well-known,scandalous
+943,important,significant,distinguished
+944,noticeable,visible,obvious
+945,oil,fossil fuel,petroleum
+946,time,period,two weeks
+947,experience,endure,go through
+948,offender,perpetrator,guilty party
+949,hiding,camouflage,cover-up
+950,small object,jewelry,decoration
+951,unclear,incomprehensible,garbled
+952,likely,probably,assumed
+953,arrogance,conceit,narcissism
+954,implied,unspoken,inferred
+955,infamous,well-known,scandalous
+956,impliedly,unspokenly,unreservedly
+957,group,organization,connection
+958,maintain,protect,conserve
+959,complete,thorough,extensive
+960,therefore,consequently,thus
+961,taboo,forbidden,illegal
+962,position,viewpoint,opinion
+963,restriction,prohibition,lockdown
+964,movement,spasm,tremor
+965,punctuation,grammar,symbol
+966,also,too,in addition
+967,diagram,land,story
+968,surplus,abundance,extra
+969,unnecessary,superfluous,extra
+970,end,finish,conclude
+971,request,ask,seek
+972,fraud,trickery,deceit
+973,deception,scam,swindle
+974,violate,infringe,break
+975,end,conclusion,finish
+976,susceptible,vulnerable,likely
+977,hard work,effort,perseverance
+978,obey,follow,conform
+979,thus,consequently,accordingly
+980,relevant,suitable,appropriate
+981,too much,extravagant,immoderate
+982,hidden,secret,confidential
+983,set up,create,found
+984,respectable,appropriate,acceptable
+985,alternatively,reciprocally,mutally
+986,clue,hint,suggestion
+987,scratch,rub,abrade
+988,reveal,disclose,uncover
+989,punctuation,grammar,symbol
+990,main,basic,fundamental
+991,recommendations,endorsements,reviews
+992,memory,storage,repository
+993,completely,meticulously,exhaustively
+994,evaluation,judgment,appraisal
+995,assuming,provided,considering
+996,,,
+997,,,
