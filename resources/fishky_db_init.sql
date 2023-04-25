@@ -103,7 +103,7 @@ DROP TABLE frequency;
 
 CREATE TABLE fishky.tags
 (
-	word_id INT PRIMARY KEY,
+	word_id INT PRIMARY KEY UNIQUE,
     tag_1 VARCHAR(45),
     tag_2 VARCHAR(45),
     tag_3 VARCHAR(45),
@@ -114,6 +114,7 @@ CREATE TABLE fishky.tags
 LOAD DATA INFILE
 'C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\fishky_db_tags.csv'
 INTO TABLE fishky.tags
+CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
@@ -123,4 +124,28 @@ SET	tag_1 = NULLIF(@var1, ''),
     tag_3 = NULLIF(@var3, '');
     
 SELECT * FROM tags;
+DROP TABLE tags;
 
+-- ---------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.word_attributes
+(
+	word_id INT PRIMARY KEY UNIQUE,
+    is_duplicated BOOLEAN,
+    is_very_common BOOLEAN,
+	CONSTRAINT FK_word_attributes FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
+);
+
+LOAD DATA INFILE
+'C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\fishky_db_word_attributes.csv'
+INTO TABLE fishky.word_attributes
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(word_id, is_duplicated, @skip);
+
+SELECT * FROM word_attributes;
+
+DROP TABLE word_attributes;
