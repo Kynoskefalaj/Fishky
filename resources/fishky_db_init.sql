@@ -162,3 +162,17 @@ CREATE TABLE fishky.users
 );
 
 DROP TABLE fishky.users;
+
+-- ---------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.user_attributes
+(
+	user_id INT PRIMARY KEY,
+    word_id INT,
+    is_problematic BOOLEAN,
+    CONSTRAINT FK_user_attributes FOREIGN KEY (user_id)
+    REFERENCES fishky.users(id),
+    CONSTRAINT FK_user_words_attributes FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
+);
+    
