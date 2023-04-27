@@ -165,7 +165,7 @@ DROP TABLE fishky.users;
 
 -- ---------------------------------------------------------------------------------------------
 
-CREATE TABLE fishky.user_attributes
+CREATE TABLE fishky.users_attributes
 (
 	user_id INT PRIMARY KEY,
     word_id INT,
@@ -175,4 +175,26 @@ CREATE TABLE fishky.user_attributes
     CONSTRAINT FK_user_words_attributes FOREIGN KEY (word_id)
     REFERENCES fishky.words(id)
 );
-    
+
+SELECT * FROM fishky.users_attributes;
+DROP TABLE users_attributes;
+
+-- -----------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.users_answers
+(
+	id INT NOT NULL UNIQUE AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    word_id INT NOT NULL,
+    is_correct BOOLEAN,
+    hints_used INT DEFAULT 0,
+    time_stamp TIMESTAMP DEFAULT NOW(),
+    answer_rate INT DEFAULT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT FK_user_answers FOREIGN KEY (user_id)
+    REFERENCES fishky.users(id),
+	CONSTRAINT FK_user_answers_word FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
+);
+
+DESC users_answers;
