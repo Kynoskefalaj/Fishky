@@ -212,10 +212,12 @@ CREATE TABLE fishky.users_actions
     negative_rate BOOLEAN DEFAULT 0,
     comment_body VARCHAR(4045),
     PRIMARY KEY (id),
-    CONSTRAINT FK_user_aactions FOREIGN KEY (user_id)
+    CONSTRAINT FK_user_actions FOREIGN KEY (user_id)
     REFERENCES fishky.users(id),
 	CONSTRAINT FK_user_actions_word FOREIGN KEY (word_id)
     REFERENCES fishky.words(id)
 );
+
+DROP TABLE fishky.users_actions;
 
 SELECT * FROM fishky.users_actions;
