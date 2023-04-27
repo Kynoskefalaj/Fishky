@@ -198,3 +198,24 @@ CREATE TABLE fishky.users_answers
 );
 
 DESC users_answers;
+
+-- ----------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.users_actions
+(
+	id INT NOT NULL UNIQUE AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    word_id INT NOT NULL,
+    action VARCHAR(45),
+    time_stamp TIMESTAMP DEFAULT NOW(),
+    positive_rate BOOLEAN DEFAULT 0,
+    negative_rate BOOLEAN DEFAULT 0,
+    comment_body VARCHAR(4045),
+    PRIMARY KEY (id),
+    CONSTRAINT FK_user_aactions FOREIGN KEY (user_id)
+    REFERENCES fishky.users(id),
+	CONSTRAINT FK_user_actions_word FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id)
+);
+
+SELECT * FROM fishky.users_actions;
