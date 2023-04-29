@@ -169,7 +169,9 @@ CREATE TABLE fishky.users_attributes
 (
 	user_id INT PRIMARY KEY,
     word_id INT,
-    is_problematic BOOLEAN,
+    is_problematic BOOLEAN DEFAULT 0,
+    star_signed BOOLEAN DEFAULT 0,
+    heart_signed BOOLEAN DEFAULT 0,
     CONSTRAINT FK_user_attributes FOREIGN KEY (user_id)
     REFERENCES fishky.users(id),
     CONSTRAINT FK_user_words_attributes FOREIGN KEY (word_id)
@@ -210,6 +212,8 @@ CREATE TABLE fishky.users_actions
     time_stamp TIMESTAMP DEFAULT NOW(),
     positive_rate BOOLEAN DEFAULT 0,
     negative_rate BOOLEAN DEFAULT 0,
+    star BOOLEAN DEFAULT 0,
+    heart BOOLEAN DEFAULT 0,
     comment_body VARCHAR(4045),
     PRIMARY KEY (id),
     CONSTRAINT FK_user_actions FOREIGN KEY (user_id)
