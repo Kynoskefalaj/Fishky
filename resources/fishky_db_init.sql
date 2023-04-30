@@ -225,3 +225,19 @@ CREATE TABLE fishky.users_actions
 DROP TABLE fishky.users_actions;
 
 SELECT * FROM fishky.users_actions;
+
+-- -----------------------------------------------------------------------------------------------
+
+CREATE TABLE fishky.users_progress
+(
+	id INT UNIQUE PRIMARY KEY NOT NULL,
+    user_id INT NOT NULL, CONSTRAINT FK_user_progress FOREIGN KEY (user_id)
+    REFERENCES fishky.users(id),
+    word_id INT NOT NULL, CONSTRAINT FK_word_progress FOREIGN KEY (word_id)
+    REFERENCES fishky.words(id),
+    last_time_correct DATETIME,
+    last_rate INT,
+    last_3_avg_rate DOUBLE
+);
+
+SELECT * FROM users_progress;
