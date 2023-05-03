@@ -3,6 +3,8 @@ package root;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Main {
 
@@ -11,13 +13,13 @@ public class Main {
     public UI ui;
     public UtilsHandler utilsHandler = new UtilsHandler();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         new Main();
     }
 
-    Main() {
+    Main() throws SQLException {
         this.ui = new UI(this);
-
+        Connection connection = DbConnector.connect();
     }
 
     public class UtilsHandler implements ActionListener {
