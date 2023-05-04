@@ -8,8 +8,6 @@ import java.sql.SQLException;
 
 public class Main {
 
-    Timer popupTimer;
-
     public UI ui;
     public UtilsHandler utilsHandler = new UtilsHandler();
 
@@ -19,7 +17,6 @@ public class Main {
 
     Main() throws SQLException {
         this.ui = new UI(this);
-        Connection connection = DbConnector.connect();
     }
 
     public class UtilsHandler implements ActionListener {
