@@ -13,14 +13,23 @@ public class DatabaseConnection {
     }
 
     @Test
-    public void queryTest() throws SQLException {
+    public void selectTest() throws SQLException {
 
         try {
             ResultSet result = QueryExecutor.executeSelect("SELECT * FROM words WHERE id = 666");
+            result.next();
             String wordName = result.getString("eng_word");
             System.out.println(wordName);
         } catch (SQLException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    @Test
+
+    public void insertTest() {
+        QueryExecutor.executeQuery("INSERT INTO fishky.users (id, email, passwd, nickname) " +
+                "VALUES (1, \"john_doe@gmail.com\", \"1234\", \"Johny\");");
     }
 }
