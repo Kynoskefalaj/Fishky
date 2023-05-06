@@ -1,5 +1,6 @@
 import org.junit.Test;
 import root.DbConnector;
+import root.QueryExecutor;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,7 +14,7 @@ public class DatabaseConnection {
     }
 
     @Test
-    public void selectTest() throws SQLException {
+    public void selectTest() {
 
         try {
             ResultSet result = QueryExecutor.executeSelect("SELECT * FROM words WHERE id = 666");
@@ -27,9 +28,16 @@ public class DatabaseConnection {
     }
 
     @Test
-
     public void insertTest() {
         QueryExecutor.executeQuery("INSERT INTO fishky.users (id, email, passwd, nickname) " +
-                "VALUES (1, \"john_doe@gmail.com\", \"1234\", \"Johny\");");
+                    "VALUES (1, \"john_doe@gmail.com\", \"1234\", \"Johny\");");
+        System.out.println("Test passed, user added.");
     }
+
+    @Test
+    public void deleteTest() {
+        QueryExecutor.executeQuery("DELETE FROM users WHERE id = 1");
+        System.out.println("Test passed, user deleted.");
+    }
+
 }
