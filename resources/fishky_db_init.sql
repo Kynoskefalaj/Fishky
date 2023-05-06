@@ -158,7 +158,7 @@ CREATE TABLE fishky.users
     email VARCHAR(90) UNIQUE,
     passwd VARCHAR(45),
 	nickname VARCHAR(45) UNIQUE,
-    permission_level INT GENERATED ALWAYS AS (0)
+    permission_level INT DEFAULT 0
 );
 
 DROP TABLE fishky.users;
@@ -241,3 +241,9 @@ CREATE TABLE fishky.users_progress
 );
 
 SELECT * FROM users_progress;
+-- -------------------------------------------------------------------------------------
+
+SHOW VARIABLES LIKE 'port';
+SHOW VARIABLES LIKE 'hostname';
+
+DROP TABLE users_answers, users_actions, users_attributes, users_progress, users;

@@ -37,3 +37,10 @@ IGNORE 1 LINES;
 
 SELECT * FROM words
 LIMIT 10;
+
+SELECT * FROM fishky.words WHERE id = 666;
+
+SELECT * from fishky.users;
+DESC users;
+
+UPDATE users SET permission_level = 1 WHERE id = 22;
