@@ -60,4 +60,23 @@ public class MechanicsTests {
                 "eng_sentence: " + explanationResult.getString("eng_sentence") + "\n" +
                 "eng_explanation: " + explanationResult.getString("eng_explanation"));
     }
+
+    @Test
+    public void getTagsFields_test() throws SQLException {
+
+        ResultSet wordResult = Mechanics.randomWordResultSet("words", 999);
+        assert wordResult != null;
+
+        ResultSet tagsResult = Mechanics.getTagsFields(wordResult);
+        assert tagsResult != null;
+
+        System.out.println("Rolled word: " + wordResult.getString("eng_word") + "\n" +
+                "Meaning: " + wordResult.getString("pol_word") + "\n" +
+                "Id: " + wordResult.getString("id") + "\n" +
+                "Part of Speech: " + wordResult.getString("part_of_speech") + "\n" +
+                "word_id: " + tagsResult.getString("word_id") + "\n" +
+                "tag_1: " + tagsResult.getString("tag_1") + "\n" +
+                "tag_2: " + tagsResult.getString("tag_2") + "\n" +
+                "tag_3: " + tagsResult.getString("tag_3"));
+    }
 }

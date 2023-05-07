@@ -47,3 +47,5 @@ UPDATE users SET permission_level = 1 WHERE id = 22;
 
 SELECT * FROM frequency WHERE word_id = 509;
 SELECT * FROM explanation WHERE word_id = 509;
+SELECT * FROM tags WHERE word_id = 509;
+SELECT * FROM words;
