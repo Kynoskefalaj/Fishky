@@ -58,5 +58,20 @@ public class Mechanics {
         }
         return null;
     }
+
+    public static ResultSet getExplanationFields (ResultSet rolledWordResultSet) {
+        try {
+            String word_id = rolledWordResultSet.getString("id");
+            String sqlQuery = "SELECT * FROM explanation WHERE word_id = " + word_id;
+
+            ResultSet result = QueryExecutor.executeSelect(sqlQuery);
+            result.next();
+            return result;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
 

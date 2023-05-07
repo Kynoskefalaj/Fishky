@@ -40,4 +40,24 @@ public class MechanicsTests {
                 "frequency_daily: " + frequencyResult.getString("frequency_daily") + "\n" +
                 "frequency_IT: " + frequencyResult.getString("frequency_IT"));
     }
+
+    @Test
+    public void getExplanationFields_test() throws SQLException {
+
+        ResultSet wordResult = Mechanics.randomWordResultSet("words", 999);
+        assert wordResult != null;
+
+        ResultSet explanationResult = Mechanics.getExplanationFields(wordResult);
+        assert explanationResult != null;
+
+        System.out.println("Rolled word: " + wordResult.getString("eng_word") + "\n" +
+                "Meaning: " + wordResult.getString("pol_word") + "\n" +
+                "Id: " + wordResult.getString("id") + "\n" +
+                "Part of Speech: " + wordResult.getString("part_of_speech") + "\n" +
+                "word_id: " + explanationResult.getString("word_id") + "\n" +
+                "eng_phrase: " + explanationResult.getString("eng_phrase") + "\n" +
+                "pol_phrase: " + explanationResult.getString("pol_phrase") + "\n" +
+                "eng_sentence: " + explanationResult.getString("eng_sentence") + "\n" +
+                "eng_explanation: " + explanationResult.getString("eng_explanation"));
+    }
 }
