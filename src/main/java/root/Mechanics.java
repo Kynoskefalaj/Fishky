@@ -27,5 +27,21 @@ public class Mechanics {
         }
         return null;
     }
+
+    public static ResultSet randomWordResultSet (String tableName, int rollRange) {
+        Random random = new Random();
+        int randInt = random.nextInt(rollRange);
+
+        String sqlRequest = "SELECT * FROM " + tableName + " WHERE id = " + randInt;
+        try {
+            ResultSet result = QueryExecutor.executeSelect(sqlRequest);
+            result.next();
+            return result;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
 
