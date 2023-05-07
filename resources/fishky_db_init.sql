@@ -69,11 +69,11 @@ DROP TABLE explanation;
 
 CREATE TABLE fishky.frequency
 (
-	word_id INT NOT NULL UNIQUE,
-    ranking_position INT,
+	word_id INT,
     frequency_daily INT,
 	frequency_IT INT,
     frequency_engineering INT,
+    ranking_position INT,
     PRIMARY KEY (word_id),
     CONSTRAINT FK_word_frequency FOREIGN KEY (word_id)
     REFERENCES fishky.words(id)
@@ -86,10 +86,10 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (word_id, @var1, @var2, @var3, @var4)
-SET ranking_position = NULLIF(@var1, ''), 
-	frequency_daily = NULLIF(@var2, ''), 
-    frequency_IT = NULLIF(@var3, ''), 
-    frequency_engineering = NULLIF(@var4, '');
+SET frequency_daily = NULLIF(@var1, ''), 
+    frequency_IT = NULLIF(@var2, ''), 
+    frequency_engineering = NULLIF(@var3, ''),
+    ranking_position = NULLIF(@var4, '');
 
 
 SELECT * FROM frequency;
