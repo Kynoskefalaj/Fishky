@@ -21,7 +21,7 @@ public class Main {
         ui.displayTextAreas();
         ui.displayUserActionsComponents();
 
-        this.mechanics = new Mechanics(this, ui);
+        this.mechanics = new Mechanics(ui);
     }
 
 }
