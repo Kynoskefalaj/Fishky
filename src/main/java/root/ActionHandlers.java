@@ -7,7 +7,7 @@ public class ActionHandlers {
 
     public UI ui;
     public UtilsHandler utilsHandler = new UtilsHandler();
-//    public UserActionHandler userActionHandler = new UserActionHandler();
+    public UserActionHandler userActionHandler = new UserActionHandler();
 
     public ActionHandlers(UI ui) {
         this.ui = ui;
@@ -36,7 +36,27 @@ public class ActionHandlers {
         }
     }
 
-//    public class UserActionHandler
-//}
+    public class UserActionHandler implements ActionListener {
+
+        public void actionPerformed(ActionEvent event) {
+
+            String userAction = event.getActionCommand();
+            switch (userAction) {
+                case "ENTER":
+                    //something after clicking enter
+                    break;
+                case "next":
+                    //something after clicking next
+                    break;
+                case "check":
+                    //something after clicking check
+                    break;
+                case "hint":
+                    //something after clicking hint
+                    break;
+            }
+        }
+
+}
 
 }

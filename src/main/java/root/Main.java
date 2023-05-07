@@ -2,7 +2,7 @@ package root;
 
 public class Main {
     public ActionHandlers ah = new ActionHandlers(null);
-    public UI ui = new UI(this, ah);
+    public UI ui = new UI(ah);
     public Mechanics mechanics;
 
     public static void main(String[] args) {

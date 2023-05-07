@@ -54,13 +54,7 @@ public class UI {
     Color goodColor = new Color(48, 206, 59);
     Color badColor = new Color(187, 66, 66);
 
-    public UI(Main main, ActionHandlers ah) {
-        this.main = main;
-        this.ah = ah;
-    }
-
-    //Dependency Injection
-    public void setAh(ActionHandlers ah) {
+    public UI(ActionHandlers ah) {
         this.ah = ah;
     }
 
