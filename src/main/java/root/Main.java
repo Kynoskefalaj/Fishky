@@ -1,40 +1,27 @@
 package root;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.SQLException;
-
 public class Main {
+    public ActionHandlers ah = new ActionHandlers(null);
+    public UI ui = new UI(this, ah);
+    public Mechanics mechanics;
 
-    public UI ui;
-    public UtilsHandler utilsHandler = new UtilsHandler();
-
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         new Main();
     }
 
-    Main() throws SQLException {
-        this.ui = new UI(this);
+    Main(){
+        // dependency injection
+        ah.setUI(ui);
+
+        ui.displayWindow();
+        ui.displayScreen();
+        ui.displayPanels();
+        ui.displayLabels();
+        ui.displayCheckBoxes();
+        ui.displayTextAreas();
+        ui.displayUserActionsComponents();
+
+        this.mechanics = new Mechanics(this, ui);
     }
 
-    public class UtilsHandler implements ActionListener {
-
-        public void actionPerformed(ActionEvent event) {
-
-            String utilAction = event.getActionCommand();
-            switch (utilAction) {
-                case "ok":
-                    ui.thanksForAnswerLabel.setVisible(true);
-                    ui.thanksForAnswerLabel.setForeground(ui.goodColor);
-                    break;
-                case "nok":
-                    ui.thanksForAnswerLabel.setForeground(ui.badColor);
-                    ui.thanksForAnswerLabel.setVisible(true);
-                    break;
-                case "submit": ui.isSubmittedLabel.setVisible(true); break;
-            }
-        }
-    }
 }

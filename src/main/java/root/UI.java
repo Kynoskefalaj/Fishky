@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 public class UI {
 
     Main main;
+    ActionHandlers ah;
 
     JFrame window;
     Container con;
@@ -53,15 +54,14 @@ public class UI {
     Color goodColor = new Color(48, 206, 59);
     Color badColor = new Color(187, 66, 66);
 
-    public UI(Main main) {
+    public UI(Main main, ActionHandlers ah) {
         this.main = main;
-        displayWindow();
-        displayScreen();
-        displayPanels();
-        displayLabels();
-        displayCheckBoxes();
-        displayTextAreas();
-        displayUserActionsComponents();
+        this.ah = ah;
+    }
+
+    //Dependency Injection
+    public void setAh(ActionHandlers ah) {
+        this.ah = ah;
     }
 
     void displayWindow() {
@@ -103,14 +103,14 @@ public class UI {
         return button;
     }
 
-    private void displayScreen() {
+    public void displayScreen() {
         optionsPanelWidth = 300;
         optionsPanel = makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
         optionsPanel.setLayout(new GridLayout(13, 1));
         con.add(optionsPanel);
     }
 
-    private void displayPanels() {
+    public void displayPanels() {
         int mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
         mainPanel = makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
                 windowY - margin * 2, mediumGray);
@@ -174,7 +174,7 @@ public class UI {
         userPanel.add(userActionPanel);
     }
 
-    private void displayLabels() {
+    public void displayLabels() {
 //        ---------------------------------------------------------------------------------------------------------
 //        JLabels:
         dbsLabel = makeLabel("Databases:", headerFont, JLabel.LEFT);
@@ -219,7 +219,7 @@ public class UI {
         tagsPanel.add(tagsLabel);
     }
 
-    private void displayTextAreas() {
+    public void displayTextAreas() {
 //        ----------------------------------------------------------------------------------------------------------
 //        text areas:
         commentArea = new JTextArea();
@@ -268,7 +268,7 @@ public class UI {
         tagsPanel.add(tagsArea);
     }
 
-    private void displayCheckBoxes() {
+    public void displayCheckBoxes() {
 //        ----------------------------------------------------------------------------------------------------------
 //        check boxes:
         commentsCheckBox = new JCheckBox();
@@ -337,7 +337,7 @@ public class UI {
         picturePanel.add(pictureCheckBox);
     }
 
-    private void displayUserActionsComponents() {
+    public void displayUserActionsComponents() {
 //        --------------------------------------------------------------------------------------------------------------
 //        components on userActionPanel
         userWordInput = new JTextField();
@@ -399,14 +399,14 @@ public class UI {
         okButton = makeButton("Yes", buttonFont, nextButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         okButton.setBackground(goodColor);
-        okButton.addActionListener(main.utilsHandler);
+        okButton.addActionListener(ah.utilsHandler);
         okButton.setActionCommand("ok");
         userActionPanel.add(okButton);
 
         nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         nokButton.setBackground(badColor);
-        nokButton.addActionListener(main.utilsHandler);
+        nokButton.addActionListener(ah.utilsHandler);
         nokButton.setActionCommand("nok");
         userActionPanel.add(nokButton);
 
@@ -419,7 +419,7 @@ public class UI {
         submitButton = makeButton("Submit", buttonFont, okButton.getX(),
                 thanksForAnswerLabel.getY() + labelMargin + thanksForAnswerLabel.getHeight(), nextButton.getWidth(),
                 nextButton.getHeight(), mediumPurple);
-        submitButton.addActionListener(main.utilsHandler);
+        submitButton.addActionListener(ah.utilsHandler);
         submitButton.setActionCommand("submit");
         userActionPanel.add(submitButton);
 
