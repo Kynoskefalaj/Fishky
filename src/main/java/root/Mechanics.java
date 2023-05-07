@@ -32,9 +32,24 @@ public class Mechanics {
         Random random = new Random();
         int randInt = random.nextInt(rollRange);
 
-        String sqlRequest = "SELECT * FROM " + tableName + " WHERE id = " + randInt;
+        String sqlQuery = "SELECT * FROM " + tableName + " WHERE id = " + randInt;
         try {
-            ResultSet result = QueryExecutor.executeSelect(sqlRequest);
+            ResultSet result = QueryExecutor.executeSelect(sqlQuery);
+            result.next();
+            return result;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ResultSet getFrequencyFields (ResultSet rolledWordResultSet) {
+        try {
+            String word_id = rolledWordResultSet.getString("id");
+            String sqlQuery = "SELECT * FROM frequency WHERE word_id = " + word_id;
+
+            ResultSet result = QueryExecutor.executeSelect(sqlQuery);
             result.next();
             return result;
         } catch (SQLException e) {
