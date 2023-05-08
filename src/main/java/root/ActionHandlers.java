@@ -46,7 +46,6 @@ public class ActionHandlers {
                     //something after clicking enter
                     break;
                 case "next":
-                    //something after clicking next
                     break;
                 case "check":
                     //something after clicking check

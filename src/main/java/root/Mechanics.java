@@ -8,6 +8,9 @@ public class Mechanics {
 
     UI ui;
 
+    int wordsLength = 999;
+    ResultSet currentWordSet;
+
     public Mechanics (UI ui) {
         this.ui = ui;
     }
@@ -87,6 +90,18 @@ public class Mechanics {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void setRandomWord(){
+        try {
+            currentWordSet = randomWordResultSet("words", wordsLength);
+            if (currentWordSet != null) {
+                ui.wordLabel.setText(currentWordSet.getString("pol_word"));
+            } else
+                throw new RuntimeException();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

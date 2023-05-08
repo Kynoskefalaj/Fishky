@@ -22,6 +22,7 @@ public class Main {
         ui.displayUserActionsComponents();
 
         this.mechanics = new Mechanics(ui);
+        mechanics.setRandomWord();
     }
 
 }
