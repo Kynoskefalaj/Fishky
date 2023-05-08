@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class ActionHandlers {
 
     public UI ui;
+    public Mechanics mech;
     public UtilsHandler utilsHandler = new UtilsHandler();
     public UserActionHandler userActionHandler = new UserActionHandler();
 
@@ -15,6 +16,10 @@ public class ActionHandlers {
 
     public void setUI (UI ui) {
         this.ui = ui;
+    }
+
+    public void setMech (Mechanics mech) {
+        this.mech = mech;
     }
 
     public class UtilsHandler implements ActionListener {
@@ -46,6 +51,13 @@ public class ActionHandlers {
                     //something after clicking enter
                     break;
                 case "next":
+                    mech.setRandomWord();
+                    //setWordComment
+                    //setWordSentences
+                    //setWordTags
+                    //setWordPartOfSpeech
+                    //setWordHint
+                    //setHiddenCorrectAnswer
                     break;
                 case "check":
                     //something after clicking check

@@ -349,6 +349,8 @@ public class UI {
 
         nextButton = makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
+        nextButton.addActionListener(ah.userActionHandler);
+        nextButton.setActionCommand("next");
         userActionPanel.add(nextButton);
 
         checkButton = makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,

@@ -12,6 +12,8 @@ public class Main {
     Main(){
         // dependency injection
         ah.setUI(ui);
+        this.mechanics = new Mechanics(ui);
+        ah.setMech(mechanics);
 
         ui.displayWindow();
         ui.displayScreen();
@@ -21,7 +23,7 @@ public class Main {
         ui.displayTextAreas();
         ui.displayUserActionsComponents();
 
-        this.mechanics = new Mechanics(ui);
+
         mechanics.setRandomWord();
     }
 
