@@ -114,17 +114,28 @@ public class Mechanics {
                         .getString("eng_sentence");
                 comment = Objects.requireNonNull(getExplanationFields(currentWordSet))
                         .getString("eng_explanation");
+                tag1 = Objects.requireNonNull(getTagsFields(currentWordSet))
+                        .getString("tag_1");
+                tag2 = Objects.requireNonNull(getTagsFields(currentWordSet))
+                        .getString("tag_2");
+                tag3 = Objects.requireNonNull(getTagsFields(currentWordSet))
+                        .getString("tag_3");
 
                 ui.wordLabel.setText(polWord);
                 ui.posValueLabel.setText(partOfSpeech);
                 ui.exampleArea.setText(polExample);
                 ui.commentArea.setText(comment);
-
+                ui.tagsArea.setText(tag1 + ", " + tag2 + ", " + tag3);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         } else
             throw new RuntimeException();
+    }
+
+    public void notificationsReset(){
+        ui.isSubmittedLabel.setVisible(false);
+        ui.thanksForAnswerLabel.setVisible(false);
     }
 
 }
