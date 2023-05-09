@@ -14,6 +14,7 @@ public class Mechanics {
     String engWord, polWord, partOfSpeech, userAnswer, hint;
     String comment, polExample, engExample, tag1, tag2, tag3;
     String wordLengthMsg;
+    int hintsUsed, hintsAvailable;
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -142,15 +143,17 @@ public class Mechanics {
     }
 
     public void hintDiscover(){
-
         if (hint == null) {
             wordLengthMsg = engWord.length() + " letters: ";
             hint = "";
+            hintsUsed = 1;
         } else if (hint.equals("")) {
             hint = engWord.substring(0, 1);
+            hintsUsed = 2;
         } else if (engWord.length() > hint.length()) {
             int h = hint.length();
             hint = engWord.substring(0, h + 1);
+            hintsUsed += 1;
         }
 
         ui.hintLabel.setText(wordLengthMsg + hint);
