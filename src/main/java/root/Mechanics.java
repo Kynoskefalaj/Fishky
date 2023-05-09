@@ -2,6 +2,7 @@ package root;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.Random;
 
 public class Mechanics {
@@ -10,6 +11,8 @@ public class Mechanics {
 
     int wordsLength = 999;
     ResultSet currentWordSet;
+    String engWord, polWord, partOfSpeech, userAnswer, hint;
+    String comment, polExample, engExample, tag1, tag2, tag3;
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -92,16 +95,36 @@ public class Mechanics {
         return null;
     }
 
-    public void setRandomWord(){
-        try {
-            currentWordSet = randomWordResultSet("words", wordsLength);
-            if (currentWordSet != null) {
-                ui.wordLabel.setText(currentWordSet.getString("pol_word"));
-            } else
-                throw new RuntimeException();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+
+    public void generateRandomWordResultSet(){
+        currentWordSet = randomWordResultSet("words", wordsLength);
+    }
+
+    public void setRandomWordLabels() {
+        if (currentWordSet != null) {
+            try {
+                polWord = currentWordSet.getString("pol_word");
+                engWord = currentWordSet.getString("eng_word");
+                partOfSpeech = currentWordSet.getString("part_of_speech");
+                polExample = Objects.requireNonNull(getExplanationFields(currentWordSet))
+                        .getString("pol_phrase");
+                engExample = Objects.requireNonNull(getExplanationFields(currentWordSet))
+                        .getString("eng_phrase") + "\n\n" +
+                        Objects.requireNonNull(getExplanationFields(currentWordSet))
+                        .getString("eng_sentence");
+                comment = Objects.requireNonNull(getExplanationFields(currentWordSet))
+                        .getString("eng_explanation");
+
+                ui.wordLabel.setText(polWord);
+                ui.posValueLabel.setText(partOfSpeech);
+                ui.exampleArea.setText(polExample);
+                ui.commentArea.setText(comment);
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else
+            throw new RuntimeException();
     }
 
 }

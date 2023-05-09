@@ -24,7 +24,7 @@ public class Main {
         ui.displayUserActionsComponents();
 
 
-        mechanics.setRandomWord();
+        mechanics.setRandomWordLabels();
     }
 
 }

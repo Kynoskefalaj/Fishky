@@ -2,6 +2,7 @@ package root;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class ActionHandlers {
 
@@ -51,7 +52,8 @@ public class ActionHandlers {
                     //something after clicking enter
                     break;
                 case "next":
-                    mech.setRandomWord();
+                    mech.generateRandomWordResultSet();
+                    mech.setRandomWordLabels();
                     //setWordComment
                     //setWordSentences
                     //setWordTags
