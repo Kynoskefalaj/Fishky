@@ -364,6 +364,8 @@ public class UI {
 
         hintButton = makeButton("Hint", buttonFont, enterButton.getX(), hintLabel.getY(), enterButton.getWidth(),
                 enterButton.getHeight(), mediumPurple);
+        hintButton.addActionListener(ah.userActionHandler);
+        hintButton.setActionCommand("hint");
         userActionPanel.add(hintButton);
 
         checkLabel = makeLabel("Check answer", normalFont, JLabel.CENTER);

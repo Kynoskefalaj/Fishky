@@ -13,6 +13,7 @@ public class Mechanics {
     ResultSet currentWordSet;
     String engWord, polWord, partOfSpeech, userAnswer, hint;
     String comment, polExample, engExample, tag1, tag2, tag3;
+    String wordLengthMsg;
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -136,6 +137,23 @@ public class Mechanics {
     public void notificationsReset(){
         ui.isSubmittedLabel.setVisible(false);
         ui.thanksForAnswerLabel.setVisible(false);
+        hint = null;
+        ui.hintLabel.setText("");
+    }
+
+    public void hintDiscover(){
+
+        if (hint == null) {
+            wordLengthMsg = engWord.length() + " letters: ";
+            hint = "";
+        } else if (hint.equals("")) {
+            hint = engWord.substring(0, 1);
+        } else if (engWord.length() > hint.length()) {
+            int h = hint.length();
+            hint = engWord.substring(0, h + 1);
+        }
+
+        ui.hintLabel.setText(wordLengthMsg + hint);
     }
 
 }

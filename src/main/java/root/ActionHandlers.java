@@ -54,17 +54,13 @@ public class ActionHandlers {
                     mech.notificationsReset();
                     mech.generateRandomWordResultSet();
                     mech.setRandomWordLabels();
-                    //setWordComment
-                    //setWordSentences
-                    //setWordTags
-                    //setWordPartOfSpeech
-                    //setWordHint
                     //setHiddenCorrectAnswer
                     break;
                 case "check":
                     //something after clicking check
                     break;
                 case "hint":
+                    mech.hintDiscover();
                     //something after clicking hint
                     break;
             }
