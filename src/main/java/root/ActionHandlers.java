@@ -35,6 +35,9 @@ public class ActionHandlers {
                 case "heart":
                     //something after clicking heart
                     break;
+                case "star":
+                    //something after clicking star
+                    break;
             }
         }
     }

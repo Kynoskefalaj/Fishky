@@ -425,13 +425,20 @@ public class UI {
         userActionPanel.add(isSubmittedLabel);
 
         //-----------------------------------------------------------------------------------------------------------
-        heartButton = makeButton("Heart", buttonFont, checkButton.getX() + 85,
+        heartButton = makeButton("Heart", buttonFont, userActionPanel.getWidth() - margin - 50,
                 userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
                 50, mediumPurple);
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);
         heartButton.setActionCommand("heart");
         userActionPanel.add(heartButton);
+
+        starButton = makeButton("Star", buttonFont, heartButton.getX() - margin - 50,
+                heartButton.getY(), heartButton.getWidth(), heartButton.getHeight(), mediumPurple);
+        starButton.setBackground(mediumPurple);
+        starButton.addActionListener(ah.utilsHandler);
+        starButton.setActionCommand("star");
+        userActionPanel.add(starButton);
 
     }
 }
