@@ -32,6 +32,9 @@ public class ActionHandlers {
                     ui.thanksForAnswerLabel.setVisible(true);
                     break;
                 case "submit": ui.isSubmittedLabel.setVisible(true); break;
+                case "heart":
+                    //something after clicking heart
+                    break;
             }
         }
     }

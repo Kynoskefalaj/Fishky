@@ -23,7 +23,8 @@ public class UI {
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
     public JTextField userWordInput;
-    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
+            starButton;
     private int valueObjectLevel;
 
 
@@ -422,5 +423,15 @@ public class UI {
         isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
+
+        //-----------------------------------------------------------------------------------------------------------
+        heartButton = makeButton("Heart", buttonFont, checkButton.getX() + 85,
+                userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
+                50, mediumPurple);
+        heartButton.setBackground(mediumPurple);
+        heartButton.addActionListener(ah.utilsHandler);
+        heartButton.setActionCommand("heart");
+        userActionPanel.add(heartButton);
+
     }
 }
