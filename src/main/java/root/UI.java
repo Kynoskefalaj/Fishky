@@ -345,6 +345,8 @@ public class UI {
 
         enterButton = makeButton("Enter", buttonFont, examplePanel.getWidth(), labelMargin,
                 (tagsPanel.getWidth() + margin - 3 * labelMargin) / 3, userWordInput.getHeight(), mediumPurple);
+        enterButton.addActionListener(ah.userActionHandler);
+        enterButton.setActionCommand("ENTER");
         userActionPanel.add(enterButton);
 
         nextButton = makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,

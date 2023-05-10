@@ -139,6 +139,7 @@ public class Mechanics {
         ui.isSubmittedLabel.setVisible(false);
         ui.thanksForAnswerLabel.setVisible(false);
         hint = null;
+        userAnswer = null;
         ui.hintLabel.setText("");
     }
 
@@ -157,6 +158,11 @@ public class Mechanics {
         }
 
         ui.hintLabel.setText(wordLengthMsg + hint);
+    }
+
+    public void enterAnswer(){
+        //get user input and set field - userAnswer
+        userAnswer = ui.userWordInput.getText();
     }
 
 }
