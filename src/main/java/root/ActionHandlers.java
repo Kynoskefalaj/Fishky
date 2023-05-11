@@ -49,7 +49,7 @@ public class ActionHandlers {
             switch (userAction) {
                 case "ENTER":
                     //something after clicking enter
-                    mech.enterAnswer();
+                    mech.checkAnswer();
                     break;
                 case "next":
                     mech.notificationsReset();

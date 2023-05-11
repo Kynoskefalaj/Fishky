@@ -15,6 +15,7 @@ public class Mechanics {
     String comment, polExample, engExample, tag1, tag2, tag3;
     String wordLengthMsg;
     int hintsUsed, hintsAvailable;
+    boolean correctAnswer;
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -141,6 +142,7 @@ public class Mechanics {
         hint = null;
         userAnswer = null;
         ui.hintLabel.setText("");
+        ui.feedbackLabel.setText("");
     }
 
     public void hintDiscover(){
@@ -160,9 +162,16 @@ public class Mechanics {
         ui.hintLabel.setText(wordLengthMsg + hint);
     }
 
-    public void enterAnswer(){
+    public void checkAnswer(){
         //get user input and set field - userAnswer
         userAnswer = ui.userWordInput.getText();
+        //checks if userAnswer is correct and set field correctAnswer as boolean
+
+        if (Objects.equals(userAnswer, engWord)){
+            ui.setFeedback(true);
+        } else ui.setFeedback(false);
+
+
     }
 
 }

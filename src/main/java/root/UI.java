@@ -175,7 +175,7 @@ public class UI {
         dbsLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize());
         optionsPanel.add(dbsLabel);
 
-        feedbackLabel = makeLabel("Correct / Wrong", normalFont, JLabel.CENTER);
+        feedbackLabel = makeLabel("Correct / Wrong", headerFont, JLabel.CENTER);
         mainWordPanel.add(feedbackLabel);
 
         wordLabel = makeLabel("Word", wordFont, JLabel.CENTER);
@@ -428,5 +428,14 @@ public class UI {
         isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
+    }
+
+    public void setFeedback(Boolean isCorrect){
+        if (isCorrect) {
+            feedbackLabel.setText("CORRECT");
+            feedbackLabel.setForeground(goodColor);
+        } else {
+            feedbackLabel.setText("WRONG!");
+            feedbackLabel.setForeground(badColor);}
     }
 }
