@@ -1,10 +1,16 @@
 package root;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
 
 public class UI {
 
@@ -25,6 +31,8 @@ public class UI {
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
             starButton;
+    private ImageIcon heartIcon, starIcon;
+
     private int valueObjectLevel;
 
 
@@ -438,7 +446,30 @@ public class UI {
         starButton.setBackground(mediumPurple);
         starButton.addActionListener(ah.utilsHandler);
         starButton.setActionCommand("star");
+
         userActionPanel.add(starButton);
+
+//        try {
+//            Image img = ImageIO.read(getClass().getResource("C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\star.png"));
+
+
+        BufferedImage image = null;
+        try {
+            URL file = getClass().getResource("/resources/star50.png");
+            image = ImageIO.read(file);
+        } catch (IOException ioex) {
+            System.err.println("load error: " + ioex.getMessage());
+        }
+        ImageIcon icon = new ImageIcon(image);
+        starButton = new JButton(icon);
+//            starIcon = new ImageIcon("C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\star50.png");
+
+//        starButton.setIcon(starIcon);
+//        } catch (IOException e) {
+//            System.out.println(e.getMessage());
+//        }
+
+        starButton.setBorder(BorderFactory.createEmptyBorder());
 
     }
 }
