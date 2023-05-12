@@ -8,7 +8,6 @@ import java.awt.event.KeyEvent;
 
 public class UI {
 
-    Main main;
     ActionHandlers ah;
 
     JFrame window;
@@ -428,6 +427,8 @@ public class UI {
         isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
+
+        setDefaultEnterButton();
     }
 
     public void setFeedback(Boolean isCorrect){
@@ -437,5 +438,9 @@ public class UI {
         } else {
             feedbackLabel.setText("WRONG!");
             feedbackLabel.setForeground(badColor);}
+    }
+
+    public void setDefaultEnterButton(){
+        window.getRootPane().setDefaultButton(enterButton);
     }
 }
