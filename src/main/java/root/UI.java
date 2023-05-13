@@ -1,10 +1,16 @@
 package root;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
 
 public class UI {
 
@@ -22,7 +28,10 @@ public class UI {
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
     public JTextField userWordInput;
-    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
+            starButton;
+    private ImageIcon heartIcon, starIcon;
+
     private int valueObjectLevel;
 
 
@@ -428,7 +437,46 @@ public class UI {
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
 
+        //-----------------------------------------------------------------------------------------------------------
+        heartButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
+                userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
+                50, mediumPurple);
+        heartButton.setBackground(mediumPurple);
+        heartButton.addActionListener(ah.utilsHandler);
+        heartButton.setActionCommand("heart");
+        userActionPanel.add(heartButton);
+
+        heartIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/heart.png")));
+        Image heartImage = heartIcon.getImage();
+        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 10,
+                heartButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        ImageIcon resizedHeartIcon = new ImageIcon(resizedHeartImage);
+        heartButton.setIcon(resizedHeartIcon);
+//        heartButton.setBorder(BorderFactory.createEmptyBorder());
+
+        starButton = makeButton("", buttonFont, heartButton.getX() - margin - 50,
+                heartButton.getY(), heartButton.getWidth(), heartButton.getHeight(), mediumPurple);
+        starButton.setBackground(mediumPurple);
+        starButton.addActionListener(ah.utilsHandler);
+        starButton.setActionCommand("star");
+
+        userActionPanel.add(starButton);
+
+        starIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/star.png")));
+        Image starImage = starIcon.getImage();
+        Image resizedStarImage = starImage.getScaledInstance(starButton.getWidth() - 10,
+                starButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        ImageIcon resizedStarIcon = new ImageIcon(resizedStarImage);
+        starButton.setIcon(resizedStarIcon);
+//        starButton.setBorder(BorderFactory.createEmptyBorder());
+
         setDefaultEnterButton();
+    }
+
+    public void setDefaultEnterButton() {
+        window.getRootPane().setDefaultButton(enterButton);
     }
 
     public void setFeedback(Boolean isCorrect){
@@ -438,9 +486,5 @@ public class UI {
         } else {
             feedbackLabel.setText("WRONG!");
             feedbackLabel.setForeground(badColor);}
-    }
-
-    public void setDefaultEnterButton(){
-        window.getRootPane().setDefaultButton(enterButton);
     }
 }
