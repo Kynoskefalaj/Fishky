@@ -433,7 +433,7 @@ public class UI {
         userActionPanel.add(isSubmittedLabel);
 
         //-----------------------------------------------------------------------------------------------------------
-        heartButton = makeButton("Heart", buttonFont, userActionPanel.getWidth() - margin - 50,
+        heartButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
                 userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
                 50, mediumPurple);
         heartButton.setBackground(mediumPurple);
@@ -441,7 +441,16 @@ public class UI {
         heartButton.setActionCommand("heart");
         userActionPanel.add(heartButton);
 
-        starButton = makeButton("Star", buttonFont, heartButton.getX() - margin - 50,
+        heartIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/heart.png")));
+        Image heartImage = heartIcon.getImage();
+        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 10,
+                heartButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        ImageIcon resizedHeartIcon = new ImageIcon(resizedHeartImage);
+        heartButton.setIcon(resizedHeartIcon);
+//        heartButton.setBorder(BorderFactory.createEmptyBorder());
+
+        starButton = makeButton("", buttonFont, heartButton.getX() - margin - 50,
                 heartButton.getY(), heartButton.getWidth(), heartButton.getHeight(), mediumPurple);
         starButton.setBackground(mediumPurple);
         starButton.addActionListener(ah.utilsHandler);
@@ -449,27 +458,14 @@ public class UI {
 
         userActionPanel.add(starButton);
 
-//        try {
-//            Image img = ImageIO.read(getClass().getResource("C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\star.png"));
-
-
-        BufferedImage image = null;
-        try {
-            URL file = getClass().getResource("/resources/star50.png");
-            image = ImageIO.read(file);
-        } catch (IOException ioex) {
-            System.err.println("load error: " + ioex.getMessage());
-        }
-        ImageIcon icon = new ImageIcon(image);
-        starButton = new JButton(icon);
-//            starIcon = new ImageIcon("C:\\Users\\adamg\\Desktop\\Java_learning\\Fishky\\resources\\star50.png");
-
-//        starButton.setIcon(starIcon);
-//        } catch (IOException e) {
-//            System.out.println(e.getMessage());
-//        }
-
-        starButton.setBorder(BorderFactory.createEmptyBorder());
+        starIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/star.png")));
+        Image starImage = starIcon.getImage();
+        Image resizedStarImage = starImage.getScaledInstance(starButton.getWidth() - 10,
+                starButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        ImageIcon resizedStarIcon = new ImageIcon(resizedStarImage);
+        starButton.setIcon(resizedStarIcon);
+//        starButton.setBorder(BorderFactory.createEmptyBorder());
 
     }
 }
