@@ -1,7 +1,5 @@
 package root;
 
-import java.io.IOException;
-
 public class Main {
     public ActionHandlers ah = new ActionHandlers(null);
     public UI ui = new UI(ah);

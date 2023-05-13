@@ -15,7 +15,6 @@ public class Mechanics {
     String comment, polExample, engExample, tag1, tag2, tag3;
     String wordLengthMsg;
     int hintsUsed, hintsAvailable;
-    boolean correctAnswer;
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -130,10 +129,10 @@ public class Mechanics {
                 ui.commentArea.setText(comment);
                 ui.tagsArea.setText(tag1 + ", " + tag2 + ", " + tag3);
             } catch (SQLException e) {
+                System.out.println(e.getMessage());
                 throw new RuntimeException(e);
             }
-        } else
-            throw new RuntimeException();
+        }
     }
 
     public void notificationsReset(){
