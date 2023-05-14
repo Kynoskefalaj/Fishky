@@ -1,15 +1,11 @@
 package root;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+
 import java.util.Objects;
 
 public class UI {
@@ -20,13 +16,13 @@ public class UI {
     Container con;
 
     public JPanel optionsPanel, mainPanel, wordPanel, userPanel;
-    public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
+    public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, newWordPanel,
             userActionPanel;
     public JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
-    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
+    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, newWordCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
             starButton, helpButton;
@@ -157,10 +153,12 @@ public class UI {
 //        commentPanel.setLayout(null);
         wordPanel.add(commentPanel);
 
-        picturePanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
+
+        //changed "picturePanel" to "newWordPanel" for setting wordLabel in the very center of the screen
+        newWordPanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
-//        examplePanel.setLayout(null);
-        wordPanel.add(picturePanel);
+        newWordPanel.setLayout(new GridBagLayout());
+        wordPanel.add(newWordPanel);
 
         tagsPanel = makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
@@ -187,7 +185,9 @@ public class UI {
         mainWordPanel.add(feedbackLabel);
 
         wordLabel = makeLabel("Word", wordFont, JLabel.CENTER);
-        mainWordPanel.add(wordLabel);
+        wordLabel.setHorizontalAlignment(JLabel.CENTER);
+        wordLabel.setVerticalAlignment(JLabel.CENTER);
+        newWordPanel.add(wordLabel);
 
         currentDB_Label = makeLabel("Current data base:", headerFont, JLabel.LEFT);
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
@@ -321,22 +321,22 @@ public class UI {
         });
         tagsPanel.add(tagsCheckBox);
 
-        pictureCheckBox = new JCheckBox();
-        pictureCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
-        pictureCheckBox.setBackground(veryLightGray);
-        pictureCheckBox.setMnemonic(KeyEvent.VK_P);
-        pictureCheckBox.setSelected(true);
-        pictureCheckBox.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-//                    picture.setVisible(true);
-                }
-//                else
-//                    picture.setVisible(false);
-            }
-        });
-        picturePanel.add(pictureCheckBox);
+//        newWordCheckBox = new JCheckBox();
+//        newWordCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+//        newWordCheckBox.setBackground(veryLightGray);
+//        newWordCheckBox.setMnemonic(KeyEvent.VK_P);
+//        newWordCheckBox.setSelected(true);
+//        newWordCheckBox.addItemListener(new ItemListener() {
+//            @Override
+//            public void itemStateChanged(ItemEvent e) {
+//                if (e.getStateChange() == ItemEvent.SELECTED) {
+////                    picture.setVisible(true);
+//                }
+////                else
+////                    picture.setVisible(false);
+//            }
+//        });
+//        newWordPanel.add(newWordCheckBox);
     }
 
     public void displayUserActionsComponents() {
