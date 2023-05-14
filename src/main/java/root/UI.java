@@ -15,17 +15,17 @@ public class UI {
     Container con;
 
     public JPanel optionsPanel, mainPanel, wordPanel, userPanel;
-    public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, picturePanel,
+    public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, newWordPanel,
             userActionPanel;
     public JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
             currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
-    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
+    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, newWordCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
-            starButton;
-    private ImageIcon heartIcon, starIcon;
+            starButton, helpButton;
+    private ImageIcon heartIcon, starIcon, helpIcon;
 
     private int valueObjectLevel;
 
@@ -152,10 +152,12 @@ public class UI {
 //        commentPanel.setLayout(null);
         wordPanel.add(commentPanel);
 
-        picturePanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
+
+        //changed "picturePanel" to "newWordPanel" for setting wordLabel in the very center of the screen
+        newWordPanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
-//        examplePanel.setLayout(null);
-        wordPanel.add(picturePanel);
+        newWordPanel.setLayout(new GridBagLayout());
+        wordPanel.add(newWordPanel);
 
         tagsPanel = makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
@@ -182,7 +184,9 @@ public class UI {
         mainWordPanel.add(feedbackLabel);
 
         wordLabel = makeLabel("Word", wordFont, JLabel.CENTER);
-        mainWordPanel.add(wordLabel);
+        wordLabel.setHorizontalAlignment(JLabel.CENTER);
+        wordLabel.setVerticalAlignment(JLabel.CENTER);
+        newWordPanel.add(wordLabel);
 
         currentDB_Label = makeLabel("Current data base:", headerFont, JLabel.LEFT);
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
@@ -316,22 +320,22 @@ public class UI {
         });
         tagsPanel.add(tagsCheckBox);
 
-        pictureCheckBox = new JCheckBox();
-        pictureCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
-        pictureCheckBox.setBackground(veryLightGray);
-        pictureCheckBox.setMnemonic(KeyEvent.VK_P);
-        pictureCheckBox.setSelected(true);
-        pictureCheckBox.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-//                    picture.setVisible(true);
-                }
-//                else
-//                    picture.setVisible(false);
-            }
-        });
-        picturePanel.add(pictureCheckBox);
+//        newWordCheckBox = new JCheckBox();
+//        newWordCheckBox.setBounds(commentPanelWidth - 20 - labelMargin, labelMargin, 20, 20);
+//        newWordCheckBox.setBackground(veryLightGray);
+//        newWordCheckBox.setMnemonic(KeyEvent.VK_P);
+//        newWordCheckBox.setSelected(true);
+//        newWordCheckBox.addItemListener(new ItemListener() {
+//            @Override
+//            public void itemStateChanged(ItemEvent e) {
+//                if (e.getStateChange() == ItemEvent.SELECTED) {
+////                    picture.setVisible(true);
+//                }
+////                else
+////                    picture.setVisible(false);
+//            }
+//        });
+//        newWordPanel.add(newWordCheckBox);
     }
 
     public void displayUserActionsComponents() {
@@ -440,9 +444,26 @@ public class UI {
         userActionPanel.add(isSubmittedLabel);
 
         //-----------------------------------------------------------------------------------------------------------
-        heartButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
+        helpButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
                 userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
                 50, mediumPurple);
+        helpButton.setBackground(mediumPurple);
+        helpButton.addActionListener(ah.utilsHandler);
+        helpButton.setActionCommand("help");
+
+        userActionPanel.add(helpButton);
+
+        helpIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/help.png")));
+        Image helpImage = helpIcon.getImage();
+        Image resizedHelpImage = helpImage.getScaledInstance(helpButton.getWidth() - 2,
+                helpButton.getHeight() - 2, Image.SCALE_SMOOTH);
+        ImageIcon resizedHelpIcon = new ImageIcon(resizedHelpImage);
+        helpButton.setIcon(resizedHelpIcon);
+//        starButton.setBorder(BorderFactory.createEmptyBorder());
+
+        heartButton = makeButton("", buttonFont, helpButton.getX() - margin - 50,
+                helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);
         heartButton.setActionCommand("heart");
@@ -452,8 +473,8 @@ public class UI {
         heartIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("icons/heart.png")));
         Image heartImage = heartIcon.getImage();
-        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 10,
-                heartButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 15,
+                heartButton.getHeight() - 15, Image.SCALE_SMOOTH);
         ImageIcon resizedHeartIcon = new ImageIcon(resizedHeartImage);
         heartButton.setIcon(resizedHeartIcon);
 //        heartButton.setBorder(BorderFactory.createEmptyBorder());
