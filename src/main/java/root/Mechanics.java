@@ -142,6 +142,7 @@ public class Mechanics {
         userAnswer = null;
         ui.hintLabel.setText("");
         ui.feedbackLabel.setText("");
+        ui.userWordInput.setText("");
     }
 
     public void hintDiscover(){
@@ -169,8 +170,6 @@ public class Mechanics {
         if (Objects.equals(userAnswer, engWord)){
             ui.setFeedback(true);
         } else ui.setFeedback(false);
-
-
     }
 
 }

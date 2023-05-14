@@ -1,7 +1,9 @@
 package root;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class ActionHandlers {
 
@@ -72,7 +74,22 @@ public class ActionHandlers {
                     break;
             }
         }
+    }
 
-}
+    static class confirmationKeyListener implements java.awt.event.KeyListener {
+        @Override
+        public void keyTyped(KeyEvent e) {}
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                JButton button = (JButton) e.getComponent();
+                button.doClick();
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {}
+    }
 
 }

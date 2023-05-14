@@ -1,15 +1,10 @@
 package root;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.Objects;
 
 public class UI {
@@ -355,16 +350,19 @@ public class UI {
                 (tagsPanel.getWidth() + margin - 3 * labelMargin) / 3, userWordInput.getHeight(), mediumPurple);
         enterButton.addActionListener(ah.userActionHandler);
         enterButton.setActionCommand("ENTER");
+        enterButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(enterButton);
 
         nextButton = makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
         nextButton.addActionListener(ah.userActionHandler);
         nextButton.setActionCommand("next");
+        nextButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(nextButton);
 
         checkButton = makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
+        checkButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(checkButton);
 
         hintLabel = makeLabel("This is hint", normalFont, JLabel.LEFT);
@@ -376,6 +374,7 @@ public class UI {
                 enterButton.getHeight(), mediumPurple);
         hintButton.addActionListener(ah.userActionHandler);
         hintButton.setActionCommand("hint");
+        hintButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(hintButton);
 
         checkLabel = makeLabel("Check answer", normalFont, JLabel.CENTER);
@@ -409,6 +408,7 @@ public class UI {
         okButton.setBackground(goodColor);
         okButton.addActionListener(ah.utilsHandler);
         okButton.setActionCommand("ok");
+        okButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(okButton);
 
         nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
@@ -416,6 +416,7 @@ public class UI {
         nokButton.setBackground(badColor);
         nokButton.addActionListener(ah.utilsHandler);
         nokButton.setActionCommand("nok");
+        nokButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(nokButton);
 
         thanksForAnswerLabel = makeLabel("Thank you for your answer", notificationFont, JLabel.CENTER);
@@ -429,6 +430,7 @@ public class UI {
                 nextButton.getHeight(), mediumPurple);
         submitButton.addActionListener(ah.utilsHandler);
         submitButton.setActionCommand("submit");
+        submitButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(submitButton);
 
         isSubmittedLabel = makeLabel("Submitted", notificationFont, JLabel.CENTER);
@@ -444,6 +446,7 @@ public class UI {
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);
         heartButton.setActionCommand("heart");
+        heartButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(heartButton);
 
         heartIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
@@ -459,6 +462,7 @@ public class UI {
                 heartButton.getY(), heartButton.getWidth(), heartButton.getHeight(), mediumPurple);
         starButton.setBackground(mediumPurple);
         starButton.addActionListener(ah.utilsHandler);
+        starButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         starButton.setActionCommand("star");
 
         userActionPanel.add(starButton);
@@ -472,7 +476,7 @@ public class UI {
         starButton.setIcon(resizedStarIcon);
 //        starButton.setBorder(BorderFactory.createEmptyBorder());
 
-        setDefaultEnterButton();
+//        setDefaultEnterButton();
     }
 
     public void setDefaultEnterButton() {
