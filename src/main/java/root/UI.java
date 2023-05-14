@@ -29,8 +29,8 @@ public class UI {
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, pictureCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
-            starButton;
-    private ImageIcon heartIcon, starIcon;
+            starButton, helpButton;
+    private ImageIcon heartIcon, starIcon, helpIcon;
 
     private int valueObjectLevel;
 
@@ -438,9 +438,26 @@ public class UI {
         userActionPanel.add(isSubmittedLabel);
 
         //-----------------------------------------------------------------------------------------------------------
-        heartButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
+        helpButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
                 userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
                 50, mediumPurple);
+        helpButton.setBackground(mediumPurple);
+        helpButton.addActionListener(ah.utilsHandler);
+        helpButton.setActionCommand("help");
+
+        userActionPanel.add(helpButton);
+
+        helpIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/help.png")));
+        Image helpImage = helpIcon.getImage();
+        Image resizedHelpImage = helpImage.getScaledInstance(helpButton.getWidth() - 2,
+                helpButton.getHeight() - 2, Image.SCALE_SMOOTH);
+        ImageIcon resizedHelpIcon = new ImageIcon(resizedHelpImage);
+        helpButton.setIcon(resizedHelpIcon);
+//        starButton.setBorder(BorderFactory.createEmptyBorder());
+
+        heartButton = makeButton("", buttonFont, helpButton.getX() - margin - 50,
+                helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);
         heartButton.setActionCommand("heart");
@@ -449,8 +466,8 @@ public class UI {
         heartIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("icons/heart.png")));
         Image heartImage = heartIcon.getImage();
-        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 10,
-                heartButton.getHeight() - 10, Image.SCALE_SMOOTH);
+        Image resizedHeartImage = heartImage.getScaledInstance(heartButton.getWidth() - 15,
+                heartButton.getHeight() - 15, Image.SCALE_SMOOTH);
         ImageIcon resizedHeartIcon = new ImageIcon(resizedHeartImage);
         heartButton.setIcon(resizedHeartIcon);
 //        heartButton.setBorder(BorderFactory.createEmptyBorder());
