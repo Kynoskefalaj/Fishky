@@ -24,8 +24,8 @@ public class UI {
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, newWordCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
-            starButton, helpButton;
-    private ImageIcon heartIcon, starIcon, helpIcon;
+            starButton, helpButton, exclamationButton;
+    private ImageIcon heartIcon, starIcon, helpIcon, exclamationIcon;
 
     private int valueObjectLevel;
 
@@ -462,7 +462,25 @@ public class UI {
         helpButton.setIcon(resizedHelpIcon);
 //        starButton.setBorder(BorderFactory.createEmptyBorder());
 
-        heartButton = makeButton("", buttonFont, helpButton.getX() - margin - 50,
+        exclamationButton = makeButton("", buttonFont, helpButton.getX() - margin - 50,
+                helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
+        exclamationButton.setBackground(mediumPurple);
+        exclamationButton.addActionListener(ah.utilsHandler);
+        exclamationButton.setActionCommand("exclamation");
+        exclamationButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
+        userActionPanel.add(exclamationButton);
+
+        exclamationIcon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader()
+                .getResource("icons/exclamation_mark.png")));
+        Image exclamationImage = exclamationIcon.getImage();
+        Image resizedExclamationImage = exclamationImage.getScaledInstance(exclamationButton.getWidth() - 15,
+                exclamationButton.getHeight() - 15, Image.SCALE_SMOOTH);
+        ImageIcon resizedExclamationIcon = new ImageIcon(resizedExclamationImage);
+        exclamationButton.setIcon(resizedExclamationIcon);
+//        heartButton.setBorder(BorderFactory.createEmptyBorder());
+
+
+        heartButton = makeButton("", buttonFont, exclamationButton.getX() - margin - 50,
                 helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);

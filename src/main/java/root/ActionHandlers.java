@@ -45,6 +45,12 @@ public class ActionHandlers {
                 case "star":
                     //something after clicking star
                     break;
+                case "exclamation":
+                    //something after clicking exclamation
+                    break;
+                case "help":
+                    //something after clicking help
+                    break;
             }
         }
     }
