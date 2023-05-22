@@ -72,7 +72,7 @@ public class ActionHandlers {
                     //setHiddenCorrectAnswer
                     break;
                 case "check":
-                    //something after clicking check
+                    ui.hiddenWordLabel.setVisible(true);
                     break;
                 case "hint":
                     mech.hintDiscover();

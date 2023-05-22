@@ -17,8 +17,8 @@ public class UI {
     public JPanel optionsPanel, mainPanel, wordPanel, userPanel;
     public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, newWordPanel,
             userActionPanel;
-    public JLabel dbsLabel, feedbackLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel, posValueLabel,
-            currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
+    public JLabel dbsLabel, feedbackLabel, hiddenWordLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel,
+            posValueLabel, currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, newWordCheckBox;
@@ -180,8 +180,11 @@ public class UI {
         dbsLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize());
         optionsPanel.add(dbsLabel);
 
-        feedbackLabel = makeLabel("Correct / Wrong", headerFont, JLabel.CENTER);
+        feedbackLabel = makeLabel("Correct / Wrong", wordFont, JLabel.CENTER);
         mainWordPanel.add(feedbackLabel);
+
+        hiddenWordLabel = makeLabel("Hidden word", wordFont, JLabel.CENTER);
+        mainWordPanel.add(hiddenWordLabel);
 
         wordLabel = makeLabel("Word", wordFont, JLabel.CENTER);
         wordLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -366,6 +369,8 @@ public class UI {
 
         checkButton = makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
+        checkButton.addActionListener(ah.userActionHandler);
+        checkButton.setActionCommand("check");
         checkButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(checkButton);
 

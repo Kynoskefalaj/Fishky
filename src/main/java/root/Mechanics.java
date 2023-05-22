@@ -107,6 +107,7 @@ public class Mechanics {
             try {
                 polWord = currentWordSet.getString("pol_word");
                 engWord = currentWordSet.getString("eng_word");
+                ui.hiddenWordLabel.setText(engWord);
                 partOfSpeech = currentWordSet.getString("part_of_speech");
                 polExample = Objects.requireNonNull(getExplanationFields(currentWordSet))
                         .getString("pol_phrase");
@@ -143,6 +144,7 @@ public class Mechanics {
         ui.hintLabel.setText("");
         ui.feedbackLabel.setText("");
         ui.userWordInput.setText("");
+        ui.hiddenWordLabel.setVisible(false);
     }
 
     public void hintDiscover(){
