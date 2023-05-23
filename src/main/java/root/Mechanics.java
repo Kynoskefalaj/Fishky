@@ -102,7 +102,7 @@ public class Mechanics {
         currentWordSet = randomWordResultSet("words", wordsLength);
     }
 
-    public void setRandomWordLabels() {
+    public void setRandomWordLabels(){
         if (currentWordSet != null) {
             try {
                 polWord = currentWordSet.getString("pol_word");
@@ -149,19 +149,30 @@ public class Mechanics {
 
     public void hintDiscover(){
         if (hint == null) {
-            wordLengthMsg = engWord.length() + " letters: ";
-            hint = "";
+            hintToAsterisks();
             hintsUsed = 1;
-        } else if (hint.equals("")) {
-            hint = engWord.substring(0, 1);
-            hintsUsed = 2;
-        } else if (engWord.length() > hint.length()) {
-            int h = hint.length();
-            hint = engWord.substring(0, h + 1);
-            hintsUsed += 1;
+        } else if (hintsUsed < engWord.length() + 1) {
+            charRevealFromAsterisks(hintsUsed - 1);
+            if (engWord.charAt(hintsUsed - 1) != ' ') {
+                hintsUsed += 1;
+            }
         }
+        ui.hintLabel.setText(hint);
+    }
 
-        ui.hintLabel.setText(wordLengthMsg + hint);
+    public void hintToAsterisks(){
+        hint = "";
+        for (int i = 0; i < engWord.length(); i++){
+            if (engWord.charAt(i) != ' '){
+                hint += "*";
+            } else hint += " ";
+        }
+    }
+
+    public void charRevealFromAsterisks(int index){
+        char[] tempHint = hint.toCharArray();
+        tempHint[index] = engWord.charAt(index);
+        hint = new String(tempHint);
     }
 
     public void checkAnswer(){
