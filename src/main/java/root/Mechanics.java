@@ -102,7 +102,7 @@ public class Mechanics {
         currentWordSet = randomWordResultSet("words", wordsLength);
     }
 
-    public void setRandomWordLabels() {
+    public void setRandomWordLabels(){
         if (currentWordSet != null) {
             try {
                 polWord = currentWordSet.getString("pol_word");
@@ -147,10 +147,9 @@ public class Mechanics {
 
     public void hintDiscover(){
         if (hint == null) {
-            wordLengthMsg = engWord.length() + " letters: ";
-            hint = "";
+            hintToAsterisks();
             hintsUsed = 1;
-        } else if (hint.equals("")) {
+        } else if (hintsUsed == 1) {
             hint = engWord.substring(0, 1);
             hintsUsed = 2;
         } else if (engWord.length() > hint.length()) {
@@ -160,6 +159,15 @@ public class Mechanics {
         }
 
         ui.hintLabel.setText(wordLengthMsg + hint);
+    }
+
+    public void hintToAsterisks(){
+        hint = "";
+        for (int i = 0; i < engWord.length(); i++){
+            if (engWord.charAt(i) != ' '){
+                hint += "*";
+            } else hint += " ";
+        }
     }
 
     public void checkAnswer(){
