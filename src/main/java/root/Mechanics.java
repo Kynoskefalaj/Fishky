@@ -149,16 +149,13 @@ public class Mechanics {
         if (hint == null) {
             hintToAsterisks();
             hintsUsed = 1;
-        } else if (hintsUsed == 1) {
-            hint = engWord.substring(0, 1);
-            hintsUsed = 2;
-        } else if (engWord.length() > hint.length()) {
-            int h = hint.length();
-            hint = engWord.substring(0, h + 1);
-            hintsUsed += 1;
+        } else if (hintsUsed < engWord.length() + 1) {
+            charRevealFromAsterisks(hintsUsed - 1);
+            if (engWord.charAt(hintsUsed - 1) != ' ') {
+                hintsUsed += 1;
+            }
         }
-
-        ui.hintLabel.setText(wordLengthMsg + hint);
+        ui.hintLabel.setText(hint);
     }
 
     public void hintToAsterisks(){
@@ -168,6 +165,12 @@ public class Mechanics {
                 hint += "*";
             } else hint += " ";
         }
+    }
+
+    public void charRevealFromAsterisks(int index){
+        char[] tempHint = hint.toCharArray();
+        tempHint[index] = engWord.charAt(index);
+        hint = new String(tempHint);
     }
 
     public void checkAnswer(){
