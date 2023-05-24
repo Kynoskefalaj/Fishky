@@ -180,7 +180,7 @@ public class Mechanics {
         userAnswer = ui.userWordInput.getText();
         //checks if userAnswer is correct and set field correctAnswer as boolean
 
-        if (Objects.equals(userAnswer, engWord)){
+        if (Objects.equals(userAnswer.toLowerCase(), engWord.toLowerCase())){
             ui.setFeedback(true);
         } else ui.setFeedback(false);
     }
