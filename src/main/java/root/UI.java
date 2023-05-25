@@ -21,7 +21,7 @@ public class UI {
             posValueLabel, currentDB_Label, currDB_ValueLabel, hintLabel, isSubmittedLabel, checkLabel, leaveFeedbackLabel,
             isTranslationCorrectLabel, thanksForAnswerLabel;
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
-    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox, newWordCheckBox;
+    public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
             starButton, helpButton, exclamationButton;
