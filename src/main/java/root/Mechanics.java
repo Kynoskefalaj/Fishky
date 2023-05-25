@@ -124,7 +124,7 @@ public class Mechanics {
                 tag3 = Objects.requireNonNull(getTagsFields(currentWordSet))
                         .getString("tag_3");
 
-                ui.wordLabel.setText(polWord);
+                ui.wordLabel.setText(Utilities.customLineWrap(polWord));
                 ui.posValueLabel.setText(partOfSpeech);
                 ui.exampleArea.setText(polExample);
                 ui.commentArea.setText(comment);
