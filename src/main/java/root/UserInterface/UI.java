@@ -1,4 +1,6 @@
-package root;
+package root.UserInterface;
+
+import root.ActionHandlers;
 
 import javax.swing.*;
 import java.awt.*;
@@ -54,14 +56,14 @@ public class UI {
     Color lightGray = new Color (50, 50, 50);
     Color veryLightGray = new Color (60, 60, 60);
     Color mediumPurple = new Color (70, 70, 206);
-    Color goodColor = new Color(48, 206, 59);
-    Color badColor = new Color(187, 66, 66);
+    public Color goodColor = new Color(48, 206, 59);
+    public Color badColor = new Color(187, 66, 66);
 
     public UI(ActionHandlers ah) {
         this.ah = ah;
     }
 
-    void displayWindow() {
+    public void displayWindow() {
         window = new JFrame();
         window.setSize(windowX + 13, windowY + 36);
         window.getContentPane().setBackground(darkGray);
