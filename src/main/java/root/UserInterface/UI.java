@@ -56,45 +56,16 @@ public class UI extends SetupUI{
         con = window.getContentPane();
     }
 
-    JPanel makePanel(int x, int y, int width, int height, Color color) {
-        JPanel panel = new JPanel();
-        panel.setBounds(x, y, width, height);
-        panel.setBackground(color);
-        panel.setLayout(null);
-        panel.setVisible(true);
-        return panel;
-    }
-
-    JLabel makeLabel(String name, Font font, int horizontalAlignment){
-        JLabel label = new JLabel(name);
-        label.setForeground(Color.black);
-        label.setFont(font);
-        label.setHorizontalAlignment(horizontalAlignment);
-        label.setVisible(true);
-        return label;
-    }
-
-    JButton makeButton(String name, Font font, int x, int y, int width, int height, Color color){
-        JButton button = new JButton(name);
-        button.setBounds(x, y, width, height);
-        button.setForeground(Color.black);
-        button.setBackground(color);
-        button.setBorder(BorderFactory.createLineBorder(mediumGray));
-        button.setFont(font);
-
-        return button;
-    }
-
     public void displayScreen() {
         optionsPanelWidth = 300;
-        optionsPanel = makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
+        optionsPanel = UtilsUI.makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
         optionsPanel.setLayout(new GridLayout(13, 1));
         con.add(optionsPanel);
     }
 
     public void displayPanels() {
         int mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
-        mainPanel = makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
+        mainPanel = UtilsUI.makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
                 windowY - margin * 2, mediumGray);
         mainPanel.setLayout(null); //set panel's layout to null to have control on its child's boundaries
         con.add(mainPanel);
@@ -102,19 +73,19 @@ public class UI extends SetupUI{
 
         int wordPanelWidth = mainPanelWidth - margin * 2;
         int wordPanelHeight = 500;
-        wordPanel = makePanel(margin, margin, wordPanelWidth, wordPanelHeight, lightGray);
+        wordPanel = UtilsUI.makePanel(margin, margin, wordPanelWidth, wordPanelHeight, lightGray);
         wordPanel.setLayout(null);
         mainPanel.add(wordPanel);
 
         int userPanelHeight = windowY - wordPanelHeight - margin * 5;
-        userPanel = makePanel(margin, wordPanelHeight + margin * 2,
+        userPanel = UtilsUI.makePanel(margin, wordPanelHeight + margin * 2,
                 wordPanelWidth, userPanelHeight, lightGray);
         userPanel.setLayout(null);
         mainPanel.add(userPanel);
 
         int mainWordPanelWidth = 500;
         int mainWordPanelHeight = 150;
-        mainWordPanel = makePanel(mainPanelWidth / 2 - mainWordPanelWidth / 2 - margin, margin,
+        mainWordPanel = UtilsUI.makePanel(mainPanelWidth / 2 - mainWordPanelWidth / 2 - margin, margin,
                 mainWordPanelWidth, mainWordPanelHeight, veryLightGray);
         wordPanel.add(mainWordPanel);
         mainWordPanel.setLayout(new GridLayout(2, 1));
@@ -122,38 +93,38 @@ public class UI extends SetupUI{
 
         int dataBasePanelWidth = (wordPanelWidth - margin * 4 - mainWordPanelWidth) / 2;
         int dataBasePanelHeight = mainWordPanelHeight;
-        dataBasePanel = makePanel(margin, margin, dataBasePanelWidth, dataBasePanelHeight, veryLightGray);
+        dataBasePanel = UtilsUI.makePanel(margin, margin, dataBasePanelWidth, dataBasePanelHeight, veryLightGray);
         wordPanel.add(dataBasePanel);
 
-        grammarPanel = makePanel(margin * 3 + dataBasePanelWidth + mainWordPanelWidth, margin, dataBasePanelWidth,
+        grammarPanel = UtilsUI.makePanel(margin * 3 + dataBasePanelWidth + mainWordPanelWidth, margin, dataBasePanelWidth,
                 dataBasePanelHeight, veryLightGray);
         wordPanel.add(grammarPanel);
 
         commentPanelWidth = (wordPanelWidth - margin * 4) / 3;
         commentPanelHeight = wordPanelHeight - margin * 3 - mainWordPanelHeight;
         int commentPanelLevel = mainWordPanelHeight + margin * 2;
-        commentPanel = makePanel(margin, commentPanelLevel, commentPanelWidth,
+        commentPanel = UtilsUI.makePanel(margin, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
 //        commentPanel.setLayout(null);
         wordPanel.add(commentPanel);
 
 
         //changed "picturePanel" to "newWordPanel" for setting wordLabel in the very center of the screen
-        newWordPanel = makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
+        newWordPanel = UtilsUI.makePanel(margin * 2 + commentPanelWidth, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
         newWordPanel.setLayout(new GridBagLayout());
         wordPanel.add(newWordPanel);
 
-        tagsPanel = makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
+        tagsPanel = UtilsUI.makePanel(margin * 3 + commentPanelWidth * 2, commentPanelLevel, commentPanelWidth,
                 commentPanelHeight, veryLightGray);
 //        tagsPanel.setLayout(null);
         wordPanel.add(tagsPanel);
 
 
-        examplePanel = makePanel(margin, margin, commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
+        examplePanel = UtilsUI.makePanel(margin, margin, commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
         userPanel.add(examplePanel);
 
-        userActionPanel = makePanel(margin * 2 + commentPanelWidth, margin,
+        userActionPanel = UtilsUI.makePanel(margin * 2 + commentPanelWidth, margin,
                 wordPanelWidth - margin * 3 - commentPanelWidth, userPanelHeight - margin * 2, veryLightGray);
         userPanel.add(userActionPanel);
     }
@@ -161,49 +132,49 @@ public class UI extends SetupUI{
     public void displayLabels() {
 //        ---------------------------------------------------------------------------------------------------------
 //        JLabels:
-        dbsLabel = makeLabel("Databases:", headerFont, JLabel.LEFT);
+        dbsLabel = UtilsUI.makeLabel("Databases:", headerFont, JLabel.LEFT);
         dbsLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize());
         optionsPanel.add(dbsLabel);
 
-        feedbackLabel = makeLabel("Correct / Wrong", wordFont, JLabel.CENTER);
+        feedbackLabel = UtilsUI.makeLabel("Correct / Wrong", wordFont, JLabel.CENTER);
         mainWordPanel.add(feedbackLabel);
 
-        hiddenWordLabel = makeLabel("Hidden word", wordFont, JLabel.CENTER);
+        hiddenWordLabel = UtilsUI.makeLabel("Hidden word", wordFont, JLabel.CENTER);
         mainWordPanel.add(hiddenWordLabel);
 
-        wordLabel = makeLabel("Word", wordFont, JLabel.CENTER);
+        wordLabel = UtilsUI.makeLabel("Word", wordFont, JLabel.CENTER);
         wordLabel.setHorizontalAlignment(JLabel.CENTER);
         wordLabel.setVerticalAlignment(JLabel.CENTER);
         newWordPanel.add(wordLabel);
 
-        currentDB_Label = makeLabel("Current data base:", headerFont, JLabel.LEFT);
+        currentDB_Label = UtilsUI.makeLabel("Current data base:", headerFont, JLabel.LEFT);
         currentDB_Label.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         dataBasePanel.add(currentDB_Label);
 
         valueObjectLevel = labelMargin * 2 + headerFont.getSize() + 5;
 
-        currDB_ValueLabel = makeLabel("The data base", normalFont, JLabel.LEFT);
+        currDB_ValueLabel = UtilsUI.makeLabel("The data base", normalFont, JLabel.LEFT);
         currDB_ValueLabel.setBounds(labelMargin, valueObjectLevel, 250,
                 normalFont.getSize() + 5);
         dataBasePanel.add(currDB_ValueLabel);
 
-        posLabel = makeLabel("Part of speech:", headerFont, JLabel.LEFT);
+        posLabel = UtilsUI.makeLabel("Part of speech:", headerFont, JLabel.LEFT);
         posLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         grammarPanel.add(posLabel);
 
-        posValueLabel = makeLabel("The part of speech", normalFont, JLabel.LEFT);
+        posValueLabel = UtilsUI.makeLabel("The part of speech", normalFont, JLabel.LEFT);
         posValueLabel.setBounds(labelMargin, valueObjectLevel, 250, normalFont.getSize() + 5);
         grammarPanel.add(posValueLabel);
 
-        commentLabel = makeLabel("Comment:", headerFont, JLabel.LEFT);
+        commentLabel = UtilsUI.makeLabel("Comment:", headerFont, JLabel.LEFT);
         commentLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize() + 5);
         commentPanel.add(commentLabel);
 
-        exampleLabel = makeLabel("Example:", headerFont, JLabel.LEFT);
+        exampleLabel = UtilsUI.makeLabel("Example:", headerFont, JLabel.LEFT);
         exampleLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         examplePanel.add(exampleLabel);
 
-        tagsLabel = makeLabel("Tags:", headerFont, JLabel.LEFT);
+        tagsLabel = UtilsUI.makeLabel("Tags:", headerFont, JLabel.LEFT);
         tagsLabel.setBounds(labelMargin, labelMargin, 250, headerFont.getSize() + 5);
         tagsPanel.add(tagsLabel);
     }
@@ -338,40 +309,40 @@ public class UI extends SetupUI{
         userWordInput.setBorder(BorderFactory.createLineBorder(mediumGray));
         userActionPanel.add(userWordInput);
 
-        enterButton = makeButton("Enter", buttonFont, examplePanel.getWidth(), labelMargin,
+        enterButton = UtilsUI.makeButton("Enter", buttonFont, examplePanel.getWidth(), labelMargin,
                 (tagsPanel.getWidth() + margin - 3 * labelMargin) / 3, userWordInput.getHeight(), mediumPurple);
         enterButton.addActionListener(ah.userActionHandler);
         enterButton.setActionCommand("ENTER");
         enterButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(enterButton);
 
-        nextButton = makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,
+        nextButton = UtilsUI.makeButton("Next", buttonFont, enterButton.getX() + enterButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
         nextButton.addActionListener(ah.userActionHandler);
         nextButton.setActionCommand("next");
         nextButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(nextButton);
 
-        checkButton = makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,
+        checkButton = UtilsUI.makeButton("Check", buttonFont, nextButton.getX() + nextButton.getWidth() + labelMargin,
                 labelMargin, enterButton.getWidth(), userWordInput.getHeight(), mediumPurple);
         checkButton.addActionListener(ah.userActionHandler);
         checkButton.setActionCommand("check");
         checkButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(checkButton);
 
-        hintLabel = makeLabel("This is hint", normalFont, JLabel.LEFT);
+        hintLabel = UtilsUI.makeLabel("This is hint", normalFont, JLabel.LEFT);
         hintLabel.setBounds(labelMargin, userWordInput.getHeight() + 2 * labelMargin, userWordInput.getWidth(),
                 userWordInput.getHeight());
         userActionPanel.add(hintLabel);
 
-        hintButton = makeButton("Hint", buttonFont, enterButton.getX(), hintLabel.getY(), enterButton.getWidth(),
+        hintButton = UtilsUI.makeButton("Hint", buttonFont, enterButton.getX(), hintLabel.getY(), enterButton.getWidth(),
                 enterButton.getHeight(), mediumPurple);
         hintButton.addActionListener(ah.userActionHandler);
         hintButton.setActionCommand("hint");
         hintButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(hintButton);
 
-        checkLabel = makeLabel("Check answer", normalFont, JLabel.CENTER);
+        checkLabel = UtilsUI.makeLabel("Check answer", normalFont, JLabel.CENTER);
         checkLabel.setBounds(nextButton.getX(), hintLabel.getY(), checkButton.getWidth() * 2 + labelMargin,
                 hintLabel.getHeight());
         userActionPanel.add(checkLabel);
@@ -386,18 +357,18 @@ public class UI extends SetupUI{
         userSuggestionsInput.setBorder(BorderFactory.createLineBorder(lightGray));
         userActionPanel.add(userSuggestionsInput);
 
-        leaveFeedbackLabel = makeLabel("Leave feedback below:", smallHeaderFont, JLabel.LEFT);
+        leaveFeedbackLabel = UtilsUI.makeLabel("Leave feedback below:", smallHeaderFont, JLabel.LEFT);
         leaveFeedbackLabel.setBounds(labelMargin, userSuggestionsInput.getY() - hintLabel.getHeight(),
                 userSuggestionsInput.getWidth(), hintLabel.getHeight());
         leaveFeedbackLabel.setForeground(veryDarkGray);
         userActionPanel.add(leaveFeedbackLabel);
 
-        isTranslationCorrectLabel = makeLabel("Is translation correct?", smallHeaderFont, JLabel.CENTER);
+        isTranslationCorrectLabel = UtilsUI.makeLabel("Is translation correct?", smallHeaderFont, JLabel.CENTER);
         isTranslationCorrectLabel.setBounds(nextButton.getX(), leaveFeedbackLabel.getY(),
                 nextButton.getWidth() * 2 + labelMargin, leaveFeedbackLabel.getHeight());
         userActionPanel.add(isTranslationCorrectLabel);
 
-        okButton = makeButton("Yes", buttonFont, nextButton.getX(), userSuggestionsInput.getY(),
+        okButton = UtilsUI.makeButton("Yes", buttonFont, nextButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         okButton.setBackground(goodColor);
         okButton.addActionListener(ah.utilsHandler);
@@ -405,7 +376,7 @@ public class UI extends SetupUI{
         okButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(okButton);
 
-        nokButton = makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
+        nokButton = UtilsUI.makeButton("No", buttonFont, checkButton.getX(), userSuggestionsInput.getY(),
                 nextButton.getWidth(), nextButton.getHeight(), mediumPurple);
         nokButton.setBackground(badColor);
         nokButton.addActionListener(ah.utilsHandler);
@@ -413,13 +384,13 @@ public class UI extends SetupUI{
         nokButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(nokButton);
 
-        thanksForAnswerLabel = makeLabel("Thank you for your answer", notificationFont, JLabel.CENTER);
+        thanksForAnswerLabel = UtilsUI.makeLabel("Thank you for your answer", notificationFont, JLabel.CENTER);
         thanksForAnswerLabel.setBounds(okButton.getX(), okButton.getY() + okButton.getHeight() + labelMargin,
                 okButton.getWidth() * 2 + labelMargin, okButton.getHeight());
         thanksForAnswerLabel.setVisible(false);
         userActionPanel.add(thanksForAnswerLabel);
 
-        submitButton = makeButton("Submit", buttonFont, okButton.getX(),
+        submitButton = UtilsUI.makeButton("Submit", buttonFont, okButton.getX(),
                 thanksForAnswerLabel.getY() + labelMargin + thanksForAnswerLabel.getHeight(), nextButton.getWidth(),
                 nextButton.getHeight(), mediumPurple);
         submitButton.addActionListener(ah.utilsHandler);
@@ -427,14 +398,14 @@ public class UI extends SetupUI{
         submitButton.addKeyListener(new ActionHandlers.confirmationKeyListener());
         userActionPanel.add(submitButton);
 
-        isSubmittedLabel = makeLabel("Submitted", notificationFont, JLabel.CENTER);
+        isSubmittedLabel = UtilsUI.makeLabel("Submitted", notificationFont, JLabel.CENTER);
         isSubmittedLabel.setBounds(nokButton.getX(), submitButton.getY(), nokButton.getWidth(), submitButton.getHeight());
         isSubmittedLabel.setForeground(goodColor);
         isSubmittedLabel.setVisible(false);
         userActionPanel.add(isSubmittedLabel);
 
         //-----------------------------------------------------------------------------------------------------------
-        helpButton = makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
+        helpButton = UtilsUI.makeButton("", buttonFont, userActionPanel.getWidth() - margin - 50,
                 userSuggestionsInput.getY() - margin - 50 - isTranslationCorrectLabel.getHeight(), 50,
                 50, mediumPurple);
         helpButton.setBackground(mediumPurple);
@@ -452,7 +423,7 @@ public class UI extends SetupUI{
         helpButton.setIcon(resizedHelpIcon);
 //        starButton.setBorder(BorderFactory.createEmptyBorder());
 
-        exclamationButton = makeButton("", buttonFont, helpButton.getX() - margin - 50,
+        exclamationButton = UtilsUI.makeButton("", buttonFont, helpButton.getX() - margin - 50,
                 helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
         exclamationButton.setBackground(mediumPurple);
         exclamationButton.addActionListener(ah.utilsHandler);
@@ -470,7 +441,7 @@ public class UI extends SetupUI{
 //        heartButton.setBorder(BorderFactory.createEmptyBorder());
 
 
-        heartButton = makeButton("", buttonFont, exclamationButton.getX() - margin - 50,
+        heartButton = UtilsUI.makeButton("", buttonFont, exclamationButton.getX() - margin - 50,
                 helpButton.getY(), helpButton.getWidth(), helpButton.getHeight(), mediumPurple);
         heartButton.setBackground(mediumPurple);
         heartButton.addActionListener(ah.utilsHandler);
@@ -487,7 +458,7 @@ public class UI extends SetupUI{
         heartButton.setIcon(resizedHeartIcon);
 //        heartButton.setBorder(BorderFactory.createEmptyBorder());
 
-        starButton = makeButton("", buttonFont, heartButton.getX() - margin - 50,
+        starButton = UtilsUI.makeButton("", buttonFont, heartButton.getX() - margin - 50,
                 heartButton.getY(), heartButton.getWidth(), heartButton.getHeight(), mediumPurple);
         starButton.setBackground(mediumPurple);
         starButton.addActionListener(ah.utilsHandler);

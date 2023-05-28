@@ -13,7 +13,7 @@ public class SetupUI {
 
     protected Color veryDarkGray = new Color(15, 15, 15);
     protected Color darkGray = new Color(30, 30, 30);
-    protected Color mediumGray = new Color (40, 40, 40);
+    protected static Color mediumGray = new Color (40, 40, 40);
     protected Color lightGray = new Color (50, 50, 50);
     protected Color veryLightGray = new Color (60, 60, 60);
     protected Color mediumPurple = new Color (70, 70, 206);
