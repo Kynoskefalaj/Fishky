@@ -9,7 +9,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
 import java.util.Objects;
 
-public class UI {
+public class UI extends SetupUI{
 
     ActionHandlers ah;
 
@@ -41,23 +41,6 @@ public class UI {
     private int optionsPanelWidth;
     private int commentPanelWidth;
     private int commentPanelHeight;
-
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-    Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
-    Font wordFont = new Font("Arial", Font.BOLD, 45);
-    Font textFont = new Font("Times New Roman", Font.PLAIN, 19);
-    Font buttonFont = new Font("Arial", Font.BOLD, 25);
-    Font smallHeaderFont = new Font("Times New Roman", Font.PLAIN, 25);
-    Font notificationFont = new Font("Arial", Font.BOLD, 20);
-
-    Color veryDarkGray = new Color(15, 15, 15);
-    Color darkGray = new Color(30, 30, 30);
-    Color mediumGray = new Color (40, 40, 40);
-    Color lightGray = new Color (50, 50, 50);
-    Color veryLightGray = new Color (60, 60, 60);
-    Color mediumPurple = new Color (70, 70, 206);
-    public Color goodColor = new Color(48, 206, 59);
-    public Color badColor = new Color(187, 66, 66);
 
     public UI(ActionHandlers ah) {
         this.ah = ah;
