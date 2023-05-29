@@ -1,5 +1,7 @@
 package root;
 
+import root.UserInterface.UI;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -82,7 +84,7 @@ public class ActionHandlers {
         }
     }
 
-    static class confirmationKeyListener implements java.awt.event.KeyListener {
+    public static class confirmationKeyListener implements java.awt.event.KeyListener {
         @Override
         public void keyTyped(KeyEvent e) {}
 
