@@ -474,13 +474,6 @@ public class UI extends SetupUI{
                 starButton.getHeight() - 10, Image.SCALE_SMOOTH);
         ImageIcon resizedStarIcon = new ImageIcon(resizedStarImage);
         starButton.setIcon(resizedStarIcon);
-//        starButton.setBorder(BorderFactory.createEmptyBorder());
-
-//        setDefaultEnterButton();
-    }
-
-    public void setDefaultEnterButton() {
-        window.getRootPane().setDefaultButton(enterButton);
     }
 
     public void setFeedback(Boolean isCorrect){
