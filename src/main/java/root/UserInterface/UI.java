@@ -26,7 +26,8 @@ public class UI extends SetupUI{
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox;
     public JTextField userWordInput;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
-            starButton, helpButton, exclamationButton;
+            starButton, helpButton, exclamationButton, dbTotalButton, dbThemesButton, dbRepetitionButton, dbMarkedButton,
+            dbSearchEngineButton;
     private ImageIcon heartIcon, starIcon, helpIcon, exclamationIcon;
 
     private int valueObjectLevel;
@@ -59,7 +60,7 @@ public class UI extends SetupUI{
     public void displayScreen() {
         optionsPanelWidth = 300;
         optionsPanel = UtilsUI.makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
-        optionsPanel.setLayout(new GridLayout(13, 1));
+//        optionsPanel.setLayout(new GridLayout(13, 1));
         con.add(optionsPanel);
     }
 
@@ -133,7 +134,7 @@ public class UI extends SetupUI{
 //        ---------------------------------------------------------------------------------------------------------
 //        JLabels:
         dbsLabel = UtilsUI.makeLabel("Databases:", headerFont, JLabel.LEFT);
-        dbsLabel.setBounds(labelMargin, labelMargin, 150, headerFont.getSize());
+        dbsLabel.setBounds(margin, labelMargin, 150, headerFont.getSize());
         optionsPanel.add(dbsLabel);
 
         feedbackLabel = UtilsUI.makeLabel("Correct / Wrong", wordFont, JLabel.CENTER);
@@ -474,6 +475,34 @@ public class UI extends SetupUI{
                 starButton.getHeight() - 10, Image.SCALE_SMOOTH);
         ImageIcon resizedStarIcon = new ImageIcon(resizedStarImage);
         starButton.setIcon(resizedStarIcon);
+
+        //-----------------------------------------------------------------------------------------------------------
+        dbTotalButton = UtilsUI.makeButton("Total", buttonFont, dbsLabel.getX(),
+                dbsLabel.getY() + dbsLabel.getHeight() + margin, optionsPanelWidth - 2 * margin,
+                40, mediumPurple);
+        optionsPanel.add(dbTotalButton);
+
+        dbThemesButton = UtilsUI.makeButton("Themes", buttonFont, dbsLabel.getX(),
+                dbTotalButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbTotalButton.getHeight(), mediumPurple);
+        optionsPanel.add(dbThemesButton);
+
+        dbRepetitionButton = UtilsUI.makeButton("Repetition", buttonFont, dbsLabel.getX(),
+                dbThemesButton.getY() + dbThemesButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbTotalButton.getHeight(), mediumPurple);
+        optionsPanel.add(dbRepetitionButton);
+
+        dbMarkedButton = UtilsUI.makeButton("Marked", buttonFont, dbsLabel.getX(),
+                dbRepetitionButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbTotalButton.getHeight(), mediumPurple);
+        optionsPanel.add(dbMarkedButton);
+
+        dbSearchEngineButton = UtilsUI.makeButton("Search Engine", buttonFont, dbsLabel.getX(),
+                dbMarkedButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbTotalButton.getHeight(), mediumPurple);
+        optionsPanel.add(dbSearchEngineButton);
+
+
     }
 
     public void setFeedback(Boolean isCorrect){
@@ -484,6 +513,4 @@ public class UI extends SetupUI{
             feedbackLabel.setText("WRONG!");
             feedbackLabel.setForeground(badColor);}
     }
-
-
 }
