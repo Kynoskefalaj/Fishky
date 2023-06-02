@@ -1,5 +1,6 @@
 package root.UserInterface;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class SetupUI {
@@ -19,5 +20,10 @@ public class SetupUI {
     protected Color mediumPurple = new Color (70, 70, 206);
     public Color goodColor = new Color(48, 206, 59);
     public Color badColor = new Color(187, 66, 66);
+
+    JButton dbTotalButton, dbThemesButton, dbRepetitionButton, dbMarkedButton, dbSearchEngineButton;
+    JButton heartButton, starButton, helpButton, exclamationButton;
+    protected ImageIcon heartIcon, starIcon, helpIcon, exclamationIcon;
+    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
 
 }

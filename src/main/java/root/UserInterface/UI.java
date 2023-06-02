@@ -25,10 +25,6 @@ public class UI extends SetupUI{
     public JTextArea commentArea, exampleArea, tagsArea, userSuggestionsInput;
     public JCheckBox commentsCheckBox, exampleCheckBox, tagsCheckBox;
     public JTextField userWordInput;
-    public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton, heartButton,
-            starButton, helpButton, exclamationButton, dbTotalButton, dbThemesButton, dbRepetitionButton, dbMarkedButton,
-            dbSearchEngineButton;
-    private ImageIcon heartIcon, starIcon, helpIcon, exclamationIcon;
 
     private int valueObjectLevel;
 
