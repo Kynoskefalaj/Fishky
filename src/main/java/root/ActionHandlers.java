@@ -109,18 +109,24 @@ public class ActionHandlers {
             switch (userAction) {
                 case "total":
                     //something after clicking total
+                    ui.oui.menuPanel.setVisible(false);
+                    ui.oui.totalPanel.setVisible(true);
                     break;
                 case "themes":
                     //something after clicking themes
+                    ui.oui.menuPanel.setVisible(false);
                     break;
                 case "repetition":
                     //something after clicking repetition
+                    ui.oui.menuPanel.setVisible(false);
                     break;
                 case "marked":
                     //something after clicking marked
+                    ui.oui.menuPanel.setVisible(false);
                     break;
                 case "searchEngine":
                     //something after clicking searchEngine
+                    ui.oui.menuPanel.setVisible(false);
                     break;
             }
         }
