@@ -12,11 +12,11 @@ import java.util.Objects;
 public class UI extends SetupUI{
 
     ActionHandlers ah;
+    public OptionsUI oui;
 
     JFrame window;
     Container con;
-
-    public JPanel optionsPanel, mainPanel, wordPanel, userPanel;
+    public JPanel ouioptionsPanel, mainPanel, wordPanel, userPanel;
     public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, newWordPanel,
             userActionPanel;
     public JLabel dbsLabel, feedbackLabel, hiddenWordLabel, wordLabel, commentLabel, exampleLabel, tagsLabel, posLabel,
@@ -29,18 +29,22 @@ public class UI extends SetupUI{
     private int valueObjectLevel;
 
 
-    private final int windowX = 1600;
-    private final int windowY = 900;
-
-    private final int margin = 8;
-    private final int labelMargin = 5;
-
-    private int optionsPanelWidth;
     private int commentPanelWidth;
     private int commentPanelHeight;
 
     public UI(ActionHandlers ah) {
         this.ah = ah;
+        this.oui = new OptionsUI(this);
+    }
+    public void runUI() {
+        displayWindow();
+        oui.optionsPanelsSetup();
+//        ui.displayScreen();
+        displayPanels();
+        displayLabels();
+        displayCheckBoxes();
+        displayTextAreas();
+        displayUserActionsComponents();
     }
 
     public void displayWindow() {
@@ -53,16 +57,15 @@ public class UI extends SetupUI{
         con = window.getContentPane();
     }
 
-    public void displayScreen() {
-        optionsPanelWidth = 300;
-        optionsPanel = UtilsUI.makePanel(margin, margin, optionsPanelWidth, windowY - margin * 2, mediumGray);
-//        optionsPanel.setLayout(new GridLayout(13, 1));
-        con.add(optionsPanel);
-    }
+//    public void displayScreen() {
+//        ouioptionsPanel = UtilsUI.makePanel(margin, margin, 300, windowY - margin * 2, mediumGray);
+////        optionsPanel.setLayout(new GridLayout(13, 1));
+//        con.add(ouioptionsPanel);
+//    }
 
     public void displayPanels() {
-        int mainPanelWidth = windowX - optionsPanelWidth - margin * 3;
-        mainPanel = UtilsUI.makePanel(margin * 2 + optionsPanelWidth, margin, mainPanelWidth,
+        int mainPanelWidth = windowX - oui.optionsPanel.getWidth() - margin * 3;
+        mainPanel = UtilsUI.makePanel(margin * 2 + oui.optionsPanel.getWidth(), margin, mainPanelWidth,
                 windowY - margin * 2, mediumGray);
         mainPanel.setLayout(null); //set panel's layout to null to have control on its child's boundaries
         con.add(mainPanel);
@@ -131,7 +134,7 @@ public class UI extends SetupUI{
 //        JLabels:
         dbsLabel = UtilsUI.makeLabel("Databases:", headerFont, JLabel.LEFT);
         dbsLabel.setBounds(margin, labelMargin, 150, headerFont.getSize());
-        optionsPanel.add(dbsLabel);
+        oui.optionsPanel.add(dbsLabel);
 
         feedbackLabel = UtilsUI.makeLabel("Correct / Wrong", wordFont, JLabel.CENTER);
         mainWordPanel.add(feedbackLabel);
@@ -474,39 +477,39 @@ public class UI extends SetupUI{
 
         //-----------------------------------------------------------------------------------------------------------
         dbTotalButton = UtilsUI.makeButton("Total", buttonFont, dbsLabel.getX(),
-                dbsLabel.getY() + dbsLabel.getHeight() + margin, optionsPanelWidth - 2 * margin,
+                dbsLabel.getY() + dbsLabel.getHeight() + margin, oui.optionsPanel.getWidth() - 2 * margin,
                 40, mediumPurple);
         dbTotalButton.addActionListener(ah.navigateHandler);
         dbTotalButton.setActionCommand("total");
-        optionsPanel.add(dbTotalButton);
+        oui.optionsPanel.add(dbTotalButton);
 
         dbThemesButton = UtilsUI.makeButton("Themes", buttonFont, dbsLabel.getX(),
                 dbTotalButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbThemesButton.addActionListener(ah.navigateHandler);
         dbThemesButton.setActionCommand("themes");
-        optionsPanel.add(dbThemesButton);
+        oui.optionsPanel.add(dbThemesButton);
 
         dbRepetitionButton = UtilsUI.makeButton("Repetition", buttonFont, dbsLabel.getX(),
                 dbThemesButton.getY() + dbThemesButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbRepetitionButton.addActionListener(ah.navigateHandler);
         dbRepetitionButton.setActionCommand("repetition");
-        optionsPanel.add(dbRepetitionButton);
+        oui.optionsPanel.add(dbRepetitionButton);
 
         dbMarkedButton = UtilsUI.makeButton("Marked", buttonFont, dbsLabel.getX(),
                 dbRepetitionButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbMarkedButton.addActionListener(ah.navigateHandler);
         dbMarkedButton.setActionCommand("marked");
-        optionsPanel.add(dbMarkedButton);
+        oui.optionsPanel.add(dbMarkedButton);
 
         dbSearchEngineButton = UtilsUI.makeButton("Search Engine", buttonFont, dbsLabel.getX(),
                 dbMarkedButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbSearchEngineButton.addActionListener(ah.navigateHandler);
         dbSearchEngineButton.setActionCommand("search engine");
-        optionsPanel.add(dbSearchEngineButton);
+        oui.optionsPanel.add(dbSearchEngineButton);
 
 
     }

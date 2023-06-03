@@ -5,11 +5,6 @@ import java.awt.*;
 
 public class UtilsUI{
 
-    private final UI ui;
-    public UtilsUI(UI ui) {
-        this.ui = ui;
-    }
-
     public static JPanel makePanel(int x, int y, int width, int height, Color color) {
         JPanel panel = new JPanel();
         panel.setBounds(x, y, width, height);

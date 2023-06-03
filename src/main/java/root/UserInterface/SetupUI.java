@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SetupUI {
+
+    Container con;
     protected Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     protected Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
     protected Font wordFont = new Font("Arial", Font.BOLD, 45);
@@ -25,5 +27,11 @@ public class SetupUI {
     JButton heartButton, starButton, helpButton, exclamationButton;
     protected ImageIcon heartIcon, starIcon, helpIcon, exclamationIcon;
     public JButton enterButton, nextButton, checkButton, hintButton, okButton, nokButton, submitButton;
+
+    protected final int windowX = 1600;
+    protected final int windowY = 900;
+
+    protected final int margin = 8;
+    protected final int labelMargin = 5;
 
 }
