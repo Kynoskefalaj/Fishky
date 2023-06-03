@@ -13,6 +13,7 @@ public class ActionHandlers {
     public Mechanics mech;
     public UtilsHandler utilsHandler = new UtilsHandler();
     public UserActionHandler userActionHandler = new UserActionHandler();
+    public NavigateHandler navigateHandler = new NavigateHandler();
 
     public ActionHandlers(UI ui) {
         this.ui = ui;
@@ -98,6 +99,31 @@ public class ActionHandlers {
 
         @Override
         public void keyReleased(KeyEvent e) {}
+    }
+
+    public class NavigateHandler implements ActionListener {
+
+        public void actionPerformed(ActionEvent event) {
+
+            String userAction = event.getActionCommand();
+            switch (userAction) {
+                case "total":
+                    //something after clicking total
+                    break;
+                case "themes":
+                    //something after clicking themes
+                    break;
+                case "repetition":
+                    //something after clicking repetition
+                    break;
+                case "marked":
+                    //something after clicking marked
+                    break;
+                case "searchEngine":
+                    //something after clicking searchEngine
+                    break;
+            }
+        }
     }
 
 }

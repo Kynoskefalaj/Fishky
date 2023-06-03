@@ -476,26 +476,36 @@ public class UI extends SetupUI{
         dbTotalButton = UtilsUI.makeButton("Total", buttonFont, dbsLabel.getX(),
                 dbsLabel.getY() + dbsLabel.getHeight() + margin, optionsPanelWidth - 2 * margin,
                 40, mediumPurple);
+        dbTotalButton.addActionListener(ah.navigateHandler);
+        dbTotalButton.setActionCommand("total");
         optionsPanel.add(dbTotalButton);
 
         dbThemesButton = UtilsUI.makeButton("Themes", buttonFont, dbsLabel.getX(),
                 dbTotalButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
+        dbThemesButton.addActionListener(ah.navigateHandler);
+        dbThemesButton.setActionCommand("themes");
         optionsPanel.add(dbThemesButton);
 
         dbRepetitionButton = UtilsUI.makeButton("Repetition", buttonFont, dbsLabel.getX(),
                 dbThemesButton.getY() + dbThemesButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
+        dbRepetitionButton.addActionListener(ah.navigateHandler);
+        dbRepetitionButton.setActionCommand("repetition");
         optionsPanel.add(dbRepetitionButton);
 
         dbMarkedButton = UtilsUI.makeButton("Marked", buttonFont, dbsLabel.getX(),
                 dbRepetitionButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
+        dbMarkedButton.addActionListener(ah.navigateHandler);
+        dbMarkedButton.setActionCommand("marked");
         optionsPanel.add(dbMarkedButton);
 
         dbSearchEngineButton = UtilsUI.makeButton("Search Engine", buttonFont, dbsLabel.getX(),
                 dbMarkedButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
+        dbSearchEngineButton.addActionListener(ah.navigateHandler);
+        dbSearchEngineButton.setActionCommand("search engine");
         optionsPanel.add(dbSearchEngineButton);
 
 
