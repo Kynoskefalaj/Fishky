@@ -8,6 +8,7 @@ public class OptionsUI extends SetupUI{
 
     public JPanel menuPanel, totalPanel;
     JLabel dbsLabel;
+    JButton returnButton;
 
     public OptionsUI(UI ui) {
         this.ui = ui;
@@ -62,5 +63,11 @@ public class OptionsUI extends SetupUI{
                 mediumGray);
         ui.con.add(totalPanel);
         totalPanel.setVisible(false);
+
+        returnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        returnButton.addActionListener(ui.ah.navigateHandler);
+        returnButton.setActionCommand("return");
+        totalPanel.add(returnButton);
     }
 }

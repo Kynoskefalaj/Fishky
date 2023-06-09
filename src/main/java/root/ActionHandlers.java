@@ -128,6 +128,9 @@ public class ActionHandlers {
                     //something after clicking searchEngine
                     ui.oui.menuPanel.setVisible(false);
                     break;
+                case "return":
+                    ui.oui.totalPanel.setVisible(false);
+                    ui.oui.menuPanel.setVisible(true);
             }
         }
     }
