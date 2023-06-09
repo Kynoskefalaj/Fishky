@@ -7,6 +7,7 @@ public class OptionsUI extends SetupUI{
     UI ui;
 
     public JPanel menuPanel, totalPanel;
+    public JLabel dbHeaderLabel, wordsQtyHeaderLabel;
     JLabel dbsLabel;
     JButton returnButton;
 
@@ -69,5 +70,14 @@ public class OptionsUI extends SetupUI{
         returnButton.addActionListener(ui.ah.navigateHandler);
         returnButton.setActionCommand("return");
         totalPanel.add(returnButton);
+
+        dbHeaderLabel = UtilsUI.makeLabel("Database: Total", headerFont, JLabel.LEFT);
+        dbHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY(), returnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(dbHeaderLabel);
+
+        wordsQtyHeaderLabel = UtilsUI.makeLabel("Words quantity: 999", normalFont, JLabel.LEFT);
+        wordsQtyHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY() + dbsLabel.getHeight(),
+                returnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(wordsQtyHeaderLabel);
     }
 }
