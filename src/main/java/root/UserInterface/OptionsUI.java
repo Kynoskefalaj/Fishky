@@ -1,5 +1,7 @@
 package root.UserInterface;
 
+import root.Utilities;
+
 import javax.swing.*;
 
 public class OptionsUI extends SetupUI{
@@ -117,15 +119,13 @@ public class OptionsUI extends SetupUI{
         int i = 1;
         int y = 0;
         for (JButton button: setBtns) {
-            button = UtilsUI.makeButton("" + i, headerFont, dbsLabel.getX(), problematicWordsLabel.getY() + y +
+            button = UtilsUI.makeButton(Utilities.integerToRomanNumber(i), headerFont, dbsLabel.getX(), problematicWordsLabel.getY() + y +
                     wordsQtyHeaderLabel.getHeight(), returnButton.getWidth(), 30, mediumPurple);
             button.addActionListener(ui.ah.navigateHandler);
-            button.setActionCommand("" + i);
+            button.setActionCommand(Utilities.integerToRomanNumber(i));
             totalPanel.add(button);
             y += 30;
             i += 1;
         }
-
-
     }
 }
