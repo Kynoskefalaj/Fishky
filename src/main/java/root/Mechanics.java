@@ -11,7 +11,7 @@ public class Mechanics {
 
     UI ui;
 
-    int wordsLength = 999;
+    int wordsQty = 999;
     ResultSet currentWordSet;
     String engWord, polWord, partOfSpeech, userAnswer, hint;
     String comment, polExample, engExample, tag1, tag2, tag3;
@@ -22,9 +22,9 @@ public class Mechanics {
         this.ui = ui;
     }
 
-    public static String randomWord (String tableName, String column, int rollRange) {
+    public static String randomWord (String tableName, String column, int wordsQty) {
         Random random = new Random();
-        int randInt = random.nextInt(rollRange);
+        int randInt = random.nextInt(wordsQty);
 
         String sqlRequest = "SELECT * FROM " + tableName + " WHERE id = " + randInt;
         try {
@@ -101,7 +101,7 @@ public class Mechanics {
 
 
     public void generateRandomWordResultSet(){
-        currentWordSet = randomWordResultSet("words", wordsLength);
+        currentWordSet = randomWordResultSet("words", wordsQty);
     }
 
     public void setRandomWordLabels(){
