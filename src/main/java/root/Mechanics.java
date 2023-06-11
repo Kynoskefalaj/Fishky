@@ -38,6 +38,19 @@ public class Mechanics {
         return null;
     }
 
+    public static int totalSetRecordsQty() {
+        String sqlRequest = "SELECT COUNT(\"word_id\") AS wordsQty FROM words";
+        try {
+            ResultSet result = QueryExecutor.executeSelect(sqlRequest);
+            result.next();
+            return result.getInt("wordsQty");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public static ResultSet randomWordResultSet (String tableName, int rollRange) {
         Random random = new Random();
         int randInt = random.nextInt(rollRange);
@@ -182,7 +195,7 @@ public class Mechanics {
         userAnswer = ui.userWordInput.getText();
         //checks if userAnswer is correct and set field correctAnswer as boolean
 
-        if (Objects.equals(userAnswer, engWord)){
+        if (Objects.equals(userAnswer.toLowerCase(), engWord.toLowerCase())){
             ui.setFeedback(true);
         } else ui.setFeedback(false);
     }
