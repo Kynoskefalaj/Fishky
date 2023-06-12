@@ -11,7 +11,6 @@ public class Mechanics {
 
     UI ui;
 
-    int wordsQty = 999;
     ResultSet currentWordSet;
     String engWord, polWord, partOfSpeech, userAnswer, hint;
     String comment, polExample, engExample, tag1, tag2, tag3;
@@ -114,7 +113,7 @@ public class Mechanics {
 
 
     public void generateRandomWordResultSet(){
-        currentWordSet = randomWordResultSet("words", wordsQty);
+        currentWordSet = randomWordResultSet("words", ui.wordsQty);
     }
 
     public void setRandomWordLabels(){

@@ -1,5 +1,7 @@
 package root.UserInterface;
 
+import root.Mechanics;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -33,5 +35,7 @@ public class SetupUI {
 
     protected final int margin = 8;
     protected final int labelMargin = 5;
+
+    public int wordsQty = Mechanics.totalSetRecordsQty();
 
 }

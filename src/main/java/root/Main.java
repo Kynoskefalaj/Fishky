@@ -13,6 +13,7 @@ public class Main {
     }
 
     Main(){
+
         // dependency injection
         ah.setUI(ui);
         this.mechanics = new Mechanics(ui);

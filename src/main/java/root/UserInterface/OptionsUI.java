@@ -1,5 +1,6 @@
 package root.UserInterface;
 
+import root.Mechanics;
 import root.Utilities;
 
 import javax.swing.*;
@@ -70,6 +71,10 @@ public class OptionsUI extends SetupUI{
     }
 
     public void totalPanelSetup() {
+
+//        wordsQty = Mechanics.totalSetRecordsQty(); //here
+//        System.out.println(wordsQty);
+
         totalPanel = UtilsUI.makePanel(menuPanel.getX(), menuPanel.getY(), menuPanel.getWidth(), menuPanel.getHeight(),
                 mediumGray);
         ui.con.add(totalPanel);
