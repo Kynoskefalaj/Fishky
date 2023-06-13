@@ -109,8 +109,10 @@ public class ActionHandlers {
             switch (userAction) {
                 case "total":
                     //something after clicking total
+                    mech.databaseName = "Total";
                     ui.oui.menuPanel.setVisible(false);
                     ui.oui.totalPanel.setVisible(true);
+                    mech.dataBasePanelSetUp();
                     break;
                 case "themes":
                     //something after clicking themes
@@ -131,8 +133,95 @@ public class ActionHandlers {
                 case "return":
                     ui.oui.totalPanel.setVisible(false);
                     ui.oui.menuPanel.setVisible(true);
+                    break;
+                case "total 1":
+                    Mechanics.minWordIndex = 1;
+                    Mechanics.maxWordIndex = 50;
+                    mech.dataBasePanelSetUp();
+                    break;
+                case "total 2":
+                    Mechanics.minWordIndex = 51;
+                    Mechanics.maxWordIndex = 100;
+                    mech.dataBasePanelSetUp();
+                    break;
+                case "total 3":
+                    Mechanics.minWordIndex = 101;
+                    Mechanics.maxWordIndex = 150;
+                    mech.dataBasePanelSetUp();
+                    break;
+                case "total 4":
+                    Mechanics.minWordIndex = 151;
+                    Mechanics.maxWordIndex = 200;
+                    break;
+                case "total 5":
+                    Mechanics.minWordIndex = 201;
+                    Mechanics.maxWordIndex = 250;
+                    break;
+                case "total 6":
+                    Mechanics.minWordIndex = 251;
+                    Mechanics.maxWordIndex = 300;
+                    break;
+                case "total 7":
+                    Mechanics.minWordIndex = 301;
+                    Mechanics.maxWordIndex = 350;
+                    break;
+                case "total 8":
+                    Mechanics.minWordIndex = 351;
+                    Mechanics.maxWordIndex = 400;
+                    break;
+                case "total 9":
+                    Mechanics.minWordIndex = 401;
+                    Mechanics.maxWordIndex = 450;
+                    break;
+                case "total 10":
+                    Mechanics.minWordIndex = 451;
+                    Mechanics.maxWordIndex = 500;
+                    break;
+                case "total 11":
+                    Mechanics.minWordIndex = 501;
+                    Mechanics.maxWordIndex = 550;
+                    break;
+                case "total 12":
+                    Mechanics.minWordIndex = 551;
+                    Mechanics.maxWordIndex = 600;
+                    break;
+                case "total 13":
+                    Mechanics.minWordIndex = 601;
+                    Mechanics.maxWordIndex = 650;
+                    break;
+                case "total 14":
+                    Mechanics.minWordIndex = 651;
+                    Mechanics.maxWordIndex = 700;
+                    break;
+                case "total 15":
+                    Mechanics.minWordIndex = 701;
+                    Mechanics.maxWordIndex = 750;
+                    break;
+                case "total 16":
+                    Mechanics.minWordIndex = 751;
+                    Mechanics.maxWordIndex = 800;
+                    break;
+                case "total 17":
+                    Mechanics.minWordIndex = 801;
+                    Mechanics.maxWordIndex = 850;
+                    break;
+                case "total 18":
+                    Mechanics.minWordIndex = 851;
+                    Mechanics.maxWordIndex = 900;
+                    break;
+                case "total 19":
+                    Mechanics.minWordIndex = 901;
+                    Mechanics.maxWordIndex = 950;
+                    break;
+                case "total 20":
+                    Mechanics.minWordIndex = 951;
+                    Mechanics.maxWordIndex = Mechanics.totalWordsQty;
+                    break;
             }
+            mech.dataBasePanelSetUp();
         }
     }
+
+
 
 }

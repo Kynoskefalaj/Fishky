@@ -72,8 +72,8 @@ public class OptionsUI extends SetupUI{
 
     public void totalPanelSetup() {
 
-//        wordsQty = Mechanics.totalSetRecordsQty(); //here
-//        System.out.println(wordsQty);
+        Mechanics.totalWordsQty = Mechanics.totalSetRecordsQty(); //here
+        System.out.println(Mechanics.totalWordsQty);
 
         totalPanel = UtilsUI.makePanel(menuPanel.getX(), menuPanel.getY(), menuPanel.getWidth(), menuPanel.getHeight(),
                 mediumGray);
@@ -90,7 +90,7 @@ public class OptionsUI extends SetupUI{
         dbHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY(), returnButton.getWidth(), dbsLabel.getHeight());
         totalPanel.add(dbHeaderLabel);
 
-        wordsQtyHeaderLabel = UtilsUI.makeLabel("Words quantity: 999", normalFont, JLabel.LEFT);
+        wordsQtyHeaderLabel = UtilsUI.makeLabel("Words quantity: " + Mechanics.totalWordsQty, normalFont, JLabel.LEFT);
         wordsQtyHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY() + dbsLabel.getHeight(),
                 returnButton.getWidth(), dbsLabel.getHeight());
         totalPanel.add(wordsQtyHeaderLabel);
@@ -127,7 +127,7 @@ public class OptionsUI extends SetupUI{
             button = UtilsUI.makeButton(Utilities.integerToRomanNumber(i), headerFont, dbsLabel.getX(), problematicWordsLabel.getY() + y +
                     wordsQtyHeaderLabel.getHeight(), returnButton.getWidth(), 30, mediumPurple);
             button.addActionListener(ui.ah.navigateHandler);
-            button.setActionCommand(Utilities.integerToRomanNumber(i));
+            button.setActionCommand("total " + i);
             totalPanel.add(button);
             y += 30;
             i += 1;

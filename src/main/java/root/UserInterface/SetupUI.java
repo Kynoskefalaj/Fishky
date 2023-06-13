@@ -8,6 +8,7 @@ import java.awt.*;
 public class SetupUI {
 
     Container con;
+    Mechanics mechanics;
     protected Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     protected Font headerFont = new Font("Times New Roman", Font.BOLD, 30);
     protected Font wordFont = new Font("Arial", Font.BOLD, 45);
@@ -36,6 +37,7 @@ public class SetupUI {
     protected final int margin = 8;
     protected final int labelMargin = 5;
 
-    public int wordsQty = Mechanics.totalSetRecordsQty();
-
+    public void mechanicsDependencyInjection(Mechanics mechanics) {
+        this.mechanics = mechanics;
+    }
 }

@@ -15,7 +15,6 @@ public class UI extends SetupUI{
     public OptionsUI oui;
 
     JFrame window;
-    Container con;
     public JPanel mainPanel, wordPanel, userPanel;
     public JPanel dataBasePanel, mainWordPanel, grammarPanel, commentPanel, examplePanel, tagsPanel, newWordPanel,
             userActionPanel;

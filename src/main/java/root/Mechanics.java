@@ -1,5 +1,6 @@
 package root;
 
+import root.UserInterface.SetupUI;
 import root.UserInterface.UI;
 
 import java.sql.ResultSet;
@@ -16,6 +17,11 @@ public class Mechanics {
     String comment, polExample, engExample, tag1, tag2, tag3;
     String wordLengthMsg;
     int hintsUsed, hintsAvailable;
+
+    public String databaseName = "";
+    public static int totalWordsQty = 0; //Mechanics.totalSetRecordsQty();
+    public static int minWordIndex = 0; //is set by other method
+    public static int maxWordIndex = 0; //is set by other method
 
     public Mechanics (UI ui) {
         this.ui = ui;
@@ -50,9 +56,11 @@ public class Mechanics {
         return 0;
     }
 
-    public static ResultSet randomWordResultSet (String tableName, int rollRange) {
+    public static ResultSet randomWordResultSet (String tableName, int minRollRange,
+                                                 int maxRollRange) {
         Random random = new Random();
-        int randInt = random.nextInt(rollRange);
+        //below randInt is set as random integer between min and max roll range
+        int randInt = random.nextInt(maxRollRange - minRollRange + 1) + minRollRange;
 
         String sqlQuery = "SELECT * FROM " + tableName + " WHERE id = " + randInt;
         try {
@@ -65,6 +73,12 @@ public class Mechanics {
         }
         return null;
     }
+
+    public void generateRandomWordResultSet(){
+        currentWordSet = randomWordResultSet("words", minWordIndex,
+                maxWordIndex);
+    }
+
 
     public static ResultSet getFrequencyFields (ResultSet rolledWordResultSet) {
         try {
@@ -109,11 +123,6 @@ public class Mechanics {
             e.printStackTrace();
         }
         return null;
-    }
-
-
-    public void generateRandomWordResultSet(){
-        currentWordSet = randomWordResultSet("words", ui.wordsQty);
     }
 
     public void setRandomWordLabels(){
@@ -197,6 +206,11 @@ public class Mechanics {
         if (Objects.equals(userAnswer.toLowerCase(), engWord.toLowerCase())){
             ui.setFeedback(true);
         } else ui.setFeedback(false);
+    }
+
+    public void dataBasePanelSetUp(){
+        ui.currDB_ValueLabel.setText(databaseName + " " + minWordIndex + " - " +
+                maxWordIndex);
     }
 
 }
