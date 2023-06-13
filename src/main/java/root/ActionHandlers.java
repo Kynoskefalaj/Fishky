@@ -137,17 +137,14 @@ public class ActionHandlers {
                 case "total 1":
                     Mechanics.minWordIndex = 1;
                     Mechanics.maxWordIndex = 50;
-                    mech.dataBasePanelSetUp();
                     break;
                 case "total 2":
                     Mechanics.minWordIndex = 51;
                     Mechanics.maxWordIndex = 100;
-                    mech.dataBasePanelSetUp();
                     break;
                 case "total 3":
                     Mechanics.minWordIndex = 101;
                     Mechanics.maxWordIndex = 150;
-                    mech.dataBasePanelSetUp();
                     break;
                 case "total 4":
                     Mechanics.minWordIndex = 151;
