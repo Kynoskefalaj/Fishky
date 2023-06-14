@@ -39,6 +39,7 @@ public class UI extends SetupUI{
         displayWindow();
         oui.menuPanelsSetup();
         oui.totalPanelSetup();
+        oui.themesPanelSetup();
         displayPanels();
         displayLabels();
         displayCheckBoxes();

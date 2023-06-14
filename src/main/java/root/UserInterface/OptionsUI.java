@@ -9,11 +9,11 @@ public class OptionsUI extends SetupUI{
 
     UI ui;
 
-    public JPanel menuPanel, totalPanel;
-    public JLabel dbHeaderLabel, wordsQtyHeaderLabel, seenWordsLabel, passedWordsLabel, consolidatedWordsLabel,
-            masteredWordsLabel, problematicWordsLabel;
+    public JPanel menuPanel, totalPanel, themesPanel;
+    public JLabel totDbHeaderLabel, totWordsQtyHeaderLabel, totSeenWordsLabel, totPassedWordsLabel, totConsolidatedWordsLabel,
+            totMasteredWordsLabel, totProblematicWordsLabel;
     JLabel dbsLabel;
-    JButton returnButton;
+    JButton totReturnButton, themesReturnButton;
     JButton firstSetBtn, secondSetBtn, thirdSetBtn, fourthSetBtn, fifthSetBtn, sixthSetBtn, seventhSetBtn,
             eighthSetBtn, ninthSetBtn, tenthSetBtn, eleventhSetBtn, twelfthSetBtn, thirteenthSetBtn, fourteenthSetBtn,
             fifteenSetBtn, sixteenSetBtn, seventeenSetBtn, eighteenthSetBtn, nineteenSetBtn, twentiethSetBtn;
@@ -72,65 +72,78 @@ public class OptionsUI extends SetupUI{
 
     public void totalPanelSetup() {
 
-        Mechanics.totalWordsQty = Mechanics.totalSetRecordsQty(); //here
-        System.out.println(Mechanics.totalWordsQty);
+        Mechanics.totalWordsQty = Mechanics.totalSetRecordsQty();
 
         totalPanel = UtilsUI.makePanel(menuPanel.getX(), menuPanel.getY(), menuPanel.getWidth(), menuPanel.getHeight(),
                 mediumGray);
         ui.con.add(totalPanel);
         totalPanel.setVisible(false);
 
-        returnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
-                totalPanel.getHeight() - margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
-        returnButton.addActionListener(ui.ah.navigateHandler);
-        returnButton.setActionCommand("return");
-        totalPanel.add(returnButton);
+        totReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - 2*margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        totReturnButton.addActionListener(ui.ah.navigateHandler);
+        totReturnButton.setActionCommand("totReturn");
+        totalPanel.add(totReturnButton);
 
-        dbHeaderLabel = UtilsUI.makeLabel("Database: Total", headerFont, JLabel.LEFT);
-        dbHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY(), returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(dbHeaderLabel);
+        totDbHeaderLabel = UtilsUI.makeLabel("Database: Total", headerFont, JLabel.LEFT);
+        totDbHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY(), totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totDbHeaderLabel);
 
-        wordsQtyHeaderLabel = UtilsUI.makeLabel("Words quantity: " + Mechanics.totalWordsQty, normalFont, JLabel.LEFT);
-        wordsQtyHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY() + dbsLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(wordsQtyHeaderLabel);
+        totWordsQtyHeaderLabel = UtilsUI.makeLabel("Words quantity: " + Mechanics.totalWordsQty, normalFont, JLabel.LEFT);
+        totWordsQtyHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY() + dbsLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totWordsQtyHeaderLabel);
 
-        seenWordsLabel = UtilsUI.makeLabel("Seen: ", normalFont, JLabel.LEFT);
-        seenWordsLabel.setBounds(dbsLabel.getX(), wordsQtyHeaderLabel.getY() + wordsQtyHeaderLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(seenWordsLabel);
+        totSeenWordsLabel = UtilsUI.makeLabel("Seen: ", normalFont, JLabel.LEFT);
+        totSeenWordsLabel.setBounds(dbsLabel.getX(), totWordsQtyHeaderLabel.getY() + totWordsQtyHeaderLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totSeenWordsLabel);
 
-        passedWordsLabel = UtilsUI.makeLabel("Passed: ", normalFont, JLabel.LEFT);
-        passedWordsLabel.setBounds(dbsLabel.getX(), seenWordsLabel.getY() + wordsQtyHeaderLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(passedWordsLabel);
+        totPassedWordsLabel = UtilsUI.makeLabel("Passed: ", normalFont, JLabel.LEFT);
+        totPassedWordsLabel.setBounds(dbsLabel.getX(), totSeenWordsLabel.getY() + totWordsQtyHeaderLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totPassedWordsLabel);
 
-        consolidatedWordsLabel = UtilsUI.makeLabel("Consolidated: ", normalFont, JLabel.LEFT);
-        consolidatedWordsLabel.setBounds(dbsLabel.getX(), passedWordsLabel.getY() + wordsQtyHeaderLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(consolidatedWordsLabel);
+        totConsolidatedWordsLabel = UtilsUI.makeLabel("Consolidated: ", normalFont, JLabel.LEFT);
+        totConsolidatedWordsLabel.setBounds(dbsLabel.getX(), totPassedWordsLabel.getY() + totWordsQtyHeaderLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totConsolidatedWordsLabel);
 
-        masteredWordsLabel = UtilsUI.makeLabel("Mastered: ", normalFont, JLabel.LEFT);
-        masteredWordsLabel.setBounds(dbsLabel.getX(), consolidatedWordsLabel.getY() + wordsQtyHeaderLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(masteredWordsLabel);
+        totMasteredWordsLabel = UtilsUI.makeLabel("Mastered: ", normalFont, JLabel.LEFT);
+        totMasteredWordsLabel.setBounds(dbsLabel.getX(), totConsolidatedWordsLabel.getY() + totWordsQtyHeaderLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totMasteredWordsLabel);
 
-        problematicWordsLabel = UtilsUI.makeLabel("Problematic: ", normalFont, JLabel.LEFT);
-        problematicWordsLabel.setBounds(dbsLabel.getX(), masteredWordsLabel.getY() + wordsQtyHeaderLabel.getHeight(),
-                returnButton.getWidth(), dbsLabel.getHeight());
-        totalPanel.add(problematicWordsLabel);
+        totProblematicWordsLabel = UtilsUI.makeLabel("Problematic: ", normalFont, JLabel.LEFT);
+        totProblematicWordsLabel.setBounds(dbsLabel.getX(), totMasteredWordsLabel.getY() + totWordsQtyHeaderLabel.getHeight(),
+                totReturnButton.getWidth(), dbsLabel.getHeight());
+        totalPanel.add(totProblematicWordsLabel);
 
 //        -----------------------------------Buttons-----------------------------------------
         int i = 1;
         int y = 0;
         for (JButton button: setBtns) {
-            button = UtilsUI.makeButton(Utilities.integerToRomanNumber(i), headerFont, dbsLabel.getX(), problematicWordsLabel.getY() + y +
-                    wordsQtyHeaderLabel.getHeight(), returnButton.getWidth(), 30, mediumPurple);
+            button = UtilsUI.makeButton(Utilities.integerToRomanNumber(i), headerFont, dbsLabel.getX(), totProblematicWordsLabel.getY() + y +
+                    totWordsQtyHeaderLabel.getHeight(), totReturnButton.getWidth(), 30, mediumPurple);
             button.addActionListener(ui.ah.navigateHandler);
             button.setActionCommand("total " + i);
             totalPanel.add(button);
             y += 30;
             i += 1;
         }
+    }
+
+    public void themesPanelSetup(){
+
+        themesPanel = UtilsUI.makePanel(totalPanel.getX(), totalPanel.getY(), totalPanel.getWidth(),
+                totalPanel.getHeight(), mediumGray);
+        ui.con.add(themesPanel);
+        themesPanel.setVisible(false);
+
+        themesReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - 2*margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        themesReturnButton.addActionListener(ui.ah.navigateHandler);
+        themesReturnButton.setActionCommand("themesReturn");
+        themesPanel.add(themesReturnButton);
     }
 }

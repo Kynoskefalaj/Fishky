@@ -117,6 +117,7 @@ public class ActionHandlers {
                 case "themes":
                     //something after clicking themes
                     ui.oui.menuPanel.setVisible(false);
+                    ui.oui.themesPanel.setVisible(true);
                     break;
                 case "repetition":
                     //something after clicking repetition
@@ -130,7 +131,7 @@ public class ActionHandlers {
                     //something after clicking searchEngine
                     ui.oui.menuPanel.setVisible(false);
                     break;
-                case "return":
+                case "totReturn":
                     ui.oui.totalPanel.setVisible(false);
                     ui.oui.menuPanel.setVisible(true);
                     break;
@@ -213,6 +214,11 @@ public class ActionHandlers {
                 case "total 20":
                     Mechanics.minWordIndex = 951;
                     Mechanics.maxWordIndex = Mechanics.totalWordsQty;
+                    break;
+
+                case "themesReturn":
+                    ui.oui.themesPanel.setVisible(false);
+                    ui.oui.totalPanel.setVisible(true);
                     break;
             }
             mech.dataBasePanelSetUp();
