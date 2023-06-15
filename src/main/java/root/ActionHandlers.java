@@ -218,7 +218,7 @@ public class ActionHandlers {
 
                 case "themesReturn":
                     ui.oui.themesPanel.setVisible(false);
-                    ui.oui.totalPanel.setVisible(true);
+                    ui.oui.menuPanel.setVisible(true);
                     break;
             }
             mech.dataBasePanelSetUp();

@@ -5,15 +5,16 @@ import root.Utilities;
 
 import javax.swing.*;
 
-public class OptionsUI extends SetupUI{
+public class OptionsUI extends SetupUI {
 
     UI ui;
 
     public JPanel menuPanel, totalPanel, themesPanel;
     public JLabel totDbHeaderLabel, totWordsQtyHeaderLabel, totSeenWordsLabel, totPassedWordsLabel, totConsolidatedWordsLabel,
             totMasteredWordsLabel, totProblematicWordsLabel;
-    JLabel dbsLabel;
+    JLabel dbsLabel, themesDbHeaderLabel;
     JButton totReturnButton, themesReturnButton;
+    JButton dailySetButton, it_csSetButton, engineeringSetButton;
     JButton firstSetBtn, secondSetBtn, thirdSetBtn, fourthSetBtn, fifthSetBtn, sixthSetBtn, seventhSetBtn,
             eighthSetBtn, ninthSetBtn, tenthSetBtn, eleventhSetBtn, twelfthSetBtn, thirteenthSetBtn, fourteenthSetBtn,
             fifteenSetBtn, sixteenSetBtn, seventeenSetBtn, eighteenthSetBtn, nineteenSetBtn, twentiethSetBtn;
@@ -42,28 +43,28 @@ public class OptionsUI extends SetupUI{
         menuPanel.add(dbTotalButton);
 
         dbThemesButton = UtilsUI.makeButton("Themes", buttonFont, dbsLabel.getX(),
-                dbTotalButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbTotalButton.getY() + dbTotalButton.getHeight() + margin / 2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbThemesButton.addActionListener(ui.ah.navigateHandler);
         dbThemesButton.setActionCommand("themes");
         menuPanel.add(dbThemesButton);
 
         dbRepetitionButton = UtilsUI.makeButton("Repetition", buttonFont, dbsLabel.getX(),
-                dbThemesButton.getY() + dbThemesButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbThemesButton.getY() + dbThemesButton.getHeight() + margin / 2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbRepetitionButton.addActionListener(ui.ah.navigateHandler);
         dbRepetitionButton.setActionCommand("repetition");
         menuPanel.add(dbRepetitionButton);
 
         dbMarkedButton = UtilsUI.makeButton("Marked", buttonFont, dbsLabel.getX(),
-                dbRepetitionButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbRepetitionButton.getY() + dbTotalButton.getHeight() + margin / 2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbMarkedButton.addActionListener(ui.ah.navigateHandler);
         dbMarkedButton.setActionCommand("marked");
         menuPanel.add(dbMarkedButton);
 
         dbSearchEngineButton = UtilsUI.makeButton("Search Engine", buttonFont, dbsLabel.getX(),
-                dbMarkedButton.getY() + dbTotalButton.getHeight() + margin/2, dbTotalButton.getWidth(),
+                dbMarkedButton.getY() + dbTotalButton.getHeight() + margin / 2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbSearchEngineButton.addActionListener(ui.ah.navigateHandler);
         dbSearchEngineButton.setActionCommand("search engine");
@@ -80,7 +81,7 @@ public class OptionsUI extends SetupUI{
         totalPanel.setVisible(false);
 
         totReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
-                totalPanel.getHeight() - 2*margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+                totalPanel.getHeight() - 2 * margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
         totReturnButton.addActionListener(ui.ah.navigateHandler);
         totReturnButton.setActionCommand("totReturn");
         totalPanel.add(totReturnButton);
@@ -122,7 +123,7 @@ public class OptionsUI extends SetupUI{
 //        -----------------------------------Buttons-----------------------------------------
         int i = 1;
         int y = 0;
-        for (JButton button: setBtns) {
+        for (JButton button : setBtns) {
             button = UtilsUI.makeButton(Utilities.integerToRomanNumber(i), headerFont, dbsLabel.getX(), totProblematicWordsLabel.getY() + y +
                     totWordsQtyHeaderLabel.getHeight(), totReturnButton.getWidth(), 30, mediumPurple);
             button.addActionListener(ui.ah.navigateHandler);
@@ -133,7 +134,7 @@ public class OptionsUI extends SetupUI{
         }
     }
 
-    public void themesPanelSetup(){
+    public void themesPanelSetup() {
 
         themesPanel = UtilsUI.makePanel(totalPanel.getX(), totalPanel.getY(), totalPanel.getWidth(),
                 totalPanel.getHeight(), mediumGray);
@@ -141,9 +142,20 @@ public class OptionsUI extends SetupUI{
         themesPanel.setVisible(false);
 
         themesReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
-                totalPanel.getHeight() - 2*margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+                totalPanel.getHeight() - 2 * margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
         themesReturnButton.addActionListener(ui.ah.navigateHandler);
         themesReturnButton.setActionCommand("themesReturn");
         themesPanel.add(themesReturnButton);
+
+        themesDbHeaderLabel = UtilsUI.makeLabel("Database: Themes", headerFont, JLabel.LEFT);
+        themesDbHeaderLabel.setBounds(dbsLabel.getX(), dbsLabel.getY(), totReturnButton.getWidth(), dbsLabel.getHeight());
+        themesPanel.add(themesDbHeaderLabel);
+
+        dailySetButton = UtilsUI.makeButton("Daily", buttonFont, dbsLabel.getX(), dbTotalButton.getY(),
+                themesReturnButton.getWidth(), 50, mediumPurple);
+        dailySetButton.addActionListener(ui.ah.navigateHandler);
+        dailySetButton.setActionCommand("dailySet");
+        themesPanel.add(dailySetButton);
     }
 }
+
