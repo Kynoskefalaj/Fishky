@@ -156,6 +156,20 @@ public class OptionsUI extends SetupUI {
         dailySetButton.addActionListener(ui.ah.navigateHandler);
         dailySetButton.setActionCommand("dailySet");
         themesPanel.add(dailySetButton);
+
+        it_csSetButton = UtilsUI.makeButton("IT & CS", buttonFont, dbsLabel.getX(),
+                dailySetButton.getY() + dailySetButton.getHeight() + margin/2,
+                themesReturnButton.getWidth(), 50, mediumPurple);
+        it_csSetButton.addActionListener(ui.ah.navigateHandler);
+        it_csSetButton.setActionCommand("it_cs");
+        themesPanel.add(it_csSetButton);
+
+        engineeringSetButton = UtilsUI.makeButton("Engineering", buttonFont, dbsLabel.getX(),
+                it_csSetButton.getY() + it_csSetButton.getHeight() + margin/2,
+                themesReturnButton.getWidth(), 50, mediumPurple);
+        engineeringSetButton.addActionListener(ui.ah.navigateHandler);
+        engineeringSetButton.setActionCommand("engineering");
+        themesPanel.add(engineeringSetButton);
     }
 }
 
