@@ -9,11 +9,11 @@ public class OptionsUI extends SetupUI {
 
     UI ui;
 
-    public JPanel menuPanel, totalPanel, themesPanel;
+    public JPanel menuPanel, totalPanel, themesPanel, markedPanel, repetitionPanel, searchEnginePanel;
     public JLabel totDbHeaderLabel, totWordsQtyHeaderLabel, totSeenWordsLabel, totPassedWordsLabel, totConsolidatedWordsLabel,
             totMasteredWordsLabel, totProblematicWordsLabel;
     JLabel dbsLabel, themesDbHeaderLabel;
-    JButton totReturnButton, themesReturnButton;
+    JButton totReturnButton, themesReturnButton, repetitionReturnButton, markedReturnButton, searchEngineReturnButton;
     JButton dailySetButton, it_csSetButton, engineeringSetButton;
     JButton firstSetBtn, secondSetBtn, thirdSetBtn, fourthSetBtn, fifthSetBtn, sixthSetBtn, seventhSetBtn,
             eighthSetBtn, ninthSetBtn, tenthSetBtn, eleventhSetBtn, twelfthSetBtn, thirteenthSetBtn, fourteenthSetBtn,
@@ -26,6 +26,7 @@ public class OptionsUI extends SetupUI {
     public OptionsUI(UI ui) {
         this.ui = ui;
     }
+
 
     public void menuPanelsSetup() {
         menuPanel = UtilsUI.makePanel(margin, margin, 300, windowY - margin * 2, mediumGray);
@@ -67,8 +68,14 @@ public class OptionsUI extends SetupUI {
                 dbMarkedButton.getY() + dbTotalButton.getHeight() + margin / 2, dbTotalButton.getWidth(),
                 dbTotalButton.getHeight(), mediumPurple);
         dbSearchEngineButton.addActionListener(ui.ah.navigateHandler);
-        dbSearchEngineButton.setActionCommand("search engine");
+        dbSearchEngineButton.setActionCommand("searchEngine");
         menuPanel.add(dbSearchEngineButton);
+
+        totalPanelSetup();
+        themesPanelSetup();
+        markedPanelSetup();
+        repetitionPanelSetup();
+        searchEngineSetup();
     }
 
     public void totalPanelSetup() {
@@ -171,5 +178,49 @@ public class OptionsUI extends SetupUI {
         engineeringSetButton.setActionCommand("engineering");
         themesPanel.add(engineeringSetButton);
     }
-}
 
+    public void markedPanelSetup() {
+
+        markedPanel = UtilsUI.makePanel(totalPanel.getX(), totalPanel.getY(), totalPanel.getWidth(),
+                totalPanel.getHeight(), mediumGray);
+        ui.con.add(markedPanel);
+        markedPanel.setVisible(false);
+
+        markedReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - 2 * margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        markedReturnButton.addActionListener(ui.ah.navigateHandler);
+        markedReturnButton.setActionCommand("markedReturn");
+        markedPanel.add(markedReturnButton);
+
+    }
+
+    public void repetitionPanelSetup() {
+
+        repetitionPanel = UtilsUI.makePanel(totalPanel.getX(), totalPanel.getY(), totalPanel.getWidth(),
+                totalPanel.getHeight(), mediumGray);
+        ui.con.add(repetitionPanel);
+        repetitionPanel.setVisible(false);
+
+        repetitionReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - 2 * margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        repetitionReturnButton.addActionListener(ui.ah.navigateHandler);
+        repetitionReturnButton.setActionCommand("repetitionReturn");
+        repetitionPanel.add(repetitionReturnButton);
+
+    }
+
+    public void searchEngineSetup() {
+
+        searchEnginePanel = UtilsUI.makePanel(totalPanel.getX(), totalPanel.getY(), totalPanel.getWidth(),
+                totalPanel.getHeight(), mediumGray);
+        ui.con.add(searchEnginePanel);
+        searchEnginePanel.setVisible(false);
+
+        searchEngineReturnButton = UtilsUI.makeButton("Return", buttonFont, totalPanel.getX(), totalPanel.getY() +
+                totalPanel.getHeight() - 2 * margin - 50, totalPanel.getWidth() - 2 * margin, 50, mediumPurple);
+        searchEngineReturnButton.addActionListener(ui.ah.navigateHandler);
+        searchEngineReturnButton.setActionCommand("searchEngineReturn");
+        searchEnginePanel.add(searchEngineReturnButton);
+
+    }
+}

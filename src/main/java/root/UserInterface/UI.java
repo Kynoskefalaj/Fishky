@@ -38,8 +38,6 @@ public class UI extends SetupUI{
     public void runUI() {
         displayWindow();
         oui.menuPanelsSetup();
-        oui.totalPanelSetup();
-        oui.themesPanelSetup();
         displayPanels();
         displayLabels();
         displayCheckBoxes();

@@ -122,14 +122,17 @@ public class ActionHandlers {
                 case "repetition":
                     //something after clicking repetition
                     ui.oui.menuPanel.setVisible(false);
+                    ui.oui.repetitionPanel.setVisible(true);
                     break;
                 case "marked":
                     //something after clicking marked
                     ui.oui.menuPanel.setVisible(false);
+                    ui.oui.markedPanel.setVisible(true);
                     break;
                 case "searchEngine":
                     //something after clicking searchEngine
                     ui.oui.menuPanel.setVisible(false);
+                    ui.oui.searchEnginePanel.setVisible(true);
                     break;
                 case "totReturn":
                     ui.oui.totalPanel.setVisible(false);
@@ -220,6 +223,23 @@ public class ActionHandlers {
                     ui.oui.themesPanel.setVisible(false);
                     ui.oui.menuPanel.setVisible(true);
                     break;
+
+                case "markedReturn":
+                    ui.oui.markedPanel.setVisible(false);
+                    ui.oui.menuPanel.setVisible(true);
+                    break;
+
+                case "repetitionReturn":
+                    ui.oui.repetitionPanel.setVisible(false);
+                    ui.oui.menuPanel.setVisible(true);
+                    break;
+
+                case "searchEngineReturn":
+                    ui.oui.searchEnginePanel.setVisible(false);
+                    ui.oui.menuPanel.setVisible(true);
+                    break;
+
+
             }
             mech.dataBasePanelSetUp();
         }
